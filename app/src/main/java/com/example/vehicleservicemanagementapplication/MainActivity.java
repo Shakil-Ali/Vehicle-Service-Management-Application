@@ -1,5 +1,6 @@
 package com.example.vehicleservicemanagementapplication;
 
+// Import statements
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
