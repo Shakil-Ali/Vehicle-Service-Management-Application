@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:textColorHint="grey"
+        android:textColorHint="@color/hintColour"
         android:layout_marginTop="40dp"
         >
 
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:textColorHint="grey"
+        android:textColorHint="@color/hintColour"
         >
 
         <EditText
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:textColorHint="grey"
+        android:textColorHint="@color/hintColour"
         >
 
         <EditText
@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:textColorHint="grey"
+        android:textColorHint="@color/hintColour"
         app:passwordToggleEnabled="true"
         >
 
@@ -106,7 +106,7 @@
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:textColorHint="grey"
+        android:textColorHint="@color/hintColour"
         app:passwordToggleEnabled="true"
         >
 

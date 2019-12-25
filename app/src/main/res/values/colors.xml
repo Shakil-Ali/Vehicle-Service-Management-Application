@@ -9,4 +9,5 @@
     <color name="buttonYellow">#FFE800</color>
     <color name="background">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="hintColour">#808080</color>
 </resources>
