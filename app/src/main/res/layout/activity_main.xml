@@ -25,6 +25,7 @@
         android:textColor="@color/black"
         android:layout_marginTop="260dp"
         android:background="@drawable/yellow_rounded_button"
+        android:onClick="btn_main_login"
         >
     </Button>
 
@@ -37,6 +38,7 @@
         android:textColor="@color/black"
         android:layout_marginTop="10dp"
         android:background="@drawable/yellow_rounded_button"
+        android:onClick="btn_main_register"
         >
     </Button>
 
