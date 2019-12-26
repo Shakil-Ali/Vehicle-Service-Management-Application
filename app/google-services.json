@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "314636761615",
+    "firebase_url": "https://motor-manager.firebaseio.com",
+    "project_id": "motor-manager",
+    "storage_bucket": "motor-manager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314636761615:android:349a0dcefd0bf8dd96817a",
+        "android_client_info": {
+          "package_name": "com.example.vehicleservicemanagementapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314636761615-g8okoeurdck5ga32nuhm4lhsoukjg76d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vehicleservicemanagementapplication",
+            "certificate_hash": "b0c5b6125532bf6d4f9b35a81e9ba4f5f0bb53b8"
+          }
+        },
+        {
+          "client_id": "314636761615-fg564uvkeh1cljurqhat2gtt43k7drsp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhO_mO4wi2c0VxQmCjm-6QJcyKkAwSjdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314636761615-fg564uvkeh1cljurqhat2gtt43k7drsp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
