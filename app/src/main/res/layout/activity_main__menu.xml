@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Main_Menu"
     android:orientation="vertical"
+    android:background="@drawable/menu_background"
     android:padding="30dp"
     android:weightSum="10">
 
@@ -16,9 +17,10 @@
         
         <TextView
             android:id="@+id/textGrid"
-            android:text="GRID LAYOUT"
-            android:textSize="34sp"
-            android:textColor="@color/black"
+            android:text="Welcome to Motor Manager"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="@color/background"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
