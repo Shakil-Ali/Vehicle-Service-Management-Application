@@ -9,6 +9,7 @@
     android:padding="30dp"
     tools:context=".Signup_Form">
 
+
     // Motor Manager Logo
     <ImageView
         android:layout_width="wrap_content"
@@ -17,25 +18,27 @@
         android:layout_gravity="center">
     </ImageView>
 
-    // Enter Full Name Design Code
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:textColorHint="@color/hintColour"
-        android:layout_marginTop="40dp"
-        >
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Full Name"
-        android:ems="10"
-        android:inputType="text"
-        android:textSize="20sp"
-        />
-    </com.google.android.material.textfield.TextInputLayout>
+<!--    -->
+<!--    // Enter Full Name Design Code-->
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:focusable="true"-->
+<!--        android:focusableInTouchMode="true"-->
+<!--        android:textColorHint="@color/hintColour"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        >-->
+
+<!--    <EditText-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Full Name"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="text"-->
+<!--        android:textSize="20sp"-->
+<!--        />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
 
 
     // Enter Email Address Design Code
@@ -45,9 +48,11 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:textColorHint="@color/hintColour"
+        android:layout_marginTop="60dp"
         >
 
         <EditText
+            android:id="@+id/txt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email Address"
@@ -59,25 +64,25 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    // Enter Username Design Code
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:textColorHint="@color/hintColour"
-        >
+<!--    // Enter Username Design Code-->
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:focusable="true"-->
+<!--        android:focusableInTouchMode="true"-->
+<!--        android:textColorHint="@color/hintColour"-->
+<!--        >-->
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Username"
-            android:ems="10"
-            android:inputType="text"
-            android:textSize="20sp"
-            />
+<!--        <EditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Username"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="text"-->
+<!--            android:textSize="20sp"-->
+<!--            />-->
 
-    </com.google.android.material.textfield.TextInputLayout>
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
 
     // Enter Password Design Code
     <com.google.android.material.textfield.TextInputLayout
@@ -90,6 +95,7 @@
         >
 
         <EditText
+            android:id="@+id/txt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -99,6 +105,7 @@
             />
 
     </com.google.android.material.textfield.TextInputLayout>
+
 
     // Enter Confirm Password Design Code
     <com.google.android.material.textfield.TextInputLayout
@@ -111,6 +118,7 @@
         >
 
         <EditText
+            android:id="@+id/txt_confirm_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Confirm Password"
@@ -124,6 +132,7 @@
 
     // Register Button
     <Button
+        android:id="@+id/buttonRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"

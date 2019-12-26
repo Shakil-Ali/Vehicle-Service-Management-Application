@@ -18,6 +18,7 @@
 
     // Login Button
     <Button
+        android:id="@+id/btn_home_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
@@ -25,12 +26,12 @@
         android:textColor="@color/black"
         android:layout_marginTop="260dp"
         android:background="@drawable/yellow_rounded_button"
-        android:onClick="btn_main_login"
         >
     </Button>
 
     // Register Button
     <Button
+        android:id="@+id/btn_home_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
@@ -38,7 +39,6 @@
         android:textColor="@color/black"
         android:layout_marginTop="10dp"
         android:background="@drawable/yellow_rounded_button"
-        android:onClick="btn_main_register"
         >
     </Button>
 
