@@ -82,6 +82,12 @@ public class Signup_Form extends AppCompatActivity
                     Toast.makeText(Signup_Form.this, "Please Enter Password", Toast.LENGTH_SHORT).show();
                 }
 
+                // Check if password too short
+                if(password.length() < 6)
+                {
+                    Toast.makeText(Signup_Form.this, "Password Too Short", Toast.LENGTH_SHORT).show();
+                }
+
                 // Check if a full name has been entered
                 if(TextUtils.isEmpty(fullName))
                 {
@@ -133,6 +139,9 @@ public class Signup_Form extends AppCompatActivity
 
                                 }
                             });
+                }
+                else{
+                    Toast.makeText(Signup_Form.this, "Passwords Do Not Match", Toast.LENGTH_SHORT).show();
                 }
 
 
