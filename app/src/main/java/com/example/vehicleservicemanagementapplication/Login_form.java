@@ -65,12 +65,6 @@ public class Login_form extends AppCompatActivity
                     return;
                 }
 
-                // Check if password is below 6 characters
-                if(password.length()<6)
-                {
-                    // Inform user password to short
-                    Toast.makeText(Login_form.this, "Password is too short", Toast.LENGTH_SHORT).show();
-                }
 
                 // Check if user is amongst existing user - Android Studio Firebase Assistant Code
                 firebaseAuth.signInWithEmailAndPassword(email, password)
