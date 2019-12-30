@@ -19,26 +19,26 @@
     </ImageView>
 
 
-<!--    -->
-<!--    // Enter Full Name Design Code-->
-<!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:focusable="true"-->
-<!--        android:focusableInTouchMode="true"-->
-<!--        android:textColorHint="@color/hintColour"-->
-<!--        android:layout_marginTop="40dp"-->
-<!--        >-->
 
-<!--    <EditText-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="Full Name"-->
-<!--        android:ems="10"-->
-<!--        android:inputType="text"-->
-<!--        android:textSize="20sp"-->
-<!--        />-->
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
+    // Enter Full Name Design Code
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/hintColour"
+        android:layout_marginTop="40dp"
+        >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full Name"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     // Enter Email Address Design Code
@@ -64,25 +64,25 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-<!--    // Enter Username Design Code-->
-<!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:focusable="true"-->
-<!--        android:focusableInTouchMode="true"-->
-<!--        android:textColorHint="@color/hintColour"-->
-<!--        >-->
+    // Enter Username Design Code
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/hintColour"
+        >
 
-<!--        <EditText-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:hint="Username"-->
-<!--            android:ems="10"-->
-<!--            android:inputType="text"-->
-<!--            android:textSize="20sp"-->
-<!--            />-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="20sp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
 
     // Enter Password Design Code
     <com.google.android.material.textfield.TextInputLayout
