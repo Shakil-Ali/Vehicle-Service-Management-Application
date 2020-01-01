@@ -13,7 +13,9 @@ public class Main_Menu extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__menu);
+
+        // end of main method
     }
 
-
+// end of class
 }
