@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".About"></activity>
+        <activity android:name=".Settings"></activity>
+        <activity android:name=".About" />
         <activity android:name=".VehicleInventory" />
         <activity android:name=".Main_Menu" />
         <activity android:name=".Login_form" />
