@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/textViewReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vehicle Registration"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large">
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/textViewMake"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vehicle Make"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large">
+    </TextView>
 
 </LinearLayout>
