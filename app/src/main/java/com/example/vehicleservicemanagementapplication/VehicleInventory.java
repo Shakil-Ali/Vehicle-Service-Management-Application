@@ -11,9 +11,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.internal.Storage;
@@ -32,13 +34,21 @@ import java.io.IOException;
 
 public class VehicleInventory extends AppCompatActivity
 {
-
+    // Variable Initialisation
+    EditText editTextReg;
+    Button saveButton;
+    Spinner spinnerMake;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_inventory);
+
+        // Assignment Operations
+        editTextReg = (EditText)findViewById(R.id.editRegText);
+        saveButton = (Button) findViewById(R.id.buttonSave);
+        spinnerMake = (Spinner) findViewById(R.id.spinnerVehicleMake);
 
 
     // end of main method method
