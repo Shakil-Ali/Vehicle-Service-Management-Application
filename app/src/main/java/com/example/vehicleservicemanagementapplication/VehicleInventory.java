@@ -10,6 +10,7 @@ import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,7 +31,11 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
+
+// https://www.youtube.com/watch?v=EM2x33g4syY
 
 public class VehicleInventory extends AppCompatActivity
 {
@@ -50,10 +55,41 @@ public class VehicleInventory extends AppCompatActivity
         saveButton = (Button) findViewById(R.id.buttonSave);
         spinnerMake = (Spinner) findViewById(R.id.spinnerVehicleMake);
 
+        // Check whether save button is being clicked
+        saveButton.setOnClickListener(new View.OnClickListener()
+        {
+            // OnClick method
+            @Override
+            public void onClick(View v)
+            {
+                // Call addVehicle method to add vehicle
+                addVehicle();
+            }
+        });
 
     // end of main method method
     }
 
+
+    // Method to add a vehicle
+    private void addVehicle()
+    {
+        // Initialisation and assignment operations
+        String vehReg = editTextReg.getText().toString().trim();
+        String vehMake = spinnerMake.getSelectedItem().toString();
+
+        // Check if registration has been entered
+        if(!TextUtils.isEmpty(vehReg))
+        {
+
+        }
+        else{
+            Toast.makeText(this, "Enter Vehicle Registration", Toast.LENGTH_SHORT).show();
+        }
+
+
+    // end of addVehicle method
+    }
 
 
 
