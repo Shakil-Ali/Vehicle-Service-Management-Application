@@ -3,7 +3,6 @@
 
     // Spinner array for vehicle make
     <array name="Make">
-        <item>Acura</item>
         <item>Alfa Romeo</item>
         <item>Aston Martin</item>
         <item>Audi</item>
