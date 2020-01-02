@@ -8,63 +8,7 @@
     android:padding="15dp"
     tools:context=".VehicleInventory">
 
-    // Text to inform user to pick an image for vehicle
-    <TextView
-        android:text="Tap on camera to choose vehicle image"
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-    </TextView>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        // Image area for image upload
-        <ImageView
-            android:layout_centerHorizontal="true"
-            android:id="@+id/imageView"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_margin="20dp"
-            android:background="@drawable/camera"
-            android:scaleType="centerCrop"
-            >
-        </ImageView>
-
-        <ProgressBar
-            android:visibility="gone"
-            android:id="@+id/progressBar"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </ProgressBar>
-
-    </RelativeLayout>
-
-
-
-    <EditText
-        android:id="@+id/editTextDisplayName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Vehicle Registration">
-    </EditText>
-
-    <Button
-        android:id="@+id/buttonSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="25dp"
-        android:background="@color/buttonGreen"
-        android:paddingLeft="55dp"
-        android:paddingRight="55dp"
-        android:text="Save"
-        android:textAllCaps="false">
-    </Button>
 
 
 </LinearLayout>
