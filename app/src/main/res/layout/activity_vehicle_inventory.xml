@@ -36,5 +36,11 @@
         android:textAllCaps="false">
     </Button>
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listViewVehicles">
+    </ListView>
+
 
 </LinearLayout>

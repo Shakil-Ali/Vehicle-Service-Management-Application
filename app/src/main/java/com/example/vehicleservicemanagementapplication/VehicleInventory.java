@@ -12,9 +12,11 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -27,8 +29,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -36,6 +41,8 @@ import com.google.firebase.storage.UploadTask;
 import org.w3c.dom.Text;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 // https://www.youtube.com/watch?v=EM2x33g4syY
 
@@ -46,7 +53,8 @@ public class VehicleInventory extends AppCompatActivity
     Button saveButton;
     Spinner spinnerMake;
     DatabaseReference databaseVehicles;
-
+    ListView listViewVehicles;
+    List<Vehicles> vehiclesList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -58,8 +66,9 @@ public class VehicleInventory extends AppCompatActivity
         editTextReg = (EditText)findViewById(R.id.editRegText);
         saveButton = (Button) findViewById(R.id.buttonSave);
         spinnerMake = (Spinner) findViewById(R.id.spinnerVehicleMake);
+        listViewVehicles = (ListView) findViewById(R.id.listViewVehicles);
+        vehiclesList = new ArrayList<>();
         databaseVehicles = FirebaseDatabase.getInstance().getReference("Vehicles");
-
 
         // Check whether save button is being clicked
         saveButton.setOnClickListener(new View.OnClickListener()
@@ -76,6 +85,44 @@ public class VehicleInventory extends AppCompatActivity
     // end of main method method
     }
 
+    // Override method onStart
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+        databaseVehicles.addValueEventListener(new ValueEventListener()
+        {
+            // Method for data change in database
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+            {
+                // Clear array list before iteration
+                vehiclesList.clear();
+                // Iterate through data snapshots
+                for(DataSnapshot vehicleSnapshot: dataSnapshot.getChildren())
+                {
+                    // Assign Vehicles object to a snapshots value
+                    Vehicles vehicle = vehicleSnapshot.getValue(Vehicles.class);
+                    // Add vehicle to array list
+                    vehiclesList.add(vehicle);
+                }
+
+                // Make new vehicle list object and pass arguments
+                VehicleList adapter = new VehicleList(VehicleInventory.this, vehiclesList);
+                // Set adapater to the list view vehicles
+                listViewVehicles.setAdapter(adapter);
+
+            // end of onDataChangeMethod
+            }
+
+            // Method for on cancelled
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError)
+            {
+
+            }
+        });
+    }
 
     // Method to add a vehicle
     private void addVehicle()
