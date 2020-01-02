@@ -9,6 +9,31 @@
     tools:context=".VehicleInventory">
 
 
+    <EditText
+        android:id="@+id/editRegText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Vehicle Registration">
+    </EditText>
+
+    <Spinner
+        android:id="@+id/spinnerVehicleMake"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Spinner>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="@color/buttonGreen"
+        android:paddingLeft="55dp"
+        android:paddingRight="55dp"
+        android:text="Save"
+        android:textAllCaps="false">
+    </Button>
 
 
 </LinearLayout>

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Motor Manager</string>
+
+    // Spinner array for vehicle make
+    <array name="Make">
+
+    </array>
 </resources>
