@@ -1,8 +1,10 @@
-package com.example.vehicleservicemanagementapplication;
+package com.example.vehicleservicemanagementapplication.Activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.vehicleservicemanagementapplication.R;
 
 public class RegisterActivity extends AppCompatActivity
 {
