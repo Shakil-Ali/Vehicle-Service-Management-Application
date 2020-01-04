@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.vehicleservicemanagementapplication.Activites.RegisterActivity;
+
 // Main Class
 public class MainActivity extends AppCompatActivity
 {
@@ -62,7 +64,7 @@ public class MainActivity extends AppCompatActivity
     // Open register page method
     public void openRegisterPage()
     {
-        Intent intent2 = new Intent(this, Signup_Form.class);
+        Intent intent2 = new Intent(this, RegisterActivity.class);
         startActivity(intent2);
     }
 
