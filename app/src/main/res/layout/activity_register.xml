@@ -11,6 +11,7 @@
 
     // Profile Image Avatar
     <ImageView
+        android:id="@+id/regUserPhoto"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
