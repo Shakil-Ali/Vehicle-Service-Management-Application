@@ -26,6 +26,7 @@
         android:textColor="@color/black"
         android:layout_marginTop="260dp"
         android:background="@drawable/yellow_rounded_button"
+        android:textAllCaps="false"
         >
     </Button>
 
@@ -39,6 +40,7 @@
         android:textColor="@color/black"
         android:layout_marginTop="10dp"
         android:background="@drawable/yellow_rounded_button"
+        android:textAllCaps="false"
         >
     </Button>
 
