@@ -12,7 +12,9 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.vehicleservicemanagementapplication.R;
@@ -22,10 +24,18 @@ import com.example.vehicleservicemanagementapplication.R;
 public class RegisterActivity extends AppCompatActivity
 {
     // Variable Initialisations
+    // Specific to image upload
     ImageView ImgUserPhoto;
     static int PReqCode = 1;
     static int REQUESTCODE = 1;
     Uri chosenImgUri;
+
+    // Specific to fields on registration
+    private EditText userName;
+    private EditText userEmail;
+    private EditText userPassword;
+    private EditText userPassword2;
+    private ProgressBar loadingProgressBar;
 
 
     @Override
@@ -36,6 +46,12 @@ public class RegisterActivity extends AppCompatActivity
 
         //Variable Assignment Operations
         ImgUserPhoto = findViewById(R.id.regUserPhoto);
+
+        userName = findViewById(R.id.regName);
+        userEmail = findViewById(R.id.regEmail);
+        userPassword = findViewById(R.id.regPassword);
+        userPassword2 = findViewById(R.id.regPassword2);
+        loadingProgressBar = findViewById(R.id.progressBarReg);
 
 
         // Set on-click-listener on image to detect if a user wants to upload an image
