@@ -1,5 +1,6 @@
 package com.example.vehicleservicemanagementapplication.Activites;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -19,8 +20,19 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.vehicleservicemanagementapplication.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 // https://www.youtube.com/watch?v=yHAAg-RdKDY
+// https://www.youtube.com/watch?v=o5x0HB-EYJY
 
 public class RegisterActivity extends AppCompatActivity
 {
@@ -39,6 +51,9 @@ public class RegisterActivity extends AppCompatActivity
     private ProgressBar loadingProgressBar;
     private Button regButton;
 
+    // Firebase initialisation
+    private FirebaseAuth firebaseAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -55,9 +70,50 @@ public class RegisterActivity extends AppCompatActivity
         userPassword2 = findViewById(R.id.regPassword2);
         loadingProgressBar = findViewById(R.id.progressBarReg);
         regButton = findViewById(R.id.regBtn);
+        firebaseAuth = FirebaseAuth.getInstance();
 
         // Settings progress bar to invisible
         loadingProgressBar.setVisibility(View.INVISIBLE);
+
+        // Detect register button being clicked
+        regButton.setOnClickListener(new View.OnClickListener()
+        {
+            // On click method
+            @Override
+            public void onClick(View v)
+            {
+                // Make register button invisible
+                regButton.setVisibility(View.INVISIBLE);
+                // Make progress bar visible
+                loadingProgressBar.setVisibility(View.VISIBLE);
+
+                // Store details of fields in variables
+                final String name = userName.getText().toString();
+                final String email = userEmail.getText().toString();
+                final String password = userPassword.getText().toString();
+                final String password2 = userPassword2.getText().toString();
+
+                // Conditionals to check if fields have been filled
+                if(name.isEmpty() || email.isEmpty() || password.isEmpty() || password2.isEmpty())
+                {
+                    // Inform user fields are empty
+                    showMessage("Please complete all fields");
+                    // Make register button visible
+                    regButton.setVisibility(View.VISIBLE);
+                    // Make progress bar invisible
+                    loadingProgressBar.setVisibility(View.INVISIBLE);
+                }
+                // Else conditional when all fields are complete
+                else
+                {
+                    // Now create an account for the user
+                    CreateUserAccount(name, email, password);
+                }
+
+
+            // end of method
+            }
+        });
 
 
         // Set on-click-listener on image to detect if a user wants to upload an image
@@ -85,8 +141,125 @@ public class RegisterActivity extends AppCompatActivity
         });
 
 
-
     // end of main method
+    }
+
+
+    // Method for creating account
+    private void CreateUserAccount(final String name, String email, String password)
+    {
+        // Use method to create user
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>()
+                {
+                    // On complete method
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task)
+                    {
+                        // Conditional for whether account created
+                        if(task.isSuccessful())
+                        {
+                            // Inform user successfully create account
+                            showMessage("Account successfully verified");
+                            // Call method to update user account
+                            updateUserAccount(name, chosenImgUri, firebaseAuth.getCurrentUser());
+                        }
+                        // Else conditional
+                        else
+                        {
+                            // Inform user unsuccessful attempt to create account
+                            showMessage("Account verification failed" + task.getException().getMessage());
+                            // Display register button
+                            regButton.setVisibility(View.VISIBLE);
+                            // Hide progress bar
+                            loadingProgressBar.setVisibility(View.INVISIBLE);
+                        }
+
+                    // end of method
+                    }
+                });
+
+    // end of method
+    }
+
+
+    // Method to update user account information
+    private void updateUserAccount(final String name, Uri chosenImgUri, final FirebaseUser currentUser)
+    {
+        // Variable to store firebase storage reference
+        StorageReference mStorage = FirebaseStorage.getInstance().getReference().child("users_profilePhotos");
+        final StorageReference imgFilePath = mStorage.child(chosenImgUri.getLastPathSegment());
+        imgFilePath.putFile(chosenImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>()
+        {
+            // onSuccess method
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot)
+            {
+                // Image stored successfully - retrieve image URL
+                imgFilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>()
+                {
+                    // on success method
+                    @Override
+                    public void onSuccess(Uri uri)
+                    {
+                        // Set name and photo
+                        UserProfileChangeRequest profileUpdate = new UserProfileChangeRequest.Builder()
+                                .setDisplayName(name)
+                                .setPhotoUri(uri)
+                                .build();
+
+                        // Update current user profile
+                        currentUser.updateProfile(profileUpdate)
+                                .addOnCompleteListener(new OnCompleteListener<Void>()
+                                {
+                                    // on complete method
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task)
+                                    {
+                                        // Conditional to check if task successful in updating profile
+                                        if(task.isSuccessful())
+                                        {
+                                            // Inform user
+                                            showMessage("Registration Complete");
+                                            // Call update UI method
+                                            updateUI();
+                                        }
+
+
+                                    // end of method
+                                    }
+                                });
+
+                    // end of method
+                    }
+                });
+
+            // end of method
+            }
+        });
+
+    // end of update user account method
+    }
+
+
+    // Method for updating UI
+    private void updateUI()
+    {
+        // New intent to home activity class
+        Intent homePage = new Intent(getApplicationContext(), HomeActivity.class);
+        // Start new activity from current screen
+        startActivity(homePage);
+        // Finish action
+        finish();
+
+    }
+
+
+    // Message to display to user if fields missing/incomplete
+    private void showMessage(String userMessage)
+    {
+        // Inform the user via toast
+        Toast.makeText(this, userMessage, Toast.LENGTH_SHORT).show();
     }
 
 
