@@ -125,7 +125,7 @@
     </Button>
 
 
-    // Progress Password
+    // Progress Bar
     <ProgressBar
         android:id="@+id/progressBarReg"
         android:layout_width="match_parent"

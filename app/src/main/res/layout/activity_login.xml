@@ -1,9 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activites.LoginActivity">
+    tools:context=".Activites.LoginActivity"
+    android:orientation="vertical"
+    android:padding="30dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    // Profile Image Avatar
+    <ImageView
+        android:id="@+id/loginUserPhoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/userphoto"
+        android:layout_marginTop="80dp">
+    </ImageView>
+
+
+    // Email
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/hintColour"
+        android:layout_marginTop="100dp"
+        >
+
+        <EditText
+            android:id="@+id/loginEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="20sp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    // Password
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/hintColour"
+        app:passwordToggleEnabled="true"
+        >
+
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    // Login Button
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_rounded"
+        android:textAllCaps="false"
+        >
+    </Button>
+
+
+    // Progress Bar
+    <ProgressBar
+        android:id="@+id/progressBarLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyle"
+        app:layout_constraintBottom_toBottomOf="@+id/regBtn"
+        app:layout_constraintEnd_toEndOf="@+id/regBtn"
+        app:layout_constraintStart_toStartOf="@+id/regBtn"
+        app:layout_constraintTop_toTopOf="@+id/regBtn">
+    </ProgressBar>
+
+
+</LinearLayout>
