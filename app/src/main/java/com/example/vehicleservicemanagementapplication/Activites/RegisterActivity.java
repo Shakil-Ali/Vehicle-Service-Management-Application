@@ -252,10 +252,11 @@ public class RegisterActivity extends AppCompatActivity
         // Finish action
         finish();
 
+    // end of updateUI method
     }
 
 
-    // Message to display to user if fields missing/incomplete
+    // Message to display toasts
     private void showMessage(String userMessage)
     {
         // Inform the user via toast

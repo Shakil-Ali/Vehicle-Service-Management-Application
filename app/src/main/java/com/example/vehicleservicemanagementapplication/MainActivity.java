@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.vehicleservicemanagementapplication.Activites.LoginActivity;
 import com.example.vehicleservicemanagementapplication.Activites.RegisterActivity;
 
 // Main Class
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity
     // Open login page method
     public void openLoginPage()
     {
-        Intent intent1 = new Intent(this, Login_form.class);
+        Intent intent1 = new Intent(this, LoginActivity.class);
         startActivity(intent1);
     }
 
