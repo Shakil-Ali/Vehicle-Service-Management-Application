@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -36,6 +37,7 @@ public class RegisterActivity extends AppCompatActivity
     private EditText userPassword;
     private EditText userPassword2;
     private ProgressBar loadingProgressBar;
+    private Button regButton;
 
 
     @Override
@@ -52,6 +54,10 @@ public class RegisterActivity extends AppCompatActivity
         userPassword = findViewById(R.id.regPassword);
         userPassword2 = findViewById(R.id.regPassword2);
         loadingProgressBar = findViewById(R.id.progressBarReg);
+        regButton = findViewById(R.id.regBtn);
+
+        // Settings progress bar to invisible
+        loadingProgressBar.setVisibility(View.INVISIBLE);
 
 
         // Set on-click-listener on image to detect if a user wants to upload an image
