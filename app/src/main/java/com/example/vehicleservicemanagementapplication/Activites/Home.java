@@ -14,6 +14,9 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+import com.google.firebase.auth.FirebaseUser;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -21,17 +24,32 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-public class Home extends AppCompatActivity {
-
+public class Home extends AppCompatActivity
+{
+    // Variable Initialisations
     private AppBarConfiguration mAppBarConfiguration;
 
+    // Firebase database initialisations
+    FirebaseAuth firebaseAuth;
+    FirebaseUser currentUser;
+
+
+    // Main method
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home2);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // Assignment Operations
+        firebaseAuth = FirebaseAuth.getInstance();
+        currentUser = firebaseAuth.getCurrentUser();
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,17 +72,49 @@ public class Home extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
+
+    // Method for On Create Options Menu
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
 
+    // Method for on Support Navigate Up
+    //
     @Override
-    public boolean onSupportNavigateUp() {
+    public boolean onSupportNavigateUp()
+    {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
+    // Method to update Navigation Header
+    public void updateNavHeader()
+    {
+        // Store nav_view element in a navigation view variable
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        // Set view to go on first page of header (0th index)
+        View headerView = navigationView.getHeaderView(0);
+        // Store users user name
+        TextView navUserName = headerView.findViewById(R.id.nav_username);
+        // Store users email
+        TextView navUserEmail = headerView.findViewById(R.id.nav_user_email);
+        // Store users image
+        ImageView navUserPhoto = headerView.findViewById(R.id.nav_user_photo);
+
+        // Set the username and email to the current users respectively
+        navUserEmail.setText(currentUser.getEmail());
+        navUserName.setText(currentUser.getEmail());
+
+    // end of class
+    }
+
+
+
+// end of class
 }
