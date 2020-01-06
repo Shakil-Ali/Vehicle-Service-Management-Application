@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity
         btnLogin = findViewById(R.id.loginBtn);
         loginProgressBar = findViewById(R.id.progressBarLogin);
         firebaseAuth = FirebaseAuth.getInstance();
-        HomeActivity = new Intent(this, com.example.vehicleservicemanagementapplication.Activites.HomeActivity.class);
+        HomeActivity = new Intent(this, com.example.vehicleservicemanagementapplication.Activites.Home.class);
         loginPhoto = findViewById(R.id.loginUserPhoto);
 
         // Detect if profile image is clicked

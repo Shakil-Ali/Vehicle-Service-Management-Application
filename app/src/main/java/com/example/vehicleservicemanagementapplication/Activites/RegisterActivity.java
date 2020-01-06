@@ -245,8 +245,8 @@ public class RegisterActivity extends AppCompatActivity
     // Method for updating UI
     private void updateUI()
     {
-        // New intent to home activity class
-        Intent homePage = new Intent(getApplicationContext(), HomeActivity.class);
+        // New intent to Home class
+        Intent homePage = new Intent(getApplicationContext(), Home.class);
         // Start new activity from current screen
         startActivity(homePage);
         // Finish action
