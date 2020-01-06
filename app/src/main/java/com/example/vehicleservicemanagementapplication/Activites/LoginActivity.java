@@ -49,9 +49,6 @@ public class LoginActivity extends AppCompatActivity
         HomeActivity = new Intent(this, com.example.vehicleservicemanagementapplication.Activites.HomeActivity.class);
         loginPhoto = findViewById(R.id.loginUserPhoto);
 
-        // Make progress bar invisible
-        loginProgressBar.setVisibility(View.INVISIBLE);
-
         // Detect if profile image is clicked
         loginPhoto.setOnClickListener(new View.OnClickListener()
         {
@@ -70,6 +67,8 @@ public class LoginActivity extends AppCompatActivity
             }
         });
 
+        // Make progress bar invisible
+        loginProgressBar.setVisibility(View.INVISIBLE);
 
         // To check whether login button is clicked
         btnLogin.setOnClickListener(new View.OnClickListener()
