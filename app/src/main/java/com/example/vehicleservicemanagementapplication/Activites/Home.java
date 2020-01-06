@@ -3,6 +3,7 @@ package com.example.vehicleservicemanagementapplication.Activites;
 import android.os.Bundle;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.vehicleservicemanagementapplication.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -117,12 +118,13 @@ public class Home extends AppCompatActivity
         navUserEmail.setText(currentUser.getEmail());
         navUserName.setText(currentUser.getDisplayName());
 
-        // Use Glide library for user photo - put user photo into area for it
-        Glide.with(this).load(currentUser.getPhotoUrl()).into(navUserPhoto);
+        // Use Glide library for user photo - put user photo into area for it (second version makes image appear round on profile)
+//        Glide.with(this).load(currentUser.getPhotoUrl()).into(navUserPhoto);
+        Glide.with(this).load(currentUser.getPhotoUrl()).apply(RequestOptions.circleCropTransform()).into(navUserPhoto);
 
 
 
-    // end of update nav header
+        // end of update nav header
     }
 
 
