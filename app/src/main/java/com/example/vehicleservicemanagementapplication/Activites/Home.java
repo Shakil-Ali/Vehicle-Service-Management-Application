@@ -115,7 +115,7 @@ public class Home extends AppCompatActivity
 
         // Set the username and email to the current users respectively
         navUserEmail.setText(currentUser.getEmail());
-        navUserName.setText(currentUser.getEmail());
+        navUserName.setText(currentUser.getDisplayName());
 
         // Use Glide library for user photo - put user photo into area for it
         Glide.with(this).load(currentUser.getPhotoUrl()).into(navUserPhoto);
