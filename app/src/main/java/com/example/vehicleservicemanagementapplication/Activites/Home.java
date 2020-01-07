@@ -4,12 +4,20 @@ import android.os.Bundle;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.vehicleservicemanagementapplication.Fragments.HomeFragment;
+import com.example.vehicleservicemanagementapplication.Fragments.ProfileFragment;
+import com.example.vehicleservicemanagementapplication.Fragments.SettingsFragment;
 import com.example.vehicleservicemanagementapplication.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.view.MenuItem;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -29,8 +37,7 @@ import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Home extends AppCompatActivity
-{
+public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     // Variable Initialisations
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -60,7 +67,21 @@ public class Home extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        // Newer automatically added code
+
+        /*
+        // from here
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -72,6 +93,8 @@ public class Home extends AppCompatActivity
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        // to here
+        */
 
         // Call method to update the header of the nav bar
         updateNavHeader();
@@ -79,6 +102,25 @@ public class Home extends AppCompatActivity
     // end of main method
     }
 
+
+    // Method for on back pressed
+    @Override
+    public void onBackPressed()
+    {
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        // Conditional if statement to check if the drawer is open
+        if(drawer.isDrawerOpen(GravityCompat.START))
+        {
+            drawer.closeDrawer(GravityCompat.START);
+        }
+        // Else oonditional
+        else
+        {
+            super.onBackPressed();
+        }
+
+    // end of method
+    }
 
     // Method for On Create Options Menu
     @Override
@@ -89,14 +131,73 @@ public class Home extends AppCompatActivity
         return true;
     }
 
-    // Method for on Support Navigate Up
-    //
+
+//    // Method for on Support Navigate Up
+//    @Override
+//    public boolean onSupportNavigateUp()
+//    {
+//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+//        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
+//                || super.onSupportNavigateUp();
+//    }
+
+
+    // Method for on options item selected
     @Override
-    public boolean onSupportNavigateUp()
+    public boolean onOptionsItemSelected(MenuItem item)
     {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings)
+        {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+
+    // end of method
+    }
+
+
+    // Method for on navigation item selected
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
+    {
+        // Navigation view items code
+
+        // Store current menu item id
+        int id = menuItem.getItemId();
+
+        // Conditional to check if menu item on 'home' item
+        if(id == R.id.nav_home)
+        {
+            // Open HomeFragment
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+        }
+        // Conditional if to check if menu item on 'profile' item
+        else if (id == R.id.nav_profile)
+        {
+            // Open ProfileFragment
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, new ProfileFragment()).commit();
+        }
+        // Conditional if to check if menu item on 'settings' item
+        else if (id == R.id.nav_settings)
+        {
+            // Open SettingsFragment
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, new SettingsFragment()).commit();
+        }
+
+        // Closer drawer once selected
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+
+    // end of method
     }
 
 
@@ -104,7 +205,7 @@ public class Home extends AppCompatActivity
     public void updateNavHeader()
     {
         // Store nav_view element in a navigation view variable
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         // Set view to go on first page of header (0th index)
         View headerView = navigationView.getHeaderView(0);
         // Store users user name
@@ -126,6 +227,7 @@ public class Home extends AppCompatActivity
 
         // end of update nav header
     }
+
 
 
 
