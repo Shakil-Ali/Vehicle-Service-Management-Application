@@ -179,19 +179,24 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         // Conditional to check if menu item on 'home' item
         if(id == R.id.nav_home)
         {
-
+            // Set Action Bar Text
+            getSupportActionBar().setTitle("Home");
             // Open HomeFragment
             getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
         }
         // Conditional if to check if menu item on 'profile' item
         else if (id == R.id.nav_profile)
         {
+            // Set Action Bar Text
+            getSupportActionBar().setTitle("Profile");
             // Open ProfileFragment
             getSupportFragmentManager().beginTransaction().replace(R.id.container, new ProfileFragment()).commit();
         }
         // Conditional if to check if menu item on 'settings' item
         else if (id == R.id.nav_settings)
         {
+            // Set Action Text
+            getSupportActionBar().setTitle("Settings");
             // Open SettingsFragment
             getSupportFragmentManager().beginTransaction().replace(R.id.container, new SettingsFragment()).commit();
         }
