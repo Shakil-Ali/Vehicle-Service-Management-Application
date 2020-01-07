@@ -1,5 +1,6 @@
 package com.example.vehicleservicemanagementapplication.Activites;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.bumptech.glide.Glide;
@@ -178,6 +179,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         // Conditional to check if menu item on 'home' item
         if(id == R.id.nav_home)
         {
+
             // Open HomeFragment
             getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
         }
@@ -192,6 +194,18 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         {
             // Open SettingsFragment
             getSupportFragmentManager().beginTransaction().replace(R.id.container, new SettingsFragment()).commit();
+        }
+        // Conditional if to check if menu item on 'sign out' item
+        else if (id == R.id.nav_signout)
+        {
+            // Sign current user out
+            FirebaseAuth.getInstance().signOut();
+            // Store Login Activity
+            Intent loginActivitiy = new Intent(getApplicationContext(), LoginActivity.class);
+            // Start Login Activity
+            startActivity(loginActivitiy);
+            // Finish
+            finish();
         }
 
         // Closer drawer once selected
