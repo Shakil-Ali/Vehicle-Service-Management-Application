@@ -12,6 +12,9 @@ import android.view.ViewGroup;
 
 import com.example.vehicleservicemanagementapplication.R;
 
+// https://www.youtube.com/watch?v=G0dnFpdE5rE
+
+
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -94,12 +97,8 @@ public class ProfileFragment extends Fragment
     public void onAttach(Context context)
     {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+
+    // end of onAttach method
     }
 
 
