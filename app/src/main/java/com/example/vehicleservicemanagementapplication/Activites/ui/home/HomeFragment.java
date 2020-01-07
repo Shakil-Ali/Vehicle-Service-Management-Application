@@ -14,7 +14,9 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.vehicleservicemanagementapplication.R;
 
-public class HomeFragment extends Fragment {
+
+public class HomeFragment extends Fragment
+{
 
     private HomeViewModel homeViewModel;
 
@@ -32,4 +34,7 @@ public class HomeFragment extends Fragment {
         });
         return root;
     }
+
+
+// end of class
 }
