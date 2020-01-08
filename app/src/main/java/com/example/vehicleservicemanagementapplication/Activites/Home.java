@@ -1,6 +1,9 @@
 package com.example.vehicleservicemanagementapplication.Activites;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import com.bumptech.glide.Glide;
@@ -12,6 +15,7 @@ import com.example.vehicleservicemanagementapplication.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -48,6 +52,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     FirebaseAuth firebaseAuth;
     FirebaseUser currentUser;
 
+    // Dialog initialisation (pop-up to add vehicles)
+    Dialog popAddVehicle;
+
 
     // Main method
     @Override
@@ -59,8 +66,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         setSupportActionBar(toolbar);
 
         // Assignment Operations
+        // Firebase oriented
         firebaseAuth = FirebaseAuth.getInstance();
         currentUser = firebaseAuth.getCurrentUser();
+        // Pop-up (to add vehicle)
+        inPopup();
+
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -103,6 +114,25 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         updateNavHeader();
 
     // end of main method
+    }
+
+
+    // Method for the pop-up (adding vehicle)
+    private void inPopup()
+    {
+        // Set the view to the add vehicle popup layout
+        popAddVehicle.setContentView(R.layout.popup_add_vehicle);
+        // Make add vehicle pop transparent to the original page
+        popAddVehicle.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        // Make transparent window match parent layout
+        popAddVehicle.getWindow().setLayout(Toolbar.LayoutParams.MATCH_PARENT, Toolbar.LayoutParams.WRAP_CONTENT);
+        // Ensure the add vehicle window goes to the top
+        popAddVehicle.getWindow().getAttributes().gravity = Gravity.TOP;
+
+
+
+
+    // end of inPopup method
     }
 
 
