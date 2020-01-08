@@ -1,31 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
+    // Avatar Image
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="50dp"
+        android:id="@+id/popup_user_image"
+        android:layout_width="75dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="340dp"
         tools:layout_editor_absoluteY="1dp"
         tools:srcCompat="@tools:sample/avatars" />
 
+    // First Edit Text
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="0dp"
+        android:background="@drawable/popup_edittext_style"
+        android:id="@+id/popup_title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Tile"
+        android:hint="Vehicle Registration"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/popup_user_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         >
     </EditText>
 
+    // Second Edit Text
+    <EditText
+        android:background="@drawable/popup_edittext_style"
+        android:id="@+id/popup_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popup_title"
+        >
+    </EditText>
 
-</android.support.constraint.ConstraintLayout>
+    // Image of vehicle
+    <ImageView
+        android:id="@+id/popup_img"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popup_description"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[0]">
+    </ImageView>
+
+
+</LinearLayout>
