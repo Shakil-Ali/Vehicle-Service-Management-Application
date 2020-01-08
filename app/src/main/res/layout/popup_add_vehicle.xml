@@ -9,6 +9,7 @@
 
     // Avatar Image
     <ImageView
+        android:padding="6dp"
         android:id="@+id/popup_user_image"
         android:background="#ffffff"
         android:layout_width="75dp"
