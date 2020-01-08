@@ -152,8 +152,18 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         popAddVehicle.getWindow().getAttributes().gravity = Gravity.TOP;
 
         // Widgets for the pop up
-
-
+        // Store user image in image variable
+        popUpUserImage = popAddVehicle.findViewById(R.id.popup_user_image);
+        // Store vehicle image in image variable
+        popUpPostImage = popAddVehicle.findViewById(R.id.popup_image);
+        // Store title field in text variable
+        popUpTitle = popAddVehicle.findViewById(R.id.popup_title);
+        // Store description field in text variable
+        popUpDescription = popAddVehicle.findViewById(R.id.popup_description);
+        // Assign button
+        popUpAddButton = popAddVehicle.findViewById(R.id.popup_add);
+        // Progress bar for image upload
+        popUpClickProgressBar = popAddVehicle.findViewById(R.id.popup_progressBar);
 
 
     // end of inPopup method
