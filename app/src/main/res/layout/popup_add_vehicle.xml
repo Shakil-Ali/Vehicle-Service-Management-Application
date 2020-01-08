@@ -10,6 +10,7 @@
     // Avatar Image
     <ImageView
         android:id="@+id/popup_user_image"
+        android:background="#ffffff"
         android:layout_width="75dp"
         android:layout_gravity="center"
         android:layout_height="wrap_content"
@@ -54,6 +55,7 @@
         android:layout_height="225dp"
         android:layout_marginTop="5dp"
         android:scaleType="centerCrop"
+        android:background="#2d2d2d"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

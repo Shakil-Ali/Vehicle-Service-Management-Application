@@ -43,8 +43,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 // https://www.youtube.com/watch?v=G0dnFpdE5rE
+// https://www.youtube.com/watch?v=t7Nw4CHVnfU
 
-public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
+{
     // Variable Initialisations
     private AppBarConfiguration mAppBarConfiguration;
 
