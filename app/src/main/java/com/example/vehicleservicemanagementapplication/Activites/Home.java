@@ -40,6 +40,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 // https://www.youtube.com/watch?v=G0dnFpdE5rE
@@ -56,6 +57,18 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     // Dialog initialisation (pop-up to add vehicles)
     Dialog popAddVehicle;
+
+    // Image variables for popup
+    ImageView popUpUserImage;
+    ImageView popUpPostImage;
+    ImageView popUpAddButton;
+
+    // Text variables to store field data
+    TextView popUpTitle;
+    TextView popUpDescription;
+
+    // Progress bar for the popup
+    ProgressBar popUpClickProgressBar;
 
 
     // Main method
@@ -137,6 +150,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         popAddVehicle.getWindow().setLayout(Toolbar.LayoutParams.MATCH_PARENT, Toolbar.LayoutParams.WRAP_CONTENT);
         // Ensure the add vehicle window goes to the top
         popAddVehicle.getWindow().getAttributes().gravity = Gravity.TOP;
+
+        // Widgets for the pop up
 
 
 
