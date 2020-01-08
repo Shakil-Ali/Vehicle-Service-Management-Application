@@ -69,16 +69,21 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         // Firebase oriented
         firebaseAuth = FirebaseAuth.getInstance();
         currentUser = firebaseAuth.getCurrentUser();
-        // Pop-up (to add vehicle)
+        // Call to Pop-up (to add vehicle)
         inPopup();
 
 
         FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        fab.setOnClickListener(new View.OnClickListener()
+        {
+            // On Click method
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View view)
+            {
+                // Display the pop up for adding vehicles
+                popAddVehicle.show();
+
+            // end of method
             }
         });
 
@@ -120,6 +125,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     // Method for the pop-up (adding vehicle)
     private void inPopup()
     {
+        // Set dialog variable to store current context
+        popAddVehicle = new Dialog(this);
         // Set the view to the add vehicle popup layout
         popAddVehicle.setContentView(R.layout.popup_add_vehicle);
         // Make add vehicle pop transparent to the original page
