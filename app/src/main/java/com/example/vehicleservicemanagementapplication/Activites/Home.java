@@ -277,8 +277,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         // Progress bar for image upload
         popUpClickProgressBar = popAddVehicle.findViewById(R.id.popup_progressBar);
 
-        // Display user profile image (Glide library)
-        Glide.with(Home.this).load(currentUser.getPhotoUrl()).into(popUpUserImage);
+        // Display user profile image (Glide library) on pop up (add vehicle)
+//        Glide.with(Home.this).load(currentUser.getPhotoUrl()).into(popUpUserImage);
+
 
         // Detect when post button clicked
         popUpAddButton.setOnClickListener(new View.OnClickListener()
