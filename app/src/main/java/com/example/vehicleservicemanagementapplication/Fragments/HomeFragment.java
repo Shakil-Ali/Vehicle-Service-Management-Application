@@ -4,13 +4,26 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.vehicleservicemanagementapplication.Adapters.PostAdapter;
+import com.example.vehicleservicemanagementapplication.Models.Post;
 import com.example.vehicleservicemanagementapplication.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 // https://www.youtube.com/watch?v=G0dnFpdE5rE
 // https://www.youtube.com/watch?v=OH3PgaUv-nA
@@ -37,6 +50,16 @@ public class HomeFragment extends Fragment
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    // Variable initialisation (not auto-generated)
+    RecyclerView vehicleRecyclerView;
+    PostAdapter postAdapter;
+    List<Post> vehicleList;
+
+    // Database related initialisations (not auto-generated)
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+
 
     public HomeFragment()
     {
@@ -79,7 +102,60 @@ public class HomeFragment extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home2, container, false);
+        View fragmentView = inflater.inflate(R.layout.fragment_home2, container, false);
+        vehicleRecyclerView = fragmentView.findViewById(R.id.vehicleRV);
+        vehicleRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        vehicleRecyclerView.setHasFixedSize(true);
+
+        // Database assignment operations
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("Vehicles");
+
+        return fragmentView;
+    }
+
+
+    // Method for on start
+    @Override
+    public void onStart()
+    {
+        super.onStart();
+
+        // Retrieve list posts from the database and display them
+        databaseReference.addValueEventListener(new ValueEventListener()
+        {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+            {
+                // Assign variable  to an empty array list
+                vehicleList = new ArrayList<>();
+                // For loop to iterate through datasnapshot
+                for(DataSnapshot postsnap: dataSnapshot.getChildren())
+                {
+                    // Initialise and assign post variable
+                    Post post = postsnap.getValue(Post.class);
+                    vehicleList.add(post);
+
+                // end of for loop
+                }
+
+                // Assign post adapter
+                postAdapter = new PostAdapter(getActivity(), vehicleList);
+                vehicleRecyclerView.setAdapter(postAdapter);
+
+            // end of on data change method
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError)
+            {
+
+
+            // end of on cancelled method
+            }
+        });
+
+    // end of on start method
     }
 
 

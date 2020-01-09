@@ -159,6 +159,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         // Call method to update the header of the nav bar
         updateNavHeader();
 
+        // Make home fragment the default page when sign in / open app
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+
     // end of main method
     }
 
