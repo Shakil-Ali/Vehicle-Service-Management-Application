@@ -222,7 +222,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     }
 
 
-    // Override method
+    // Override method - when user chooses an image
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
     {
@@ -282,6 +282,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 // Make progress bar visible
                 popUpClickProgressBar.setVisibility(View.VISIBLE);
 
+                // Testing input fields (title and desc) and vehicle image
+                // If conditional
 
 
             // end of method
