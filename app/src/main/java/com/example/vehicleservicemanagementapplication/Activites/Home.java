@@ -290,7 +290,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     && !popUpDescription.getText().toString().isEmpty()
                     && pickedImageUri != null)
                 {
-                    // TODO Create Post Object and add to Firebase Database
+
+
                 }
                 // Else conditional if fields are not filled and image not supplied
                 else
