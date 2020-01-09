@@ -165,7 +165,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             @Override
             public void onClick(View v)
             {
-
+                // Check if user has given permission
+                checkAndRequestForPermission();
 
             // end of on click method
             }
