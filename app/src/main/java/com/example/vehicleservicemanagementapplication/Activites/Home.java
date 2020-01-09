@@ -233,9 +233,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             // User has successfully chosen an image from gallery
             // Store the image in uri variable
             pickedImageUri = data.getData();
+            // Set the pop up post image to the chosen image
+            popUpPostImage.setImageURI(pickedImageUri);
         }
 
-        // end of method onActivityResult
+    // end of method onActivityResult
     }
 
 
@@ -284,8 +286,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
                 // Testing input fields (title and desc) and vehicle image
                 // If conditional to check if title and desc. field empty and if image upload empty
-                if(!popUpTitle.getText().equals("")
-                    && !popUpDescription.getText().equals("")
+                if(!popUpTitle.getText().toString().isEmpty()
+                    && !popUpDescription.getText().toString().isEmpty()
                     && pickedImageUri != null)
                 {
                     // TODO Create Post Object and add to Firebase Database
