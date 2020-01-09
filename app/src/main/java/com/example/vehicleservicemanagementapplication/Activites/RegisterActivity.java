@@ -324,6 +324,8 @@ public class RegisterActivity extends AppCompatActivity
             // Now set the profile image icon to the chosen user image
             ImgUserPhoto.setImageURI(chosenImgUri);
         }
+
+    // end of method onActivityResult
     }
 
 

@@ -1,9 +1,12 @@
 package com.example.vehicleservicemanagementapplication.Activites;
 
+import android.Manifest;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.bumptech.glide.Glide;
@@ -20,8 +23,11 @@ import android.view.MenuItem;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -42,9 +48,11 @@ import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 // https://www.youtube.com/watch?v=G0dnFpdE5rE
 // https://www.youtube.com/watch?v=t7Nw4CHVnfU
+// https://www.youtube.com/watch?v=cmekm6hM4ew
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
@@ -67,8 +75,16 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     TextView popUpTitle;
     TextView popUpDescription;
 
+    // Store URI of image user selects
+    private Uri pickedImageUri = null;
+
     // Progress bar for the popup
     ProgressBar popUpClickProgressBar;
+
+    // Final variable for image addition on pop-up
+    private static final int PReqCode = 2;
+    private static final int REQUESTCODE = 2;
+
 
 
     // Main method
@@ -86,6 +102,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         currentUser = firebaseAuth.getCurrentUser();
         // Call to Pop-up (to add vehicle)
         inPopup();
+        // Call to image selection on pop-up
+        setupPopUpImageClick();
 
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -134,6 +152,89 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         updateNavHeader();
 
     // end of main method
+    }
+
+
+    // Method for selecting image on pop-up
+    private void setupPopUpImageClick()
+    {
+        // Detect click on post image area on pop-up
+        popUpPostImage.setOnClickListener(new View.OnClickListener()
+        {
+            // On Click Method
+            @Override
+            public void onClick(View v)
+            {
+
+
+            // end of on click method
+            }
+        });
+
+    // end of method for setup pop up image click
+    }
+
+
+    // Method to check and request permission
+    private void checkAndRequestForPermission()
+    {
+        // Check if permission not granted
+        if(ContextCompat.checkSelfPermission(Home.this, Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED)
+        {
+            // Nested conditional statement
+            if(ActivityCompat.shouldShowRequestPermissionRationale(Home.this, Manifest.permission.READ_EXTERNAL_STORAGE))
+            {
+                // Inform the user
+                Toast.makeText(Home.this, "Please accept the required permission", Toast.LENGTH_SHORT).show();
+            }
+            // else conditional
+            else
+            {
+                ActivityCompat.requestPermissions(Home.this,
+                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                        PReqCode);
+            }
+        }
+        // else conditional
+        else
+        {
+            //  call to method - opens gaellery if user has permission
+            openGallery();
+        }
+
+        // end of checkAndRequestForPermission method
+    }
+
+
+    // Method to open gallery on user device and select image
+    private void openGallery()
+    {
+        // Initialise and assign new intent variable to hold content
+        Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
+        // Set the intents type i.e. image
+        galleryIntent.setType("image/*");
+        // Start Activity to achieve this
+        startActivityForResult(galleryIntent, REQUESTCODE);
+
+        // end of openGallery method
+    }
+
+
+    // Override method
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        // Conditional
+        if(resultCode == RESULT_OK && requestCode == REQUESTCODE && data != null)
+        {
+            // User has successfully chosen an image from gallery
+            // Store the image in uri variable
+            pickedImageUri = data.getData();
+        }
+
+        // end of method onActivityResult
     }
 
 
