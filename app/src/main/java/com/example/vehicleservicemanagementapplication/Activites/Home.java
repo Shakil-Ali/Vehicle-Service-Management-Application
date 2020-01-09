@@ -283,7 +283,23 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 popUpClickProgressBar.setVisibility(View.VISIBLE);
 
                 // Testing input fields (title and desc) and vehicle image
-                // If conditional
+                // If conditional to check if title and desc. field empty and if image upload empty
+                if(!popUpTitle.getText().equals("")
+                    && !popUpDescription.getText().equals("")
+                    && pickedImageUri != null)
+                {
+                    // TODO Create Post Object and add to Firebase Database
+                }
+                // Else conditional if fields are not filled and image not supplied
+                else
+                {
+                    // Display error message to user
+                    showMessage("Please complete all fields and add vehicle image");
+                    // Make post add button visible
+                    popUpAddButton.setVisibility(View.VISIBLE);
+                    // Make progress bar invisible
+                    popUpClickProgressBar.setVisibility(View.INVISIBLE);
+                }
 
 
             // end of method
@@ -292,6 +308,16 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
 
     // end of inPopup method
+    }
+
+
+    // Display messages via toast to user
+    private void showMessage(String message)
+    {
+        // Pass message and display toast
+        Toast.makeText(Home.this, message, Toast.LENGTH_LONG).show();
+
+    // end of method of show message
     }
 
 
