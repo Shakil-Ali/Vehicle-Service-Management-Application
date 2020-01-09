@@ -14,6 +14,7 @@ public class Post
     private String userId;
     private String userPhoto;
     private Object timeStamp;
+    private String vehicleKey;
 
     // Constructor for all initialised variables
     public Post(String title, String description, String picture, String userId, String userPhoto)
@@ -73,6 +74,12 @@ public class Post
         return timeStamp;
     }
 
+    // Vehicle key getter method
+    public Object getVehicleKey()
+    {
+        return vehicleKey;
+    }
+
 
     // SETTERS
     // Title setter method
@@ -109,6 +116,12 @@ public class Post
     public void setTimeStamp(Object timeStamp)
     {
         this.timeStamp = timeStamp;
+    }
+
+    // Vehicle Key setter method
+    public void setVehicleKey(String vehicleKey)
+    {
+        this.vehicleKey = vehicleKey;
     }
 
 

@@ -14,7 +14,10 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.vehicleservicemanagementapplication.Fragments.HomeFragment;
 import com.example.vehicleservicemanagementapplication.Fragments.ProfileFragment;
 import com.example.vehicleservicemanagementapplication.Fragments.SettingsFragment;
+import com.example.vehicleservicemanagementapplication.Models.Post;
 import com.example.vehicleservicemanagementapplication.R;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -38,6 +41,11 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -290,8 +298,58 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     && !popUpDescription.getText().toString().isEmpty()
                     && pickedImageUri != null)
                 {
+                    // Create variables for storage reference and file path
+                    StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("Vehicle_Images");
+                    final StorageReference imgFilePath = storageReference.child(pickedImageUri.getLastPathSegment());
+                    // Success listener for once image stored in that location
+                    imgFilePath.putFile(pickedImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>()
+                    {
+                        // On Success method
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot)
+                        {
+                            // Store URI data
+                            imgFilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>()
+                            {
+                                // On success method
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    // Store image download link
+                                    String imgDownloadLink = uri.toString();
+                                    // POST OBJECT
+                                    Post post = new Post(popUpTitle.getText().toString(),
+                                            popUpDescription.getText().toString(),
+                                            imgDownloadLink,
+                                            currentUser.getUid(),
+                                            currentUser.getPhotoUrl().toString());
+
+                                    // Store vehicle to realtime database
+                                    addPost(post);
 
 
+                                    // End of on success method
+                                }
+                            }).addOnFailureListener(new OnFailureListener()
+                            {
+                                // On failure method
+                                @Override
+                                public void onFailure(@NonNull Exception e)
+                                {
+                                    // Inform user error occured when uploading vehicle image
+                                    showMessage(e.getMessage());
+                                    // Hide progress bar
+                                    popUpClickProgressBar.setVisibility(View.INVISIBLE);
+                                    // Display add vehicle button
+                                    popUpAddButton.setVisibility(View.VISIBLE);
+
+                                // end of on failure method
+                                }
+                            });
+
+
+                        // End of on success method
+                        }
+                    });
                 }
                 // Else conditional if fields are not filled and image not supplied
                 else
@@ -311,6 +369,43 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
 
     // end of inPopup method
+    }
+
+
+    // Method to add vehicle details
+    private void addPost(Post post)
+    {
+        // Initialised and assigned database variable to current instance
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        // Initialise and assign database reference
+        DatabaseReference myRef = database.getReference("Vehicles").push();
+
+        // Store database reference key in a variable
+        String key = myRef.getKey();
+        // Add a vehicle key to post
+        post.setVehicleKey(key);
+        // Send vehicle data to Firebase Realtime Database
+        myRef.setValue(post).addOnSuccessListener(new OnSuccessListener<Void>()
+        {
+            // Method for on success
+            @Override
+            public void onSuccess(Void aVoid)
+            {
+                // Inform user data stored successfully
+                showMessage("Vehicle Successfully Added");
+                // Make progress bar invisible
+                popUpClickProgressBar.setVisibility(View.INVISIBLE);
+                // Make vehicle add button visible
+                popUpAddButton.setVisibility(View.VISIBLE);
+                // Remove pop up dialog box
+                popAddVehicle.dismiss();
+
+            // end of on success method
+            }
+        });
+
+
+    // end of addPost method
     }
 
 
