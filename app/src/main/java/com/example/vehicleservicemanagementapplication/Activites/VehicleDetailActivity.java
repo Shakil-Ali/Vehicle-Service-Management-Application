@@ -43,9 +43,9 @@ public class VehicleDetailActivity extends AppCompatActivity
         setContentView(R.layout.activity_vehicle_detail);
 
         // Make bar at top transparent
-        Window w = getWindow();
-        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        getSupportActionBar().hide();
+//        Window w = getWindow();
+//        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//        getSupportActionBar().hide();
 
 
         // Assignment Operations
