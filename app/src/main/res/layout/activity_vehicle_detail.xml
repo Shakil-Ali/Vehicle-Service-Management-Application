@@ -46,7 +46,7 @@
         <View
             android:background="#2e2e2e"
             android:id="@+id/view"
-            android:layout_width="370dp"
+            android:layout_width="327dp"
             android:layout_height="1dp"
             android:layout_weight="1"
             android:layout_marginLeft="15dp"
