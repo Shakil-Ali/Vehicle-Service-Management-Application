@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFE800</color>
-    <color name="colorPrimaryDark">#FFE800</color>
-    <color name="colorAccent">#FFE800</color>
+    <color name="colorPrimary">#ffaa00</color>
+    <color name="colorPrimaryDark">#ffaa00</color>
+    <color name="colorAccent">#ffaa00</color>
 
     // My colours
     <color name="buttonGreen">#2DFF00</color>
