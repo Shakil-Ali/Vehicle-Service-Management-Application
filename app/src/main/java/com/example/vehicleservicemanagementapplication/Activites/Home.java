@@ -14,6 +14,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.vehicleservicemanagementapplication.Fragments.HomeFragment;
 import com.example.vehicleservicemanagementapplication.Fragments.ProfileFragment;
 import com.example.vehicleservicemanagementapplication.Fragments.SettingsFragment;
+import com.example.vehicleservicemanagementapplication.MainActivity;
 import com.example.vehicleservicemanagementapplication.Models.Post;
 import com.example.vehicleservicemanagementapplication.R;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -522,10 +523,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         {
             // Sign current user out
             FirebaseAuth.getInstance().signOut();
-            // Store Login Activity
-            Intent loginActivitiy = new Intent(getApplicationContext(), LoginActivity.class);
+            // Store Opening Activity
+            Intent openingActivitiy = new Intent(getApplicationContext(), MainActivity.class);
             // Start Login Activity
-            startActivity(loginActivitiy);
+            startActivity(openingActivitiy);
             // Finish
             finish();
         }
