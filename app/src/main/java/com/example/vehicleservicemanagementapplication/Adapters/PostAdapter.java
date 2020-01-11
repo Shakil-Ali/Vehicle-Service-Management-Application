@@ -3,6 +3,7 @@ package com.example.vehicleservicemanagementapplication.Adapters;
 // https://www.youtube.com/watch?v=OH3PgaUv-nA
 
 import android.content.Context;
+import android.content.Intent;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.vehicleservicemanagementapplication.Activites.VehicleDetailActivity;
 import com.example.vehicleservicemanagementapplication.Models.Post;
 import com.example.vehicleservicemanagementapplication.R;
 
@@ -91,6 +93,38 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.MyViewHolder>
             // Assignment operation
             tv_Title = itemView.findViewById(R.id.row_post_title);
             imageVehicle = itemView.findViewById(R.id.row_post_image);
+
+            // On click listener
+            itemView.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    // Set an intent and store vehicle detail activity
+                    Intent vehicleDetailActivity = new Intent(m_Context, VehicleDetailActivity.class);
+                    // Store the position of the adapter in a variable
+                    int pos = getAdapterPosition();
+                    // Send the vehicle title
+                    vehicleDetailActivity.putExtra("Title", m_Data.get(pos).getTitle());
+                    // Send the vehicle image
+                    vehicleDetailActivity.putExtra("VehicleImage", m_Data.get(pos).getPicture());
+                    // Send the vehicle description
+                    vehicleDetailActivity.putExtra("Description", m_Data.get(pos).getDescription());
+                    // Send the vehicle detail post key
+                    vehicleDetailActivity.putExtra("VehicleKey", m_Data.get(pos).getVehicleKey());
+
+                    // Store timestamp of vehicle details addition
+                    long timeStamp = (long) m_Data.get(pos).getTimeStamp();
+                    // Send the the timestamp of vehicle detail
+                    vehicleDetailActivity.putExtra("VehicleDetailsAdditionDate", timeStamp);
+
+                    // From current context, start new activity to go to vehicle details activity
+                    m_Context.startActivity(vehicleDetailActivity);
+
+
+                // end of on click method
+                }
+            });
 
 
         // end of constructor

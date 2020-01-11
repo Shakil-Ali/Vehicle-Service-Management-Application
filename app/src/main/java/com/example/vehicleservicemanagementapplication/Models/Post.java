@@ -75,7 +75,7 @@ public class Post
     }
 
     // Vehicle key getter method
-    public Object getVehicleKey()
+    public String getVehicleKey()
     {
         return vehicleKey;
     }
