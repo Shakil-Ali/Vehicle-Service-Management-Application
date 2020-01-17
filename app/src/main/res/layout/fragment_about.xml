@@ -5,11 +5,61 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_gravity="center"
-        android:text="About Fragament" />
+        android:layout_marginBottom="200dp"
+        android:src="@drawable/motormanagerlogo">
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Motor Manager"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="290dp"
+        android:textColor="#654321"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Motor Manager is a vehicle detail storage application. The application will mainly target individuals or organisations who possess multiple vehicles. For instance, garage owners and vehicle rental providers. The primary function is store and view vehicle data."
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="350dp"
+        android:gravity="center"
+        android:textColor="#654321"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Application size: 3.14MB"
+        android:textStyle="bold"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="460dp"
+        android:gravity="center"
+        android:textColor="#654321"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copyright © 2020 Motor Manager, Inc. All rights reserved."
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="600dp"
+        android:gravity="center"
+        android:textColor="#654321"
+        >
+    </TextView>
+
 
 </FrameLayout>
