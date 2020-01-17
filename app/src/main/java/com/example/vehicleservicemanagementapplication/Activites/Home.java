@@ -507,7 +507,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         {
             // Set Action Bar Text
             getSupportActionBar().setTitle("About");
-            // Open ProfileFragment
+            // Open AboutFragment
             getSupportFragmentManager().beginTransaction().replace(R.id.container, new ProfileFragment()).commit();
         }
         // Conditional if to check if menu item on 'settings' item
