@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ffaa00</color>
+    <color name="colorPrimary">#654321</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#ffaa00</color>
+    <color name="colorAccent">#654321</color>
 
     // My colours
     <color name="buttonGreen">#2DFF00</color>
     <color name="buttonYellow">#FFE800</color>
-    <color name="background">#ffffff</color>
+    <color name="background">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="hintColour">#808080</color>
 </resources>
