@@ -503,10 +503,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
         }
         // Conditional if to check if menu item on 'profile' item
-        else if (id == R.id.nav_profile)
+        else if (id == R.id.nav_about)
         {
             // Set Action Bar Text
-            getSupportActionBar().setTitle("Profile");
+            getSupportActionBar().setTitle("About");
             // Open ProfileFragment
             getSupportFragmentManager().beginTransaction().replace(R.id.container, new ProfileFragment()).commit();
         }
