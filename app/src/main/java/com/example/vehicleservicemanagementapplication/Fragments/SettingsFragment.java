@@ -93,15 +93,23 @@ public class SettingsFragment extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        // Final view variable
         final View fragmentView = inflater.inflate(R.layout.fragment_settings, container, false);
+        // Assign variable to element
         ccButton = fragmentView.findViewById(R.id.ccBtn);
+        // On click method for dark mode
         ccButton.setOnClickListener(new View.OnClickListener()
         {
+            // On click method
             @Override
             public void onClick(View v)
             {
+                // Initialise an intent - store night mode activity
                 Intent intent1 = new Intent(getActivity(), NightMode.class);
+                // Start the stored activity
                 startActivity(intent1);
+
+            // end of on click method
             }
         });
 
