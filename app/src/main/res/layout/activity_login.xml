@@ -11,11 +11,10 @@
 
     // Profile Image Avatar
     <ImageView
-        android:id="@+id/loginUserPhoto"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_gravity="center"
-        android:src="@drawable/userphoto"
+        android:src="@drawable/motormanagerlogo"
         android:layout_marginTop="80dp">
     </ImageView>
 
