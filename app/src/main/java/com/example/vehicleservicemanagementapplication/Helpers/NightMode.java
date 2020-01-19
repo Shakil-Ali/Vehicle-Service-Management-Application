@@ -1,6 +1,7 @@
 package com.example.vehicleservicemanagementapplication.Helpers;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Context;
 import android.content.Intent;
@@ -43,7 +44,8 @@ public class NightMode extends AppCompatActivity
             public void onClick(View v)
             {
                 // Set background colour to black
-                view1.setBackgroundResource(R.color.black);
+//                view1.setBackgroundResource(R.color.black);
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
 
             // end of on click method
             }
@@ -57,7 +59,8 @@ public class NightMode extends AppCompatActivity
             public void onClick(View v)
             {
                 // Set background colour to white
-                view1.setBackgroundResource(R.color.white);
+//                view1.setBackgroundResource(R.color.white);
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
                 // end of on click method
             }
