@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.vehicleservicemanagementapplication.R;
@@ -50,6 +51,7 @@ public class RegisterActivity extends AppCompatActivity
     private EditText userPassword2;
     private ProgressBar loadingProgressBar;
     private Button regButton;
+    private TextView clickHereToLogin;
 
     // Firebase initialisation
     private FirebaseAuth firebaseAuth;
@@ -70,6 +72,7 @@ public class RegisterActivity extends AppCompatActivity
         userPassword2 = findViewById(R.id.regPassword2);
         loadingProgressBar = findViewById(R.id.progressBarReg);
         regButton = findViewById(R.id.regBtn);
+        clickHereToLogin = findViewById(R.id.textClickHereLogin);
         firebaseAuth = FirebaseAuth.getInstance();
 
         // Settings progress bar to invisible
@@ -137,6 +140,23 @@ public class RegisterActivity extends AppCompatActivity
 
 
             // end of onclick method
+            }
+        });
+
+        clickHereToLogin.setOnClickListener(new View.OnClickListener()
+        {
+            // On click method
+            @Override
+            public void onClick(View v)
+            {
+                // Intent to store the login activity
+                Intent loginActivity = new Intent(getApplicationContext(), LoginActivity.class);
+                // Start the activity
+                startActivity(loginActivity);
+                // Finish starting the previous activity
+                finish();
+
+                // end of on click method
             }
         });
 
