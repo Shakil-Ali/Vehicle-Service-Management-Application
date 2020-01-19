@@ -24,20 +24,24 @@ import com.example.vehicleservicemanagementapplication.R;
  */
 public class SettingsFragment extends Fragment
 {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
+    // Variable Initialisations
+    View view;
+
+    // The fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
 
+
+    // Required empty public constructor
     public SettingsFragment()
     {
-        // Required empty public constructor
+
     }
 
     /**
@@ -50,7 +54,7 @@ public class SettingsFragment extends Fragment
      */
 
 
-    // TODO: Rename and change types and number of parameters
+    // Rename and change types and number of parameters
     public static SettingsFragment newInstance(String param1, String param2)
     {
         SettingsFragment fragment = new SettingsFragment();
@@ -59,17 +63,26 @@ public class SettingsFragment extends Fragment
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+
+    // end of Settings fragment method
     }
 
 
+    // Main method
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
+        // Conditional if to check of getArguments function returns a non-null value
+        if (getArguments() != null)
+        {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
+
+    // end of main method
     }
 
 
@@ -78,18 +91,25 @@ public class SettingsFragment extends Fragment
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_settings, container, false);
+
+    // end of on create method with 3 parameters
     }
 
 
-    // TODO: Rename method, update argument and hook method into UI event
+    // Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri)
     {
-        if (mListener != null) {
+        // Conditional to check if mListerner is not null
+        if (mListener != null)
+        {
             mListener.onFragmentInteraction(uri);
         }
+
+    // end of on button pressed method
     }
 
 
+    // Method onAttach
     @Override
     public void onAttach(Context context)
     {
@@ -99,6 +119,7 @@ public class SettingsFragment extends Fragment
     }
 
 
+    // Method onDetach
     @Override
     public void onDetach()
     {
@@ -121,7 +142,7 @@ public class SettingsFragment extends Fragment
 
     public interface OnFragmentInteractionListener
     {
-        // TODO: Update argument type and name
+        // Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 
