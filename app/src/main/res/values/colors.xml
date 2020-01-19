@@ -11,4 +11,5 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="hintColour">#808080</color>
+    <color name="colorText">#000000</color>
 </resources>
