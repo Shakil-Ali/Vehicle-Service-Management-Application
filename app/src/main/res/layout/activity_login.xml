@@ -92,10 +92,12 @@
     </ProgressBar>
 
     <TextView
+        android:id="@+id/textClickHereReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="Not registered yet? Click here"
-        android:layout_marginLeft="75dp"
+        android:layout_marginLeft="65dp"
         android:textColor="#002efc">
     </TextView>
 
