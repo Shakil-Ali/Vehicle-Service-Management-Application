@@ -22,7 +22,7 @@
         android:textStyle="bold"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="290dp"
-        android:textColor="#654321"
+        android:textColor="@color/black"
         >
     </TextView>
 
@@ -34,7 +34,7 @@
         android:layout_marginLeft="0dp"
         android:layout_marginTop="350dp"
         android:gravity="center"
-        android:textColor="#654321"
+        android:textColor="#deaa00"
         >
     </TextView>
 
@@ -46,19 +46,19 @@
         android:layout_marginLeft="100dp"
         android:layout_marginTop="460dp"
         android:gravity="center"
-        android:textColor="#654321"
+        android:textColor="#deaa00"
         >
     </TextView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
+        android:textSize="12sp"
         android:text="Copyright © 2020 Motor Manager, Inc. All rights reserved."
         android:layout_marginLeft="5dp"
         android:layout_marginTop="525dp"
         android:gravity="center"
-        android:textColor="#654321"
+        android:textColor="#deaa00"
         >
     </TextView>
 
