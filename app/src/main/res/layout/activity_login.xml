@@ -91,5 +91,13 @@
         app:layout_constraintTop_toTopOf="@+id/regBtn">
     </ProgressBar>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not registered yet? Click here"
+        android:layout_marginLeft="75dp"
+        android:textColor="#002efc">
+    </TextView>
+
 
 </LinearLayout>
