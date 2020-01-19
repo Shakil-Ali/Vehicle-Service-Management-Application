@@ -1,6 +1,7 @@
 package com.example.vehicleservicemanagementapplication.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.vehicleservicemanagementapplication.Helpers.NightMode;
 import com.example.vehicleservicemanagementapplication.R;
 
 // https://www.youtube.com/watch?v=G0dnFpdE5rE
@@ -98,12 +100,13 @@ public class SettingsFragment extends Fragment
             @Override
             public void onClick(View v)
             {
-                fragmentView.setBackgroundResource(R.color.black);
+//                Intent intent1 = new Intent(this, NightMode.class);
+//                startActivity(intent1);
             }
         });
 
         // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_settings, container, false);
+//        return inflater.inflate(R.layout.fragment_settings, container, false);
         return fragmentView;
 
     // end of on create method with 3 parameters
