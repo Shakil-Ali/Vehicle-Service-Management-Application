@@ -100,8 +100,8 @@ public class SettingsFragment extends Fragment
             @Override
             public void onClick(View v)
             {
-//                Intent intent1 = new Intent(this, NightMode.class);
-//                startActivity(intent1);
+                Intent intent1 = new Intent(getActivity(), NightMode.class);
+                startActivity(intent1);
             }
         });
 
