@@ -7,11 +7,26 @@
     android:orientation="vertical"
     tools:context=".Helpers.NightMode">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Night Mode"
-        android:layout_gravity="center">
-    </TextView>
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:text="On"
+        android:textAllCaps="false"
+        android:id="@+id/darkModeOnButton">
+    </Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:text="Off"
+        android:textAllCaps="false"
+        android:id="@+id/darkModeOffButton">
+    </Button>
 
 </LinearLayout>
