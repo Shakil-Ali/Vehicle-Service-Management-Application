@@ -7,26 +7,31 @@
     android:orientation="vertical"
     tools:context=".Helpers.NightMode">
 
+
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="40sp"
         android:text="On"
         android:textAllCaps="false"
-        android:id="@+id/darkModeOnButton">
+        android:id="@+id/darkModeOnButton"
+        android:background="#deaa00">
     </Button>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="40sp"
         android:text="Off"
         android:textAllCaps="false"
-        android:id="@+id/darkModeOffButton">
+        android:id="@+id/darkModeOffButton"
+        android:background="#deaa00">
     </Button>
 
 </LinearLayout>
