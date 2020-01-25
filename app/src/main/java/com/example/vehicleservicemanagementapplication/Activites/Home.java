@@ -62,6 +62,7 @@ import android.widget.Toast;
 // https://www.youtube.com/watch?v=G0dnFpdE5rE
 // https://www.youtube.com/watch?v=t7Nw4CHVnfU
 // https://www.youtube.com/watch?v=cmekm6hM4ew
+// https://www.youtube.com/watch?v=6js4iUobzbc
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
@@ -559,10 +560,21 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         navUserEmail.setText(currentUser.getEmail());
         navUserName.setText(currentUser.getDisplayName());
 
+        // Conditional to check if profile image added
+        if(currentUser.getPhotoUrl() != null)
+        {
+            // add user chosen photo
+            Glide.with(this).load(currentUser.getPhotoUrl()).into(navUserPhoto);
+        }
+        else
+        {
+            // Default profile photo
+            Glide.with(this).load(R.drawable.userphoto).into(navUserPhoto);
+        }
+
         // Use Glide library for user photo - put user photo into area for it (second version makes image appear round on profile)
 //        Glide.with(this).load(currentUser.getPhotoUrl()).into(navUserPhoto);
         Glide.with(this).load(currentUser.getPhotoUrl()).apply(RequestOptions.circleCropTransform()).into(navUserPhoto);
-
 
 
         // end of update nav header

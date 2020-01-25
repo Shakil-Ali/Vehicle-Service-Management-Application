@@ -34,6 +34,7 @@ import com.google.firebase.storage.UploadTask;
 
 // https://www.youtube.com/watch?v=yHAAg-RdKDY
 // https://www.youtube.com/watch?v=o5x0HB-EYJY
+// https://www.youtube.com/watch?v=6js4iUobzbc
 
 public class RegisterActivity extends AppCompatActivity
 {
