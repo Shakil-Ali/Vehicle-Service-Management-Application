@@ -2,6 +2,7 @@ package com.example.vehicleservicemanagementapplication.Activites;
 
 // https://www.youtube.com/watch?v=djvbBM2Kd8A
 // https://www.youtube.com/watch?v=UpVw9TRXXaA
+// https://www.youtube.com/watch?v=lmJHtSChZG0
 
 // Import statements
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.text.format.DateFormat;
@@ -33,7 +35,8 @@ public class VehicleDetailActivity extends AppCompatActivity
     // STRING
     String VehicleKey;
 
-
+    // PDF UPLOAD BUTTON
+    Button pdf_upload_button;
 
     // Main Method
     @Override
@@ -55,6 +58,8 @@ public class VehicleDetailActivity extends AppCompatActivity
         textVehicleTitle = findViewById(R.id.vehicle_detail_title);
         textVehicleDate = findViewById(R.id.vehicle_detail_date);
         textVehicleDescription = findViewById(R.id.vehicle_detail_description);
+        // BUTTON
+        pdf_upload_button = findViewById(R.id.pdfUploadBtn);
 
         // Initialisation and assignment operations for sending data to this activity
         // Sending vehicle image
