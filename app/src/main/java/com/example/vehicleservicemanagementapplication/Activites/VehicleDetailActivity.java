@@ -7,7 +7,9 @@ package com.example.vehicleservicemanagementapplication.Activites;
 // Import statements
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -16,6 +18,7 @@ import android.widget.TextView;
 import android.text.format.DateFormat;
 
 import com.bumptech.glide.Glide;
+import com.example.vehicleservicemanagementapplication.Helpers.PDFUploadActivity;
 import com.example.vehicleservicemanagementapplication.R;
 
 import java.util.Calendar;
@@ -80,6 +83,27 @@ public class VehicleDetailActivity extends AppCompatActivity
         // Sending the date
         String date = convertTimeStampToString(getIntent().getExtras().getLong("VehicleDetailsAdditionDate"));
         textVehicleDate.setText(date);
+
+
+        // On click method for PDF upload page
+        pdf_upload_button.setOnClickListener(new View.OnClickListener()
+        {
+            // On click method
+            @Override
+            public void onClick(View v)
+            {
+                // Intent to store the pdf upload activity
+                Intent pdfUploadActivity = new Intent(getApplicationContext(), PDFUploadActivity.class);
+                // Start the activity
+                startActivity(pdfUploadActivity);
+                // Finish starting the previous activity
+                finish();
+
+            // end of on click method
+            }
+        });
+
+
 
     // end of main method
     }
