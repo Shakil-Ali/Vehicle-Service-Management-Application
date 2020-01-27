@@ -5,6 +5,38 @@ package com.example.vehicleservicemanagementapplication.Helpers;
 // Uploading PDF Class
 public class uploadingPDF
 {
+    // Initialise variables
+    public String name;
+    public String url;
+
+    // Empty constructor (base)
+    public uploadingPDF()
+    {
+
+    // end of constructor
+    }
+
+    public uploadingPDF(String name, String url)
+    {
+        this.name = name;
+        this.url = url;
+
+    // end of two parameter constructor
+    }
+
+
+    // GETTERS
+    public String getName()
+    {
+        return name;
+    }
+
+    public String getUrl()
+    {
+        return url;
+    }
+
+
 
 
 
