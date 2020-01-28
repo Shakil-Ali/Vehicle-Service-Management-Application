@@ -19,6 +19,7 @@ import android.text.format.DateFormat;
 
 import com.bumptech.glide.Glide;
 import com.example.vehicleservicemanagementapplication.Helpers.PDFUploadActivity;
+import com.example.vehicleservicemanagementapplication.Helpers.View_PDF_Files;
 import com.example.vehicleservicemanagementapplication.R;
 
 import java.util.Calendar;
@@ -40,6 +41,7 @@ public class VehicleDetailActivity extends AppCompatActivity
 
     // PDF UPLOAD BUTTON
     Button pdf_upload_button;
+    Button pdf_view_button;
 
     // Main Method
     @Override
@@ -63,6 +65,7 @@ public class VehicleDetailActivity extends AppCompatActivity
         textVehicleDescription = findViewById(R.id.vehicle_detail_description);
         // BUTTON
         pdf_upload_button = findViewById(R.id.pdfUploadBtn);
+        pdf_view_button = findViewById(R.id.pdfViewBtn);
 
         // Initialisation and assignment operations for sending data to this activity
         // Sending vehicle image
@@ -103,6 +106,24 @@ public class VehicleDetailActivity extends AppCompatActivity
             }
         });
 
+
+        // On click method for PDF view page
+        pdf_view_button.setOnClickListener(new View.OnClickListener()
+        {
+            // On click method
+            @Override
+            public void onClick(View v)
+            {
+                // Intent to store the pdf view activity
+                Intent pdfViewActivity = new Intent(getApplicationContext(), View_PDF_Files.class);
+                // Start the activity
+                startActivity(pdfViewActivity);
+                // Finish starting the previous activity
+                finish();
+
+                // end of on click method
+            }
+        });
 
 
     // end of main method
