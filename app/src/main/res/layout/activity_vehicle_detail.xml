@@ -99,6 +99,7 @@
             android:layout_gravity="center_horizontal"
             android:background="@drawable/pdfFiles"
             android:id="@+id/pdfViewBtn"
+            android:onClick="btn_action"
             >
         </Button>
 

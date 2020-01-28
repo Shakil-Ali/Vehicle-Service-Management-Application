@@ -166,6 +166,15 @@ public class PDFUploadActivity extends AppCompatActivity
     }
 
 
+    // Method for button action
+    public void btn_action(View view)
+    {
+        startActivity(new Intent(getApplicationContext(), View_PDF_Files.class));
+
+    // end of btn action method
+    }
+
+
 
 
 // end of class
