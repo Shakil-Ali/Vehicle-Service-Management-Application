@@ -9,8 +9,17 @@
     >
 
 
+    <TextView
+        android:layout_marginTop="200dp"
+        android:text="Please enter a file name and click 'Upload' to select a file to store"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
 
     <EditText
+        android:layout_marginTop="40dp"
         android:id="@+id/text_pdfName"
         android:hint="Enter PDF File Name"
         android:textSize="22sp"
