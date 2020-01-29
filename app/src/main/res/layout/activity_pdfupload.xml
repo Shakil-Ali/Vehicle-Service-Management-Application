@@ -8,12 +8,15 @@
     android:orientation="vertical"
     >
 
+
+
     <EditText
         android:id="@+id/text_pdfName"
         android:hint="Enter PDF File Name"
         android:textSize="22sp"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal">
     </EditText>
 
     <Button
