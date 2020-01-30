@@ -98,20 +98,10 @@ public class RegisterActivity extends AppCompatActivity
                 final String password2 = userPassword2.getText().toString();
 
                 // Conditionals to check if fields have been filled
-                if(chosenImgUri != null || name.isEmpty() || email.isEmpty() || password.isEmpty() || password2.isEmpty())
+                if(name.isEmpty() || email.isEmpty() || password.isEmpty() || password2.isEmpty() && !password.equals(password2))
                 {
                     // Inform user fields are empty
                     showMessage("Please complete all fields");
-                    // Make register button visible
-                    regButton.setVisibility(View.VISIBLE);
-                    // Make progress bar invisible
-                    loadingProgressBar.setVisibility(View.INVISIBLE);
-                }
-                // Check if passwords match
-                else if(password.toString() != password2.toString())
-                {
-                    // Inform user fields are empty
-                    showMessage("Please ensure passwords match");
                     // Make register button visible
                     regButton.setVisibility(View.VISIBLE);
                     // Make progress bar invisible
