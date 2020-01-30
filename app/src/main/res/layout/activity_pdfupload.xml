@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Helpers.PDFUploadActivity"
     android:orientation="vertical"
+    android:padding="20dp"
     >
 
 
@@ -29,11 +30,14 @@
     </EditText>
 
     <Button
-        android:layout_width="match_parent"
+        android:textSize="17sp"
+        android:background="#deaa00"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:id="@+id/btn_pdfUpload"
         android:layout_gravity="center_horizontal"
         android:text="Upload"
+        android:textAllCaps="false"
         >
     </Button>
 
