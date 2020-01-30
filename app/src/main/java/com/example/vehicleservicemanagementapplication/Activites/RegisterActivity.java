@@ -101,7 +101,7 @@ public class RegisterActivity extends AppCompatActivity
                 if((name.isEmpty() || email.isEmpty() || password.isEmpty() || password2.isEmpty()) || (!password2.equals(password)))
                 {
                     // Inform user fields are empty
-                    showMessage("Please complete all fields");
+                    showMessage("Please complete all fields, ensuring passwords match");
                     // Make register button visible
                     regButton.setVisibility(View.VISIBLE);
                     // Make progress bar invisible
