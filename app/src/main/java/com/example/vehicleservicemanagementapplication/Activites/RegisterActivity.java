@@ -98,7 +98,7 @@ public class RegisterActivity extends AppCompatActivity
                 final String password2 = userPassword2.getText().toString();
 
                 // Conditionals to check if fields have been filled
-                if(name.isEmpty() || email.isEmpty() || password.isEmpty() || password2.isEmpty())
+                if(chosenImgUri != null || name.isEmpty() || email.isEmpty() || password.isEmpty() || password2.isEmpty())
                 {
                     // Inform user fields are empty
                     showMessage("Please complete all fields");
