@@ -98,7 +98,7 @@ public class RegisterActivity extends AppCompatActivity
                 final String password2 = userPassword2.getText().toString();
 
                 // Conditionals to check if fields have been filled
-                if(name.isEmpty() || email.isEmpty() || password.isEmpty() || password2.isEmpty() && !password.equals(password2))
+                if(name.isEmpty() || email.isEmpty() || password.isEmpty() || password2.isEmpty())
                 {
                     // Inform user fields are empty
                     showMessage("Please complete all fields");
@@ -189,11 +189,11 @@ public class RegisterActivity extends AppCompatActivity
                                 // Update user account with the profile image chosen
                                 updateUserAccount(name, chosenImgUri, firebaseAuth.getCurrentUser());
                             }
-//                            else
-//                            {
-//                                // Update user account without a profile image
-//                                updateUserAccountWithoutUserPhoto(name, firebaseAuth.getCurrentUser());
-//                            }
+                            else
+                            {
+                                // Update user account without a profile image
+                                updateUserAccountWithoutUserPhoto(name, firebaseAuth.getCurrentUser());
+                            }
                         }
                         // Else conditional
                         else
@@ -273,39 +273,39 @@ public class RegisterActivity extends AppCompatActivity
     }
 
 
-//    //
-//    // Method to update user account information (when no profile image is supplied)
-//    private void updateUserAccountWithoutUserPhoto(final String name, final FirebaseUser currentUser)
-//    {
-//
-//                        UserProfileChangeRequest profileUpdate = new UserProfileChangeRequest.Builder()
-//                                .setDisplayName(name)
-//                                .build();
-//
-//                        // Update current user profile
-//                        currentUser.updateProfile(profileUpdate)
-//                                .addOnCompleteListener(new OnCompleteListener<Void>()
-//                                {
-//                                    // on complete method
-//                                    @Override
-//                                    public void onComplete(@NonNull Task<Void> task)
-//                                    {
-//                                        // Conditional to check if task successful in updating profile
-//                                        if(task.isSuccessful())
-//                                        {
-//                                            // Inform user
-//                                            showMessage("Registration Complete");
-//                                            // Call update UI method
-//                                            updateUI();
-//                                        }
-//
-//
-//                                    }
-//                                });
-//
-//    }
-//    // end of update user account (without (profile image) method
-//    //
+
+    // Method to update user account information (when no profile image is supplied)
+    private void updateUserAccountWithoutUserPhoto(final String name, final FirebaseUser currentUser)
+    {
+
+                        UserProfileChangeRequest profileUpdate = new UserProfileChangeRequest.Builder()
+                                .setDisplayName(name)
+                                .build();
+
+                        // Update current user profile
+                        currentUser.updateProfile(profileUpdate)
+                                .addOnCompleteListener(new OnCompleteListener<Void>()
+                                {
+                                    // on complete method
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task)
+                                    {
+                                        // Conditional to check if task successful in updating profile
+                                        if(task.isSuccessful())
+                                        {
+                                            // Inform user
+                                            showMessage("Registration Complete");
+                                            // Call update UI method
+                                            updateUI();
+                                        }
+
+
+                                    }
+                                });
+
+    }
+    // end of update user account (without (profile image) method
+
 
 
     // Method for updating UI
