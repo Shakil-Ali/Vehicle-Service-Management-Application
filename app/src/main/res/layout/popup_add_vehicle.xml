@@ -41,7 +41,7 @@
         android:ems="10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner_vehicleMake"
+        android:id="@+id/popup__vehicleMake"
         android:entries="@array/Make"
         app:layout_constraintEnd_toStartOf="@+id/popup_title"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_vehicleMake"
+        app:layout_constraintTop_toBottomOf="@+id/popup__vehicleMake"
         >
     </EditText>
 

@@ -56,6 +56,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -84,6 +85,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     // Text variables to store field data
     TextView popUpTitle;
     TextView popUpDescription;
+    String popUpVehicleMake;
+
+    // Spinner variable
+    Spinner popUpVehicleMakeSpinner;
 
     // Store URI of image user selects
     private Uri pickedImageUri = null;
@@ -275,6 +280,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         popUpPostImage = popAddVehicle.findViewById(R.id.popup_image);
         // Store title field in text variable
         popUpTitle = popAddVehicle.findViewById(R.id.popup_title);
+        // Store vehicle make, selected on spinner
+        popUpVehicleMakeSpinner = popAddVehicle.findViewById(R.id.popup__vehicleMake);
+        popUpVehicleMake = popUpVehicleMakeSpinner.getSelectedItem().toString();
         // Store description field in text variable
         popUpDescription = popAddVehicle.findViewById(R.id.popup_description);
         // Assign button
