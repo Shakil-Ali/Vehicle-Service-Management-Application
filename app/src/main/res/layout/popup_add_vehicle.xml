@@ -18,7 +18,8 @@
         tools:layout_editor_absoluteY="1dp"
         tools:srcCompat="@tools:sample/avatars" />
 
-    // First Edit Text
+
+    // Vehicle reg. number
     <EditText
         android:background="@drawable/popup_edittext_style"
         android:id="@+id/popup_title"
@@ -33,7 +34,23 @@
         >
     </EditText>
 
-    // Second Edit Text
+
+    // Vehicle Make
+    <Spinner
+        android:background="@drawable/popup_edittext_style"
+        android:ems="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_vehicleMake"
+        android:entries="@array/Make"
+        app:layout_constraintEnd_toStartOf="@+id/popup_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+    </Spinner>
+
+
+    // Description
     <EditText
         android:background="@drawable/popup_edittext_style"
         android:id="@+id/popup_description"
@@ -44,7 +61,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/popup_title"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_vehicleMake"
         >
     </EditText>
 
@@ -62,6 +79,7 @@
         app:layout_constraintTop_toBottomOf="@+id/popup_description"
         tools:srcCompat="@tools:sample/backgrounds/scenic[0]">
     </ImageView>
+
 
     // Add image icon
     <ImageView

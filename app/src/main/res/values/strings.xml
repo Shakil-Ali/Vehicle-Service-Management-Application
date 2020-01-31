@@ -4,6 +4,7 @@
 
     // Spinner array for vehicle make
     <array name="Make">
+        <item>Click here to select vehicle make</item>
         <item>Alfa Romeo</item>
         <item>Aston Martin</item>
         <item>Audi</item>
