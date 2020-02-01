@@ -309,7 +309,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 // Testing input fields (title and desc) and vehicle image
                 // If conditional to check if fields are empty
                 if(!popUpTitle.getText().toString().isEmpty()
-                    && !popUpVehicleMake.isEmpty()
+                    && !popUpVehicleMakeSpinner.toString().isEmpty()
                     && !popUpDescription.getText().toString().isEmpty()
                     && pickedImageUri != null)
                 {
@@ -333,7 +333,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                                     String imgDownloadLink = uri.toString();
                                     // POST OBJECT
                                     Post post = new Post(popUpTitle.getText().toString(),
-                                            popUpVehicleMake,
+                                            popUpVehicleMakeSpinner.getSelectedItem().toString(),
                                             popUpDescription.getText().toString(),
                                             imgDownloadLink,
                                             currentUser.getUid(),
