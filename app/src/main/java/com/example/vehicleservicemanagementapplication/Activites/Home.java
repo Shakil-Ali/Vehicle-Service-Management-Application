@@ -307,8 +307,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 popUpClickProgressBar.setVisibility(View.VISIBLE);
 
                 // Testing input fields (title and desc) and vehicle image
-                // If conditional to check if title and desc. field empty and if image upload empty
+                // If conditional to check if fields are empty
                 if(!popUpTitle.getText().toString().isEmpty()
+                    && !popUpVehicleMake.isEmpty()
                     && !popUpDescription.getText().toString().isEmpty()
                     && pickedImageUri != null)
                 {
@@ -332,6 +333,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                                     String imgDownloadLink = uri.toString();
                                     // POST OBJECT
                                     Post post = new Post(popUpTitle.getText().toString(),
+                                            popUpVehicleMake,
                                             popUpDescription.getText().toString(),
                                             imgDownloadLink,
                                             currentUser.getUid(),

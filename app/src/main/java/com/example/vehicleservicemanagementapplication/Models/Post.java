@@ -9,6 +9,7 @@ public class Post
 {
     // Initialising variables which will be stored in database
     private String title;
+    private String make;
     private String description;
     private String picture;
     private String userId;
@@ -17,9 +18,10 @@ public class Post
     private String vehicleKey;
 
     // Constructor for all initialised variables
-    public Post(String title, String description, String picture, String userId, String userPhoto)
+    public Post(String title, String make, String description, String picture, String userId, String userPhoto)
     {
         this.title = title;
+        this.make = make;
         this.description = description;
         this.picture = picture;
         this.userId = userId;
@@ -42,6 +44,12 @@ public class Post
     public String getTitle()
     {
         return title;
+    }
+
+    // Make getter method
+    public String getMake()
+    {
+        return make;
     }
 
     // Description getter method
@@ -86,6 +94,12 @@ public class Post
     public void setTitle(String title)
     {
         this.title = title;
+    }
+
+    // Make setter method
+    public void setMake(String make)
+    {
+        this.make = make;
     }
 
     // Description setter method
