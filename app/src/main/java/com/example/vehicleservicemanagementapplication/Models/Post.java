@@ -11,6 +11,7 @@ public class Post
     private String title;
     private String make;
     private String model;
+    private String transmission;
     private String description;
     private String picture;
     private String userId;
@@ -19,11 +20,12 @@ public class Post
     private String vehicleKey;
 
     // Constructor for all initialised variables
-    public Post(String title, String make, String model, String description, String picture, String userId, String userPhoto)
+    public Post(String title, String make, String model, String transmission, String description, String picture, String userId, String userPhoto)
     {
         this.title = title;
         this.make = make;
         this.model = model;
+        this.transmission = transmission;
         this.description = description;
         this.picture = picture;
         this.userId = userId;
@@ -58,6 +60,12 @@ public class Post
     public String getModel()
     {
         return model;
+    }
+
+    // Transmission getter method
+    public String getTransmission()
+    {
+        return transmission;
     }
 
     // Description getter method
@@ -114,6 +122,12 @@ public class Post
     public void setModel(String model)
     {
         this.model = model;
+    }
+
+    // Transmission setter method
+    public void setTransmission(String transmission)
+    {
+        this.transmission = transmission;
     }
 
     // Description setter method
