@@ -313,7 +313,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 // If conditional to check if fields are empty
                 if(!popUpTitle.getText().toString().isEmpty()
                     && !popUpVehicleMakeSpinner.toString().isEmpty()
-                    && !popUpVehicleModel.toString().isEmpty()
+                    && !popUpVehicleModel.getText().toString().isEmpty()
                     && !popUpDescription.getText().toString().isEmpty()
                     && pickedImageUri != null)
                 {
