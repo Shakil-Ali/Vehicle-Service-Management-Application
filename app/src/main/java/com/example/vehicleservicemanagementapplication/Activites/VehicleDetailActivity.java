@@ -36,6 +36,7 @@ public class VehicleDetailActivity extends AppCompatActivity
     TextView textVehicleTitle;
     TextView textVehicleMake;
     TextView textVehicleModel;
+    TextView textVehicleTransmission;
     TextView textVehicleDate;
     TextView textVehicleDescription;
     // STRING
@@ -65,6 +66,7 @@ public class VehicleDetailActivity extends AppCompatActivity
         textVehicleTitle = findViewById(R.id.vehicle_detail_title);
         textVehicleMake = findViewById(R.id.vehicle_detail_make);
         textVehicleModel = findViewById(R.id.vehicle_detail_model);
+        textVehicleTransmission = findViewById(R.id.vehicle_detail_transmission);
         textVehicleDate = findViewById(R.id.vehicle_detail_date);
         textVehicleDescription = findViewById(R.id.vehicle_detail_description);
         // BUTTON
@@ -87,6 +89,10 @@ public class VehicleDetailActivity extends AppCompatActivity
         // Sending vehicle model
         String vehicleModel = getIntent().getExtras().getString("Model");
         textVehicleModel.setText(vehicleModel);
+
+        // Sending vehicle transmission
+        String vehicleTransmission = getIntent().getExtras().getString("Transmission");
+        textVehicleTransmission.setText(vehicleTransmission);
 
         // Sending vehicle description
         String vehicleDescription = getIntent().getExtras().getString("Description");
