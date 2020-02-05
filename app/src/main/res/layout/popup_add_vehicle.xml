@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Vehicle Registration"
+        android:hint="Vehicle registration"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/popup_user_image"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,19 +49,33 @@
         >
     </Spinner>
 
+    // Vehicle Model
+    <EditText
+        android:background="@drawable/popup_edittext_style"
+        android:id="@+id/popup_vehicleModel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Vehicle model"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/popup__vehicleMake"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+    </EditText>
 
-    // Description
+    // Description of work to be carried out
     <EditText
         android:background="@drawable/popup_edittext_style"
         android:id="@+id/popup_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Description"
+        android:hint="Work required to be carried out"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/popup__vehicleMake"
+        app:layout_constraintTop_toBottomOf="@+id/popup_vehicleModel"
         >
     </EditText>
 
