@@ -86,6 +86,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     TextView popUpTitle;
     TextView popUpDescription;
     String popUpVehicleMake;
+    TextView popUpVehicleModel;
 
     // Spinner variable
     Spinner popUpVehicleMakeSpinner;
@@ -283,6 +284,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         // Store vehicle make, selected on spinner
         popUpVehicleMakeSpinner = popAddVehicle.findViewById(R.id.popup__vehicleMake);
         popUpVehicleMake = popUpVehicleMakeSpinner.getSelectedItem().toString();
+        // Store vehicle model in text variable
+        popUpVehicleModel = popAddVehicle.findViewById(R.id.popup_vehicleModel);
         // Store description field in text variable
         popUpDescription = popAddVehicle.findViewById(R.id.popup_description);
         // Assign button
@@ -310,6 +313,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 // If conditional to check if fields are empty
                 if(!popUpTitle.getText().toString().isEmpty()
                     && !popUpVehicleMakeSpinner.toString().isEmpty()
+                    && !popUpVehicleModel.toString().isEmpty()
                     && !popUpDescription.getText().toString().isEmpty()
                     && pickedImageUri != null)
                 {
@@ -334,6 +338,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                                     // POST OBJECT
                                     Post post = new Post(popUpTitle.getText().toString(),
                                             popUpVehicleMakeSpinner.getSelectedItem().toString(),
+                                            popUpVehicleModel.getText().toString(),
                                             popUpDescription.getText().toString(),
                                             imgDownloadLink,
                                             currentUser.getUid(),
