@@ -91,6 +91,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     // Spinner variable
     Spinner popUpVehicleMakeSpinner;
+    Spinner popUpVehicleTransmissionSpinner;
 
     // Store URI of image user selects
     private Uri pickedImageUri = null;
