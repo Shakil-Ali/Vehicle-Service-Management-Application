@@ -45,6 +45,7 @@
 
     // Spinner array for vehicle oil
     <array name="Oil">
+        <item>Click here to select vehicle fuel type</item>
         <item>Gasoline</item>
         <item>Diesel</item>
         <item>Liquified Petroleum</item>
