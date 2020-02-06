@@ -88,10 +88,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     String popUpVehicleMake;
     TextView popUpVehicleModel;
     String popUpVehicleTransmission;
+    String popUpVehicleOil;
 
     // Spinner variable
     Spinner popUpVehicleMakeSpinner;
     Spinner popUpVehicleTransmissionSpinner;
+    Spinner popUpVehicleOilSpinner;
 
     // Store URI of image user selects
     private Uri pickedImageUri = null;
@@ -288,9 +290,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         popUpVehicleMake = popUpVehicleMakeSpinner.getSelectedItem().toString();
         // Store vehicle model in text variable
         popUpVehicleModel = popAddVehicle.findViewById(R.id.popup_vehicleModel);
-        // Store vehicle transmission in text variable
+        // Store vehicle transmission, selected on spinner
         popUpVehicleTransmissionSpinner = popAddVehicle.findViewById(R.id.popup_vehicleTransmission);
         popUpVehicleTransmission = popUpVehicleTransmissionSpinner.getSelectedItem().toString();
+        // Store vehicle oil, selected on spinner
+        popUpVehicleOilSpinner = popAddVehicle.findViewById(R.id.popup_vehicleOil);
+        popUpVehicleOil = popUpVehicleOilSpinner.getSelectedItem().toString();
         // Store description field in text variable
         popUpDescription = popAddVehicle.findViewById(R.id.popup_description);
         // Assign button
@@ -320,6 +325,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     && !popUpVehicleMakeSpinner.toString().isEmpty()
                     && !popUpVehicleModel.getText().toString().isEmpty()
                     && !popUpVehicleTransmissionSpinner.toString().isEmpty()
+                    && !popUpVehicleOilSpinner.toString().isEmpty()
                     && !popUpDescription.getText().toString().isEmpty()
                     && pickedImageUri != null)
                 {
@@ -346,6 +352,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                                             popUpVehicleMakeSpinner.getSelectedItem().toString(),
                                             popUpVehicleModel.getText().toString(),
                                             popUpVehicleTransmissionSpinner.getSelectedItem().toString(),
+                                            popUpVehicleOilSpinner.getSelectedItem().toString(),
                                             popUpDescription.getText().toString(),
                                             imgDownloadLink,
                                             currentUser.getUid(),
