@@ -87,7 +87,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     TextView popUpDescription;
     String popUpVehicleMake;
     TextView popUpVehicleModel;
-    TextView popUpVehicleTransmission;
+    String popUpVehicleTransmission;
 
     // Spinner variable
     Spinner popUpVehicleMakeSpinner;
@@ -289,7 +289,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         // Store vehicle model in text variable
         popUpVehicleModel = popAddVehicle.findViewById(R.id.popup_vehicleModel);
         // Store vehicle transmission in text variable
-        popUpVehicleTransmission = popAddVehicle.findViewById(R.id.popup_vehicleTransmission);
+        popUpVehicleTransmissionSpinner = popAddVehicle.findViewById(R.id.popup_vehicleTransmission);
+        popUpVehicleTransmission = popUpVehicleTransmissionSpinner.getSelectedItem().toString();
         // Store description field in text variable
         popUpDescription = popAddVehicle.findViewById(R.id.popup_description);
         // Assign button
@@ -318,7 +319,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 if(!popUpTitle.getText().toString().isEmpty()
                     && !popUpVehicleMakeSpinner.toString().isEmpty()
                     && !popUpVehicleModel.getText().toString().isEmpty()
-                    && !popUpVehicleTransmission.getText().toString().isEmpty()
+                    && !popUpVehicleTransmissionSpinner.toString().isEmpty()
                     && !popUpDescription.getText().toString().isEmpty()
                     && pickedImageUri != null)
                 {
@@ -344,7 +345,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                                     Post post = new Post(popUpTitle.getText().toString(),
                                             popUpVehicleMakeSpinner.getSelectedItem().toString(),
                                             popUpVehicleModel.getText().toString(),
-                                            popUpVehicleTransmission.getText().toString(),
+                                            popUpVehicleTransmissionSpinner.getSelectedItem().toString(),
                                             popUpDescription.getText().toString(),
                                             imgDownloadLink,
                                             currentUser.getUid(),
