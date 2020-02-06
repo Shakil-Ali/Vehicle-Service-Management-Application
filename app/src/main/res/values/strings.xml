@@ -34,13 +34,25 @@
         <item>Mini</item>
     </array>
 
-    // Spinner array for vehicle make
+    // Spinner array for vehicle transmission
     <array name="Transmission">
         <item>Click here to select vehicle transmission</item>
         <item>Manual</item>
         <item>Automatic</item>
         <item>Semi-Automatic</item>
         <item>Continuously Variable Transmission (CTV)</item>
+    </array>
+
+    // Spinner array for vehicle oil
+    <array name="Oil">
+        <item>Gasoline</item>
+        <item>Diesel</item>
+        <item>Liquified Petroleum</item>
+        <item>Compressed Natural Gas</item>
+        <item>Ethanol</item>
+        <item>Bio-diesel</item>
+        <item>Electric</item>
+        <item>Hybrid</item>
     </array>
 
 
