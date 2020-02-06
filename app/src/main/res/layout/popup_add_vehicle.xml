@@ -65,19 +65,18 @@
     </EditText>
 
     // Vehicle Transmission
-    <EditText
+    <Spinner
         android:background="@drawable/popup_edittext_style"
-        android:id="@+id/popup_vehicleTransmission"
+        android:ems="10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Vehicle transmission"
-        android:inputType="textPersonName"
+        android:id="@+id/popup_vehicleTransmission"
+        android:entries="@array/Transmission"
         app:layout_constraintEnd_toStartOf="@+id/popup_vehicleModel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         >
-    </EditText>
+    </Spinner>
 
     // Description of work to be carried out
     <EditText
