@@ -78,6 +78,20 @@
         >
     </Spinner>
 
+    // Vehicle Oil Type
+    <Spinner
+        android:background="@drawable/popup_edittext_style"
+        android:ems="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/popup_vehicleOil"
+        android:entries="@array/Transmission"
+        app:layout_constraintEnd_toStartOf="@+id/popup_vehicleTransmission"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+    </Spinner>
+
     // Description of work to be carried out
     <EditText
         android:background="@drawable/popup_edittext_style"
@@ -89,7 +103,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/popup_vehicleTransmission"
+        app:layout_constraintTop_toBottomOf="@+id/popup_vehicleOil"
         >
     </EditText>
 
