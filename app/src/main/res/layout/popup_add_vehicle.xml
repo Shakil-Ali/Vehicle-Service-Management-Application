@@ -85,7 +85,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/popup_vehicleOil"
-        android:entries="@array/Transmission"
+        android:entries="@array/Oil"
         app:layout_constraintEnd_toStartOf="@+id/popup_vehicleTransmission"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
