@@ -13,8 +13,8 @@
     <color name="hintColour">#808080</color>
 
     // For background on start screen
-    <color name="newColourPrimary"></color>
-    <color name="newColourPrimaryDark"></color>
-    <color name="newColourAccent"></color>
+    <color name="newColourPrimary">#f4c613</color>
+    <color name="newColourPrimaryDark">#212226</color>
+    <color name="newColourAccent">#f4f4f4</color>
 
 </resources>
