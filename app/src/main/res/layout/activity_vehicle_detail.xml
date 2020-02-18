@@ -134,7 +134,7 @@
             android:lineSpacingExtra="4dp"
             android:textSize="15sp"
 
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore" />
 
 
         <Button
@@ -157,6 +157,18 @@
             android:layout_gravity="center_horizontal"
             android:background="@drawable/pdffiles"
             android:id="@+id/pdfViewBtn"
+            android:onClick="btn_action"
+            >
+        </Button>
+
+        <Button
+            android:layout_marginTop="-48dp"
+            android:layout_marginRight="80dp"
+            android:layout_width="34dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/pdffiles"
+            android:id="@+id/deletePostButton"
             android:onClick="btn_action"
             >
         </Button>
