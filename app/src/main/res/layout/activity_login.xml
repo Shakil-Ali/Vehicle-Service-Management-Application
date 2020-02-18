@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".Activites.LoginActivity"
     android:orientation="vertical"
-    android:padding="30dp">
+    android:padding="30dp"
+    android:background="@drawable/newbackground"
+    >
 
 
     // Profile Image Avatar
@@ -15,7 +17,7 @@
         android:layout_height="120dp"
         android:layout_gravity="center"
         android:src="@drawable/motormanagerlogo"
-        android:layout_marginTop="80dp">
+        android:layout_marginTop="70dp">
     </ImageView>
 
 
@@ -98,7 +100,7 @@
         android:textStyle="bold"
         android:text="Not registered yet? Click here"
         android:layout_marginLeft="65dp"
-        android:textColor="#002efc">
+        android:textColor="@color/white">
     </TextView>
 
 
