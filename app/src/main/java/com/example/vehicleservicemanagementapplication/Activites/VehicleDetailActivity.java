@@ -43,9 +43,12 @@ public class VehicleDetailActivity extends AppCompatActivity
     // STRING
     String VehicleKey;
 
-    // PDF UPLOAD BUTTON
+    // PDF UPLOAD AND VIEW BUTTONS
     Button pdf_upload_button;
     Button pdf_view_button;
+
+    // DELETE BUTTON
+    final Button buttonDelete = (Button) findViewById(R.id.deleteButton);
 
     // Main Method
     @Override
@@ -148,6 +151,10 @@ public class VehicleDetailActivity extends AppCompatActivity
                 // end of on click method
             }
         });
+
+
+        // On click method for delete vehicle post button
+
 
 
     // end of main method
