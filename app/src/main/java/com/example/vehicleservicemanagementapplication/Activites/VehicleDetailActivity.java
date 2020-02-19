@@ -20,8 +20,10 @@ import android.text.format.DateFormat;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.vehicleservicemanagementapplication.Fragments.HomeFragment;
 import com.example.vehicleservicemanagementapplication.Helpers.PDFUploadActivity;
 import com.example.vehicleservicemanagementapplication.Helpers.View_PDF_Files;
+import com.example.vehicleservicemanagementapplication.MainActivity;
 import com.example.vehicleservicemanagementapplication.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -189,8 +191,14 @@ public class VehicleDetailActivity extends AppCompatActivity
         // Inform user that vehicle has been removed from vehicle inventory
         Toast.makeText(this, "Vehicle has been removed successfully", Toast.LENGTH_SHORT).show();
 
+        // Store vehicle inventory fragment
+        Intent vehicleInventory = new Intent(getApplicationContext(), HomeFragment.class);
+        // Open vehicle inventory fragment
+        startActivity(vehicleInventory);
+        // Finish opening
+        finish();
 
-    // end of delete vehicle method
+        // end of delete vehicle method
     }
 
 
