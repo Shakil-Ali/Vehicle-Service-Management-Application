@@ -153,8 +153,19 @@ public class VehicleDetailActivity extends AppCompatActivity
         });
 
 
+        // DELETE VEHICLE DATA
         // On click method for delete vehicle post button
+        buttonDelete.setOnClickListener(new View.OnClickListener()
+        {
+            // On click method
+            @Override
+            public void onClick(View v)
+            {
 
+
+            // end of on click method
+            }
+        });
 
 
     // end of main method
