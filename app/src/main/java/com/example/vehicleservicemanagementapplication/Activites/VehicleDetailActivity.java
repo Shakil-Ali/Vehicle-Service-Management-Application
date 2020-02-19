@@ -195,8 +195,7 @@ public class VehicleDetailActivity extends AppCompatActivity
         Intent vehicleInventory = new Intent(getApplicationContext(), HomeFragment.class);
         // Open vehicle inventory fragment
         startActivity(vehicleInventory);
-        // Finish opening
-        finish();
+
 
         // end of delete vehicle method
     }
