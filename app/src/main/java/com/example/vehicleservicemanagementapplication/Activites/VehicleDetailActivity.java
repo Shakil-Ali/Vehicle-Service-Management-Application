@@ -191,11 +191,6 @@ public class VehicleDetailActivity extends AppCompatActivity
         // Inform user that vehicle has been removed from vehicle inventory
         Toast.makeText(this, "Vehicle has been removed successfully", Toast.LENGTH_SHORT).show();
 
-        // Store vehicle inventory fragment
-        Intent vehicleInventory = new Intent(getApplicationContext(), HomeFragment.class);
-        // Open vehicle inventory fragment
-        startActivity(vehicleInventory);
-
 
         // end of delete vehicle method
     }
