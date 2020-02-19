@@ -51,7 +51,7 @@ public class VehicleDetailActivity extends AppCompatActivity
     Button pdf_view_button;
 
     // DELETE BUTTON
-    final Button buttonDelete = (Button) findViewById(R.id.deleteButton);
+    Button buttonDelete;
 
     // Main Method
     @Override
@@ -77,9 +77,10 @@ public class VehicleDetailActivity extends AppCompatActivity
         textVehicleOil = findViewById(R.id.vehicle_detail_oil);
         textVehicleDate = findViewById(R.id.vehicle_detail_date);
         textVehicleDescription = findViewById(R.id.vehicle_detail_description);
-        // BUTTON
+        // BUTTONS
         pdf_upload_button = findViewById(R.id.pdfUploadBtn);
         pdf_view_button = findViewById(R.id.pdfViewBtn);
+        buttonDelete = findViewById(R.id.deleteButton);
 
         // Initialisation and assignment operations for sending data to this activity
         // Sending vehicle image
@@ -156,20 +157,20 @@ public class VehicleDetailActivity extends AppCompatActivity
         });
 
 
-        // DELETE VEHICLE DATA
-        // On click method for delete vehicle post button
-        buttonDelete.setOnClickListener(new View.OnClickListener()
-        {
-            // On click method
-            @Override
-            public void onClick(View v)
-            {
-                // Call delete vehicle method
-                deleteVehicle(VehicleKey);
-
-            // end of on click method
-            }
-        });
+//        // DELETE VEHICLE DATA
+//        // On click method for delete vehicle post button
+//        buttonDelete.setOnClickListener(new View.OnClickListener()
+//        {
+//            // On click method
+//            @Override
+//            public void onClick(View v)
+//            {
+//                // Call delete vehicle method
+//                deleteVehicle(VehicleKey);
+//
+//            // end of on click method
+//            }
+//        });
 
 
     // end of main method
@@ -177,19 +178,19 @@ public class VehicleDetailActivity extends AppCompatActivity
 
 
 
-    // Method for deleting vehicle
-    private void deleteVehicle(String vehicleKey)
-    {
-        // Store vehicle reference from database
-        DatabaseReference drVehicle = FirebaseDatabase.getInstance().getReference("Vehicles").child(vehicleKey);
-        // Remove selected value from database
-        drVehicle.removeValue();
-        // Inform user that vehicle has been removed from vehicle inventory
-        Toast.makeText(this, "Vehicle has been removed successfully", Toast.LENGTH_SHORT).show();
-
-
-    // end of delete vehicle method
-    }
+//    // Method for deleting vehicle
+//    private void deleteVehicle(String vehicleKey)
+//    {
+//        // Store vehicle reference from database
+//        DatabaseReference drVehicle = FirebaseDatabase.getInstance().getReference("Vehicles").child(vehicleKey);
+//        // Remove selected value from database
+//        drVehicle.removeValue();
+//        // Inform user that vehicle has been removed from vehicle inventory
+//        Toast.makeText(this, "Vehicle has been removed successfully", Toast.LENGTH_SHORT).show();
+//
+//
+//    // end of delete vehicle method
+//    }
 
 
     // Timestamp method
