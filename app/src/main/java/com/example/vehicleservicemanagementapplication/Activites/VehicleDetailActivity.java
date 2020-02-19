@@ -157,20 +157,20 @@ public class VehicleDetailActivity extends AppCompatActivity
         });
 
 
-//        // DELETE VEHICLE DATA
-//        // On click method for delete vehicle post button
-//        buttonDelete.setOnClickListener(new View.OnClickListener()
-//        {
-//            // On click method
-//            @Override
-//            public void onClick(View v)
-//            {
-//                // Call delete vehicle method
-//                deleteVehicle(VehicleKey);
-//
-//            // end of on click method
-//            }
-//        });
+        // DELETE VEHICLE DATA
+        // On click method for delete vehicle post button
+        buttonDelete.setOnClickListener(new View.OnClickListener()
+        {
+            // On click method
+            @Override
+            public void onClick(View v)
+            {
+                // Call delete vehicle method
+                deleteVehicle(VehicleKey);
+
+            // end of on click method
+            }
+        });
 
 
     // end of main method
@@ -178,19 +178,19 @@ public class VehicleDetailActivity extends AppCompatActivity
 
 
 
-//    // Method for deleting vehicle
-//    private void deleteVehicle(String vehicleKey)
-//    {
-//        // Store vehicle reference from database
-//        DatabaseReference drVehicle = FirebaseDatabase.getInstance().getReference("Vehicles").child(vehicleKey);
-//        // Remove selected value from database
-//        drVehicle.removeValue();
-//        // Inform user that vehicle has been removed from vehicle inventory
-//        Toast.makeText(this, "Vehicle has been removed successfully", Toast.LENGTH_SHORT).show();
-//
-//
-//    // end of delete vehicle method
-//    }
+    // Method for deleting vehicle
+    private void deleteVehicle(String vehicleKey)
+    {
+        // Store vehicle reference from database
+        DatabaseReference drVehicle = FirebaseDatabase.getInstance().getReference("Vehicles").child(vehicleKey);
+        // Remove selected value from database
+        drVehicle.removeValue();
+        // Inform user that vehicle has been removed from vehicle inventory
+        Toast.makeText(this, "Vehicle has been removed successfully", Toast.LENGTH_SHORT).show();
+
+
+    // end of delete vehicle method
+    }
 
 
     // Timestamp method
