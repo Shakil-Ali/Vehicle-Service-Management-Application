@@ -169,7 +169,6 @@
             android:layout_gravity="center_horizontal"
             android:background="@drawable/ic_delete_black_24dp"
             android:id="@+id/deleteButton"
-            android:onClick="btn_action"
             >
         </Button>
 
