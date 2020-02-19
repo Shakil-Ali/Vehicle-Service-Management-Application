@@ -16,11 +16,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.text.format.DateFormat;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.vehicleservicemanagementapplication.Helpers.PDFUploadActivity;
 import com.example.vehicleservicemanagementapplication.Helpers.View_PDF_Files;
 import com.example.vehicleservicemanagementapplication.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 import java.util.Locale;
@@ -161,8 +164,8 @@ public class VehicleDetailActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-
-
+                // Call delete vehicle method
+                deleteVehicle(VehicleKey);
 
             // end of on click method
             }
@@ -171,6 +174,23 @@ public class VehicleDetailActivity extends AppCompatActivity
 
     // end of main method
     }
+
+
+
+    // Method for deleting vehicle
+    private void deleteVehicle(String vehicleKey)
+    {
+        // Store vehicle reference from database
+        DatabaseReference drVehicle = FirebaseDatabase.getInstance().getReference("Vehicles").child(vehicleKey);
+        // Remove selected value from database
+        drVehicle.removeValue();
+        // Inform user that vehicle has been removed from vehicle inventory
+        Toast.makeText(this, "Vehicle has been removed successfully", Toast.LENGTH_SHORT).show();
+
+
+    // end of delete vehicle method
+    }
+
 
     // Timestamp method
     private String convertTimeStampToString(long time)
