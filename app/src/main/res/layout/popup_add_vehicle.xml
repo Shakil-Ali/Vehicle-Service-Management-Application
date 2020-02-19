@@ -107,6 +107,21 @@
         >
     </EditText>
 
+    // Extra notes
+    <TextView
+        android:background="@drawable/popup_edittext_style"
+        android:id="@+id/popup_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Extra Notes"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popup_description"
+        >
+    </TextView>
+
     // Image of vehicle
     <ImageView
         android:id="@+id/popup_image"
@@ -118,7 +133,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/popup_description"
+        app:layout_constraintTop_toBottomOf="@+id/popup_notes"
         tools:srcCompat="@tools:sample/backgrounds/scenic[0]">
     </ImageView>
 
