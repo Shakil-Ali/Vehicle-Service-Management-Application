@@ -122,6 +122,14 @@
         >
     </TextView>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/ic_mic_black_24dp"
+        >
+    </ImageView>
+
     // Image of vehicle
     <ImageView
         android:id="@+id/popup_image"
