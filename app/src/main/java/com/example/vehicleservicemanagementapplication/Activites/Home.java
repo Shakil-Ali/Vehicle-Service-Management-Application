@@ -91,7 +91,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     TextView popUpVehicleModel;
     String popUpVehicleTransmission;
     String popUpVehicleOil;
-    TextView popUpVehicleNote;
+//    TextView popUpVehicleNote;
 
     // Spinner variable
     Spinner popUpVehicleMakeSpinner;
@@ -99,7 +99,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     Spinner popUpVehicleOilSpinner;
 
     // Buttons
-    ImageButton popUpMicAddNote;
+//    ImageButton popUpMicAddNote;
 
     // Store URI of image user selects
     private Uri pickedImageUri = null;
@@ -305,9 +305,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         // Store description field in text variable
         popUpDescription = popAddVehicle.findViewById(R.id.popup_description);
         // Store extra notes field in text variable
-        popUpVehicleNote = popAddVehicle.findViewById(R.id.popup_notes);
+//        popUpVehicleNote = popAddVehicle.findViewById(R.id.popup_notes);
         // Button for taking audio input for notes
-        popUpMicAddNote = popAddVehicle.findViewById(R.id.notes_mic);
+//        popUpMicAddNote = popAddVehicle.findViewById(R.id.notes_mic);
         // Add vehicle button
         popUpAddButton = popAddVehicle.findViewById(R.id.popup_add);
         // Progress bar for image upload
