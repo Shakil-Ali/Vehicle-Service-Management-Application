@@ -13,7 +13,7 @@
         android:background="#ffffff"
         android:layout_width="75dp"
         android:layout_gravity="center"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         tools:layout_editor_absoluteX="340dp"
         tools:layout_editor_absoluteY="1dp"
         tools:srcCompat="@tools:sample/avatars" />
@@ -110,7 +110,10 @@
     // Extra notes
     <TextView
         android:background="@drawable/popup_edittext_style"
+        android:layout_toLeftOf="@+id/mic"
         android:id="@+id/popup_notes"
+        android:layout_toRightOf="@id/mic"
+        android:layout_centerVertical="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -122,15 +125,20 @@
         >
     </TextView>
 
+    // Microphone image
     <ImageView
-        android:layout_width="match_parent"
+        android:id="@+id/mic"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@null"
+        android:layout_gravity="center"
         android:src="@drawable/ic_mic_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popup_notes"
         >
     </ImageView>
 
-    // Image of vehicle
+    // Selecting image for vehicle
     <ImageView
         android:id="@+id/popup_image"
         android:layout_width="match_parent"
@@ -141,7 +149,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/popup_notes"
+        app:layout_constraintTop_toBottomOf="@+id/mic"
         tools:srcCompat="@tools:sample/backgrounds/scenic[0]">
     </ImageView>
 
