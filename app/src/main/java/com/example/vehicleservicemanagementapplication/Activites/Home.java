@@ -99,7 +99,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     Spinner popUpVehicleOilSpinner;
 
     // Buttons
-    ImageButton popUpAddNote;
+    ImageButton popUpMicAddNote;
 
     // Store URI of image user selects
     private Uri pickedImageUri = null;
@@ -304,7 +304,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         popUpVehicleOil = popUpVehicleOilSpinner.getSelectedItem().toString();
         // Store description field in text variable
         popUpDescription = popAddVehicle.findViewById(R.id.popup_description);
-        // Assign button
+        // Store extra notes field in text variable
+        popUpVehicleNote = popAddVehicle.findViewById(R.id.popup_notes);
+        // Button for taking audio input for notes
+        popUpMicAddNote = popAddVehicle.findViewById(R.id.notes_mic);
+        // Add vehicle button
         popUpAddButton = popAddVehicle.findViewById(R.id.popup_add);
         // Progress bar for image upload
         popUpClickProgressBar = popAddVehicle.findViewById(R.id.popup_progressBar);

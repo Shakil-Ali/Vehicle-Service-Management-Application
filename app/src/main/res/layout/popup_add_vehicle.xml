@@ -110,9 +110,7 @@
     // Extra notes
     <TextView
         android:background="@drawable/popup_edittext_style"
-        android:layout_toLeftOf="@+id/mic"
         android:id="@+id/popup_notes"
-        android:layout_toRightOf="@id/mic"
         android:layout_centerVertical="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -127,7 +125,7 @@
 
     // Microphone image
     <ImageView
-        android:id="@+id/mic"
+        android:id="@+id/notes_mic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -149,7 +147,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mic"
+        app:layout_constraintTop_toBottomOf="@+id/notes_mic"
         tools:srcCompat="@tools:sample/backgrounds/scenic[0]">
     </ImageView>
 
