@@ -13,7 +13,7 @@
         android:background="#ffffff"
         android:layout_width="75dp"
         android:layout_gravity="center"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="340dp"
         tools:layout_editor_absoluteY="1dp"
         tools:srcCompat="@tools:sample/avatars" />
@@ -130,6 +130,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:src="@drawable/ic_mic_black_24dp"
+        android:background="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/popup_notes"
