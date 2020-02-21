@@ -54,6 +54,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
@@ -64,6 +65,7 @@ import android.widget.Toast;
 // https://www.youtube.com/watch?v=t7Nw4CHVnfU
 // https://www.youtube.com/watch?v=cmekm6hM4ew
 // https://www.youtube.com/watch?v=6js4iUobzbc
+// https://www.youtube.com/watch?v=zHgATbPcq04
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
@@ -89,11 +91,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     TextView popUpVehicleModel;
     String popUpVehicleTransmission;
     String popUpVehicleOil;
+    TextView popUpVehicleNote;
 
     // Spinner variable
     Spinner popUpVehicleMakeSpinner;
     Spinner popUpVehicleTransmissionSpinner;
     Spinner popUpVehicleOilSpinner;
+
+    // Buttons
+    ImageButton popUpAddNote;
 
     // Store URI of image user selects
     private Uri pickedImageUri = null;
