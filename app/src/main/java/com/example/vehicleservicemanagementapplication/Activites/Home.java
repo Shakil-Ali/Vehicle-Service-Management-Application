@@ -286,7 +286,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         // Widgets for the pop up
         // Store user image in image variable
-        popUpUserImage = popAddVehicle.findViewById(R.id.popup_user_image);
+//        popUpUserImage = popAddVehicle.findViewById(R.id.popup_user_image);
         // Store vehicle image in image variable
         popUpPostImage = popAddVehicle.findViewById(R.id.popup_image);
         // Store title field in text variable
