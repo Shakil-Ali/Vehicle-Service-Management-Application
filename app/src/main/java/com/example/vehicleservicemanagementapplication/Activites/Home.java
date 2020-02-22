@@ -22,6 +22,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.speech.RecognizerIntent;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -62,6 +63,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 // https://www.youtube.com/watch?v=G0dnFpdE5rE
 // https://www.youtube.com/watch?v=t7Nw4CHVnfU
 // https://www.youtube.com/watch?v=cmekm6hM4ew
@@ -72,6 +75,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 {
     // Variable Initialisations
     private AppBarConfiguration mAppBarConfiguration;
+
+    // For audio input
+    private static final int REQUEST_CODE_SPEECH_INPUT = 1000;
 
     // Firebase database initialisations
     FirebaseAuth firebaseAuth;
@@ -181,8 +187,57 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         // Make home fragment the default page when sign in / open app
         getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
 
+
+        // Mic button to show Speech -> Text dialog
+        popUpMicAddNote.setOnClickListener(new View.OnClickListener()
+        {
+            // On click method
+            @Override
+            public void onClick(View v)
+            {
+                // Call to speak method
+                speak();
+
+            // end of on click method
+            }
+        });
+
+
+
     // end of main method
     }
+
+
+    // Method for detecting and capturing user speech
+    private void speak()
+    {
+        // Intent to display speech to text dialog
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Hi, speak your note");
+
+        // Begin intent
+        // Try statement (no error)
+        try
+        {
+            // Start activity for result
+            startActivityForResult(intent, REQUEST_CODE_SPEECH_INPUT);
+        }
+        // Catch statement (error)
+        catch(Exception e)
+        {
+            // Retrieve error message and display
+            Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
+    // end of speak method
+    }
+
+
+    // Method for receiving voice input and handling it
+
 
 
     // Method for selecting image on pop-up
