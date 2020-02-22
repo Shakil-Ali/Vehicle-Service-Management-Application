@@ -20,7 +20,6 @@ import com.example.vehicleservicemanagementapplication.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import android.speech.RecognizerIntent;
 import android.view.Gravity;
@@ -29,19 +28,14 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -55,14 +49,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 // https://www.youtube.com/watch?v=G0dnFpdE5rE
@@ -76,7 +69,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     // Variable Initialisations
     private AppBarConfiguration mAppBarConfiguration;
 
-    // For audio input
+    // Request code variable for audio input
     private static final int REQUEST_CODE_SPEECH_INPUT = 1000;
 
     // Firebase database initialisations
@@ -229,7 +222,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         catch(Exception e)
         {
             // Retrieve error message and display
-            Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
     // end of speak method
@@ -237,7 +230,33 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
 
     // Method for receiving voice input and handling it
-
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
+//    {
+//        super.onActivityResult(requestCode, resultCode, data);
+//
+//        switch (requestCode)
+//        {
+//            case REQUEST_CODE_SPEECH_INPUT:{
+//                if(resultCode == RESULT_OK && null != data)
+//                {
+//                    // Get text array from the voice intent
+//                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+//                    // Set text from array to text view
+//                    popUpVehicleNote.setText(result.get(0));
+//
+//                // end of if statement
+//                }
+//                // Break statement
+//                break;
+//            }
+//
+//        // end of switch
+//        }
+//
+//
+//    // end of on activity result method
+//    }
 
 
     // Method for selecting image on pop-up
@@ -321,6 +340,27 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             // Set the pop up post image to the chosen image
             popUpPostImage.setImageURI(pickedImageUri);
         }
+
+
+        // Switch for audio input
+        switch (requestCode)
+        {
+            case REQUEST_CODE_SPEECH_INPUT:{
+                if(resultCode == RESULT_OK && null != data)
+                {
+                    // Get text array from the voice intent
+                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    // Set text from array to text view
+                    popUpVehicleNote.setText(result.get(0));
+
+                // end of if statement
+                }
+                // Break statement
+                break;
+            }
+        // end of switch
+        }
+
 
     // end of method onActivityResult
     }
