@@ -46,6 +46,7 @@ public class VehicleDetailActivity extends AppCompatActivity
     TextView textVehicleOil;
     TextView textVehicleDate;
     TextView textVehicleDescription;
+    TextView textVehicleNote;
     // STRING
     String VehicleKey;
 
@@ -80,6 +81,7 @@ public class VehicleDetailActivity extends AppCompatActivity
         textVehicleOil = findViewById(R.id.vehicle_detail_oil);
         textVehicleDate = findViewById(R.id.vehicle_detail_date);
         textVehicleDescription = findViewById(R.id.vehicle_detail_description);
+        textVehicleNote = findViewById(R.id.vehicle_detail_note);
         // BUTTONS
         pdf_upload_button = findViewById(R.id.pdfUploadBtn);
         pdf_view_button = findViewById(R.id.pdfViewBtn);
@@ -113,6 +115,10 @@ public class VehicleDetailActivity extends AppCompatActivity
         // Sending vehicle description
         String vehicleDescription = getIntent().getExtras().getString("Description");
         textVehicleDescription.setText(vehicleDescription);
+
+        // Sending vehicle note
+        String vehicleNote = getIntent().getExtras().getString("Note");
+        textVehicleNote.setText(vehicleNote);
 
         // Storing vehicle details key
         VehicleKey = getIntent().getExtras().getString("VehicleKey");
