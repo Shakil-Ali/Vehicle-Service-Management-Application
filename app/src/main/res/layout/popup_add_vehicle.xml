@@ -8,15 +8,15 @@
     android:orientation="vertical">
 
     // Avatar Image
-    <ImageView
-        android:id="@+id/popup_user_image"
-        android:background="#ffffff"
-        android:layout_width="75dp"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="340dp"
-        tools:layout_editor_absoluteY="1dp"
-        tools:srcCompat="@tools:sample/avatars" />
+<!--    <ImageView-->
+<!--        android:id="@+id/popup_user_image"-->
+<!--        android:background="#ffffff"-->
+<!--        android:layout_width="75dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:layout_editor_absoluteX="340dp"-->
+<!--        tools:layout_editor_absoluteY="1dp"-->
+<!--        tools:srcCompat="@tools:sample/avatars" />-->
 
 
     // Vehicle reg. number
@@ -28,7 +28,6 @@
         android:ems="10"
         android:hint="Vehicle registration"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/popup_user_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         >
@@ -130,7 +129,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:src="@drawable/ic_mic_black_24dp"
-        android:background="#ffffff"
+        android:background="@drawable/popup_edittext_style"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/popup_notes"
