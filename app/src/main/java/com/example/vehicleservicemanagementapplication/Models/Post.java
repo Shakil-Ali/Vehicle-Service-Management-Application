@@ -14,14 +14,16 @@ public class Post
     private String transmission;
     private String oil;
     private String description;
+    private String note;
     private String picture;
     private String userId;
     private String userPhoto;
     private Object timeStamp;
     private String vehicleKey;
 
+
     // Constructor for all initialised variables
-    public Post(String title, String make, String model, String transmission, String oil, String description, String picture, String userId, String userPhoto)
+    public Post(String title, String make, String model, String transmission, String oil, String description, String note, String picture, String userId, String userPhoto)
     {
         this.title = title;
         this.make = make;
@@ -29,6 +31,7 @@ public class Post
         this.transmission = transmission;
         this.oil = oil;
         this.description = description;
+        this.note = note;
         this.picture = picture;
         this.userId = userId;
         this.userPhoto = userPhoto;
@@ -80,6 +83,12 @@ public class Post
     public String getDescription()
     {
         return description;
+    }
+
+    // Note getter method
+    public String getNote()
+    {
+        return note;
     }
 
     // Picture getter method
@@ -148,6 +157,12 @@ public class Post
     public void setDescription(String description)
     {
         this.description = description;
+    }
+
+    // Note setter method
+    public void setNote(String note)
+    {
+        this.note = note;
     }
 
     // Picture setter method

@@ -338,6 +338,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     && !popUpVehicleTransmissionSpinner.toString().isEmpty()
                     && !popUpVehicleOilSpinner.toString().isEmpty()
                     && !popUpDescription.getText().toString().isEmpty()
+                    && !popUpVehicleNote.getText().toString().isEmpty()
                     && pickedImageUri != null)
                 {
                     // Create variables for storage reference and file path
@@ -365,6 +366,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                                             popUpVehicleTransmissionSpinner.getSelectedItem().toString(),
                                             popUpVehicleOilSpinner.getSelectedItem().toString(),
                                             popUpDescription.getText().toString(),
+                                            popUpVehicleNote.getText().toString(),
                                             imgDownloadLink,
                                             currentUser.getUid(),
                                             currentUser.getPhotoUrl().toString());
