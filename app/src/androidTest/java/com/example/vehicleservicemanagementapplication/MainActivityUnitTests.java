@@ -34,7 +34,7 @@ public class MainActivityUnitTests
     public ActivityTestRule<MainActivity> nActivityTestRule = new ActivityTestRule<MainActivity>(MainActivity.class);
     // Variable to store context
     private MainActivity nActivity = null;
-    // Monitor for login activity
+    // Monitor for login and register activity
     Instrumentation.ActivityMonitor monitorLogin = getInstrumentation().addMonitor(LoginActivity.class.getName(), null, false);
     Instrumentation.ActivityMonitor monitorRegister = getInstrumentation().addMonitor(RegisterActivity.class.getName(), null, false);
 
