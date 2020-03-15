@@ -18,6 +18,7 @@ import com.example.vehicleservicemanagementapplication.R;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
+import org.junit.Test;
 
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.typeText;
@@ -55,6 +56,7 @@ public class LoginActivityUnitTests
     }
 
 
+    @Test
     //  Unit test - launching Login Activity and signing in
     public void testLogin()
     {
