@@ -1,4 +1,4 @@
-package com.example.vehicleservicemanagementapplication.Activites;
+package com.example.vehicleservicemanagementapplication;
 
 // https://www.youtube.com/watch?v=_TR6QcRozAg
 // https://www.youtube.com/watch?v=vXRoVIGttO4
@@ -6,6 +6,7 @@ package com.example.vehicleservicemanagementapplication.Activites;
 import androidx.test.espresso.Espresso;
 import androidx.test.rule.ActivityTestRule;
 
+import com.example.vehicleservicemanagementapplication.Activites.LoginActivity;
 import com.example.vehicleservicemanagementapplication.MainActivity;
 import com.example.vehicleservicemanagementapplication.R;
 
