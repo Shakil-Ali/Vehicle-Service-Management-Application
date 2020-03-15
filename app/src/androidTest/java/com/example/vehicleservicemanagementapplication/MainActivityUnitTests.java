@@ -50,6 +50,15 @@ public class MainActivityUnitTests
     // end of mainActivityTestLaunch method
     }
 
+    // Unit test - launching login activity
+    @Test
+    public void mainActivityTestLaunchLogin()
+    {
+        assertNotNull(nActivity.findViewById(R.id.btn_home_login));
+
+        // end of mainActivityTestLaunchLogin method
+    }
+
 
     // Method for finishing up anything after test
     @After
