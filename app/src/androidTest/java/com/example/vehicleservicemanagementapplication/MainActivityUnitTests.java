@@ -14,7 +14,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 // MainActivityTest Class (Opening screen)
-public class MainActivityTest
+public class MainActivityUnitTests
 {
 
     // Variable initialisation and assignment operations
