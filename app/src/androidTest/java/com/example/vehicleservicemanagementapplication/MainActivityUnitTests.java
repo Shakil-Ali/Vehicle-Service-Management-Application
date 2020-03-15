@@ -51,17 +51,17 @@ public class MainActivityUnitTests
     }
 
 
-    // Unit test - launching Main Activity (onCreate)
-//    @Test
-//    public void mainActivityTestLaunch()
-//    {
-//        // Look for view once launched - to confirm successful launch
-//        View view = nActivity.findViewById(R.id.btn_home_login);
-//        // If view is not null - then has launched successfully
-//        assertNotNull(view);
-//
-//    // end of mainActivityTestLaunch method
-//    }
+    //  Unit test - launching Main Activity (onCreate)
+    @Test
+    public void mainActivityTestLaunch()
+    {
+        // Look for view once launched - to confirm successful launch
+        View view = nActivity.findViewById(R.id.btn_home_login);
+        // If view is not null - then has launched successfully
+        assertNotNull(view);
+
+    // end of mainActivityTestLaunch method
+    }
 
 
     // Unit test - launching login activity
@@ -114,5 +114,5 @@ public class MainActivityUnitTests
 
 
 
-// end of class
+// end of MainActivityUnitTests class
 }
