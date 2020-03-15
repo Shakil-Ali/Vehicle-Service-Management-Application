@@ -23,7 +23,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 import static org.junit.Assert.*;
 
-// MainActivityTest Class (Opening screen)
+// MainActivityUnitTests Class (Opening screen)
 public class MainActivityUnitTests
 {
 
