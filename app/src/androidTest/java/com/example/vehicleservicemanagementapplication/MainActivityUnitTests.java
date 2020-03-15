@@ -63,6 +63,7 @@ public class MainActivityUnitTests
 //    // end of mainActivityTestLaunch method
 //    }
 
+
     // Unit test - launching login activity
     @Test
     public void mainActivityTestLaunchLogin()
@@ -79,6 +80,25 @@ public class MainActivityUnitTests
         loginActivity.finish();
 
         // end of mainActivityTestLaunchLogin method
+    }
+
+
+    // Unit test - launching register activity
+    @Test
+    public void mainActivityTestLaunchRegsiter()
+    {
+        // If view not null, then find element (register button)
+        assertNotNull(nActivity.findViewById(R.id.btn_home_register));
+        // Click on 'register' button
+        onView(withId(R.id.btn_home_register)).perform(click());
+        // Wait until the monitor has been hit (stored in activity variable)
+        Activity registerActivity = getInstrumentation().waitForMonitorWithTimeout(monitorRegister, 5000);
+        // If view is not null - then has launched successfully
+        assertNotNull(registerActivity);
+        // End activity
+        registerActivity.finish();
+
+        // end of mainActivityTestLaunchRegister method
     }
 
 
