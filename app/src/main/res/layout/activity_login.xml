@@ -22,54 +22,69 @@
 
 
     // Email
-    <EditText
-        android:id="@+id/loginEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email Address"
-        android:ems="10"
-        android:inputType="text"
-        android:textSize="20sp"
-        android:layout_marginTop="100dp"
-        />
-
-<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--    <EditText-->
+<!--        android:id="@+id/loginEmail"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
-<!--        android:focusable="true"-->
-<!--        android:focusableInTouchMode="true"-->
-<!--        android:textColorHint="@color/hintColour"-->
+<!--        android:hint="Email Address"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="text"-->
+<!--        android:textSize="20sp"-->
 <!--        android:layout_marginTop="100dp"-->
-<!--        >-->
-<!--        -->
-<!--        // Where EditText was-->
-<!--        -->
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
+<!--        />-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/hintColour"
+        android:layout_marginTop="100dp"
+        >
+
+        <EditText
+            android:id="@+id/loginEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="20sp">
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     // Password
-    <EditText
-        android:id="@+id/loginPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:textSize="20sp"
-        />
-
-<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--    <EditText-->
+<!--        android:id="@+id/loginPassword"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
-<!--        android:focusable="true"-->
-<!--        android:focusableInTouchMode="true"-->
-<!--        android:textColorHint="@color/hintColour"-->
-<!--        app:passwordToggleEnabled="true"-->
-<!--        >-->
+<!--        android:hint="Password"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:textSize="20sp"-->
+<!--        />-->
 
-<!--        // Where EditText was-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/hintColour"
+        app:passwordToggleEnabled="true"
+        >
 
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     // Login Button
