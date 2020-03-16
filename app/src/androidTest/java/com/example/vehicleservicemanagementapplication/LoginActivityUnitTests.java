@@ -37,7 +37,7 @@ public class LoginActivityUnitTests
     public ActivityTestRule<LoginActivity> nActivityTestRule = new ActivityTestRule<LoginActivity>(LoginActivity.class);
     // Variable to store context
     private LoginActivity nActivity = null;
-    // Monitor for login and register activity
+    // Monitor for login activity
     Instrumentation.ActivityMonitor monitorHome = getInstrumentation().addMonitor(HomeFragment.class.getName(), null, false);
 
     // Test credentials
