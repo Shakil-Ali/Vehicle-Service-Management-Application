@@ -70,7 +70,7 @@ public class LoginActivityUnitTests
         // Close soft keyboard
         Espresso.closeSoftKeyboard();
         // Perform button click (on login button)
-        Espresso.onView(withId(R.id.buttonLogin)).perform(click());
+        Espresso.onView(withId(R.id.loginBtn)).perform(click());
 
 //        // Wait until the monitor has been hit (stored in activity variable)
 //        Activity loginActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
