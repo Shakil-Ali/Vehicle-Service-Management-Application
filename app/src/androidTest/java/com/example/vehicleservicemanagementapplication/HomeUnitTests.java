@@ -3,8 +3,13 @@ package com.example.vehicleservicemanagementapplication;
 // https://www.youtube.com/watch?v=_TR6QcRozAg
 // https://www.youtube.com/watch?v=vXRoVIGttO4
 
+import android.app.Activity;
 import android.app.Instrumentation;
+import android.view.MenuItem;
 
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.test.rule.ActivityTestRule;
 
 import com.example.vehicleservicemanagementapplication.Activites.Home;
@@ -16,6 +21,9 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 import static org.junit.Assert.*;
 
@@ -46,7 +54,18 @@ public class HomeUnitTests
 
 
     @Test
-    //  Unit test -
+    //  Unit test - opening menu
+    public void menu()
+    {
+        // If view not null, then find element (login button)
+        assertNotNull(nActivity.findViewById(R.id.btn_home_login));
+        // Click on 'login' button
+        onView(withId(R.id.btn_home_login)).perform(click());
+
+
+
+    // end of menu method
+    }
 
 
 
