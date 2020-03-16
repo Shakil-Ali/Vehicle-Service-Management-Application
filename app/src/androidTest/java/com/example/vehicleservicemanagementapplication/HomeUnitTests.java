@@ -19,50 +19,17 @@ public class HomeUnitTests
     public void setUp() throws Exception
     {
 
+
+    // end of set up method
     }
 
     @After
     public void tearDown() throws Exception
     {
 
+
+    // end of tear down method
     }
-
-    @Test
-    public void onCreate()
-    {
-
-    }
-
-    @Test
-    public void onActivityResult()
-    {
-
-    }
-
-    @Test
-    public void onBackPressed()
-    {
-
-    }
-
-    @Test
-    public void onCreateOptionsMenu()
-    {
-
-    }
-
-    @Test
-    public void onNavigationItemSelected()
-    {
-
-    }
-
-    @Test
-    public void updateNavHeader()
-    {
-
-    }
-
 
 
 
