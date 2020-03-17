@@ -6,6 +6,7 @@ package com.example.vehicleservicemanagementapplication;
 import android.app.Activity;
 import android.app.Instrumentation;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -13,6 +14,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.test.rule.ActivityTestRule;
 
 import com.example.vehicleservicemanagementapplication.Activites.Home;
+import com.example.vehicleservicemanagementapplication.Activites.HomeActivity;
 import com.example.vehicleservicemanagementapplication.Activites.LoginActivity;
 import com.example.vehicleservicemanagementapplication.Fragments.HomeFragment;
 
@@ -29,8 +31,7 @@ import static org.junit.Assert.*;
 
 
 // HomeUnitTests class class
-public class HomeUnitTests
-{
+public class HomeUnitTests {
     // Variable initialisation and assignment operations
     // Rule for test - specifies this activity has launched
     @Rule
@@ -43,30 +44,22 @@ public class HomeUnitTests
 
     // Method for starting up anything before the test
     @Before
-    public void setUp() throws Exception
-    {
+    public void setUp() throws Exception {
         // Store the context of the activity
         nActivity = nActivityTestRule.getActivity();
 
-    // end of set up method
+        // end of set up method
     }
-
 
 
     @Test
-    //  Unit test - opening menu
-    public void menu()
+    //  Unit test - show message method
+    private void showMessage(String message) throws Exception
     {
-        // If view not null, then find element (login button)
-        assertNotNull(nActivity.findViewById(R.id.btn_home_login));
-        // Click on 'login' button
-        onView(withId(R.id.btn_home_login)).perform(click());
+        Toast.makeText(nActivity, message, Toast.LENGTH_LONG).show();
 
-
-
-    // end of menu method
+    // end of showMessage method
     }
-
 
 
     @After
