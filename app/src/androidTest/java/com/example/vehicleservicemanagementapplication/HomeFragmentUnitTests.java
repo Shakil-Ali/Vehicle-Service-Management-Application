@@ -1,4 +1,4 @@
-package com.example.vehicleservicemanagementapplication.Fragments;
+package com.example.vehicleservicemanagementapplication;
 
 import androidx.test.rule.ActivityTestRule;
 
