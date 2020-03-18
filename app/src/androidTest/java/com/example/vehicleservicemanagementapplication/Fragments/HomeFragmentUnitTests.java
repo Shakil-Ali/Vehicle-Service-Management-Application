@@ -49,7 +49,8 @@ public class HomeFragmentUnitTests
     @After
     public void tearDown() throws Exception
     {
-
+        // nullify activity after test complete
+        nActivity = null;
 
     // end of tear down method
     }
