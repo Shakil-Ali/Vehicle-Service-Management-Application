@@ -47,8 +47,11 @@ public class HomeFragmentUnitTests
         RelativeLayout rlContainer = nActivity.findViewById(R.id.drawer_layout);
         // Check if not null
         assertNotNull(rlContainer);
-        //
+        // New home fragment variable
+        HomeFragment fragment = new HomeFragment();
+        // Get fragment manager
 //        nActivity.getFragmentManager().beginTransaction().add(rlContainer.getId(), new HomeFragment()).commitAllowingStateLoss();
+
 
 
     // end of launch home fragment method
