@@ -1,4 +1,4 @@
-package com.example.vehicleservicemanagementapplication.Adapters;
+package com.example.vehicleservicemanagementapplication;
 
 // https://www.youtube.com/watch?v=_TR6QcRozAg
 // https://www.youtube.com/watch?v=vXRoVIGttO4
@@ -13,6 +13,7 @@ import androidx.test.rule.ActivityTestRule;
 
 import com.bumptech.glide.Glide;
 import com.example.vehicleservicemanagementapplication.Activites.Home;
+import com.example.vehicleservicemanagementapplication.Adapters.PostAdapter;
 import com.example.vehicleservicemanagementapplication.Models.Post;
 import com.example.vehicleservicemanagementapplication.R;
 
