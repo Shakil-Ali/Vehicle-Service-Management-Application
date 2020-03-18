@@ -1,7 +1,10 @@
 package com.example.vehicleservicemanagementapplication;
 
 import android.app.Fragment;
+import android.view.View;
 import android.widget.RelativeLayout;
+import android.app.Instrumentation;
+
 
 import androidx.test.rule.ActivityTestRule;
 
@@ -13,6 +16,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
+import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 import static org.junit.Assert.*;
 
 // https://www.youtube.com/watch?v=JoFN10FDm8U
@@ -51,7 +55,13 @@ public class HomeFragmentUnitTests
         HomeFragment fragment = new HomeFragment();
         // Get fragment manager
 //        nActivity.getFragmentManager().beginTransaction().add(rlContainer.getId(), new HomeFragment()).commitAllowingStateLoss();
-
+        // Wait for fragment to load and check if not null
+        Instrumentation.ActivityMonitor monitorHomeFrag = getInstrumentation().addMonitor(HomeFragment.class.getName(), null, false);
+        assertNotNull(monitorHomeFrag);
+        // Getting a home fragment view and storing it
+        View view = fragment.getView().findViewById(R.id.text_home);
+        // Check if that view is not null
+        assertNotNull(view);
 
 
     // end of launch home fragment method
