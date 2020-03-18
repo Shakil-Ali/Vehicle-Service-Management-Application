@@ -1,7 +1,12 @@
 package com.example.vehicleservicemanagementapplication.Fragments;
 
+import androidx.test.rule.ActivityTestRule;
+
+import com.example.vehicleservicemanagementapplication.Activites.Home;
+
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -12,11 +17,19 @@ import static org.junit.Assert.*;
 public class HomeFragmentUnitTests
 {
 
+    // Initialisations for testing
+    @Rule
+    public ActivityTestRule<Home> nActivityTestRule = new ActivityTestRule<Home>(Home.class);
+    private Home nActivity = null;
+
+
+
     // Set up method (before tests)
     @Before
     public void setUp() throws Exception
     {
-
+        // Store current activity
+        nActivity = nActivityTestRule.getActivity();
 
     // end of set up method
     }
