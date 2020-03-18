@@ -1,8 +1,12 @@
 package com.example.vehicleservicemanagementapplication;
 
+import android.app.Fragment;
+import android.widget.RelativeLayout;
+
 import androidx.test.rule.ActivityTestRule;
 
 import com.example.vehicleservicemanagementapplication.Activites.Home;
+import com.example.vehicleservicemanagementapplication.Fragments.HomeFragment;
 
 import org.junit.After;
 import org.junit.Before;
@@ -39,6 +43,12 @@ public class HomeFragmentUnitTests
     @Test
     public void launchHomeFragment()
     {
+        // Relative layer stored in variable
+        RelativeLayout rlContainer = nActivity.findViewById(R.id.drawer_layout);
+        // Check if not null
+        assertNotNull(rlContainer);
+        //
+//        nActivity.getFragmentManager().beginTransaction().add(rlContainer.getId(), new HomeFragment()).commitAllowingStateLoss();
 
 
     // end of launch home fragment method
