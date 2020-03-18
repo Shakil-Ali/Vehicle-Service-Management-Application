@@ -1,4 +1,4 @@
-package com.example.vehicleservicemanagementapplication.Fragments;
+package com.example.vehicleservicemanagementapplication;
 
 // https://www.youtube.com/watch?v=JoFN10FDm8U
 
@@ -9,6 +9,8 @@ import android.widget.RelativeLayout;
 import androidx.test.rule.ActivityTestRule;
 
 import com.example.vehicleservicemanagementapplication.Activites.Home;
+import com.example.vehicleservicemanagementapplication.Fragments.HomeFragment;
+import com.example.vehicleservicemanagementapplication.Fragments.ProfileFragment;
 import com.example.vehicleservicemanagementapplication.R;
 
 import org.junit.After;
