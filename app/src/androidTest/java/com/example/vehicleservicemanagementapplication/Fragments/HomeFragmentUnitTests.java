@@ -2,6 +2,7 @@ package com.example.vehicleservicemanagementapplication.Fragments;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 
@@ -18,6 +19,16 @@ public class HomeFragmentUnitTests
 
 
     // end of set up method
+    }
+
+
+    // Unit Test - Launch home fragment method
+    @Test
+    public void launchHomeFragment()
+    {
+
+
+    // end of launch home fragment method
     }
 
 
