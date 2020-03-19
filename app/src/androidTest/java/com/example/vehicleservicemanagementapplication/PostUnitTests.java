@@ -30,6 +30,9 @@ public class PostUnitTests
     }
 
 
+    // CURRENTLY NO UNIT TESTS ARE REQUIRED FOR GETTERS AND SETTER
+
+
     @Test
     public void getTitle()
     {
