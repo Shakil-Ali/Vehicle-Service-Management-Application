@@ -1,4 +1,4 @@
-package com.example.vehicleservicemanagementapplication.Models;
+package com.example.vehicleservicemanagementapplication;
 
 import org.junit.After;
 import org.junit.Before;
