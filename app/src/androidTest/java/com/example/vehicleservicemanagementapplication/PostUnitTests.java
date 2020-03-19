@@ -11,6 +11,10 @@ import static org.junit.Assert.*;
 public class PostUnitTests
 {
 
+    // Variable initialisations
+
+
+    // Set up method (before testing)
     @Before
     public void setUp() throws Exception
     {
@@ -18,6 +22,7 @@ public class PostUnitTests
     }
 
 
+    // Tear down method (after testing)
     @After
     public void tearDown() throws Exception
     {
