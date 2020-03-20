@@ -22,8 +22,8 @@ import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentat
 import static org.junit.Assert.*;
 
 
-// Main To Register Integration Test class
-public class MainToRegisterIntegrationTests
+// Main To Login Integration Test class
+public class MainToLoginIntegrationTest
 {
 
     // Initialisations
@@ -32,8 +32,8 @@ public class MainToRegisterIntegrationTests
     public ActivityTestRule<MainActivity> nActivityTestRule = new ActivityTestRule<MainActivity>(MainActivity.class);
     // Variable to store context
     private MainActivity nActivity = null;
-    // Monitor for register activity
-    Instrumentation.ActivityMonitor monitorRegister = getInstrumentation().addMonitor(RegisterActivity.class.getName(), null, false);
+    // Monitor for login and register activity
+    Instrumentation.ActivityMonitor monitorLogin = getInstrumentation().addMonitor(LoginActivity.class.getName(), null, false);
 
 
     // Set up method (occurs before testing)
@@ -49,21 +49,21 @@ public class MainToRegisterIntegrationTests
 
     // Unit test - launching login activity from main activity
     @Test
-    public void mainToRegister()
+    public void mainToLogin()
     {
-        // If view not null, then find element (register button)
-        assertNotNull(nActivity.findViewById(R.id.btn_home_register));
-        // Click on 'register' button
-        onView(withId(R.id.btn_home_register)).perform(click());
+        // If view not null, then find element (login button)
+        assertNotNull(nActivity.findViewById(R.id.btn_home_login));
+        // Click on 'login' button
+        onView(withId(R.id.btn_home_login)).perform(click());
         // Wait until the monitor has been hit (stored in activity variable)
-        Activity registerActivity = getInstrumentation().waitForMonitorWithTimeout(monitorRegister, 5000);
+        Activity loginActivity = getInstrumentation().waitForMonitorWithTimeout(monitorLogin, 5000);
         // If view is not null - then has launched successfully
-        assertNotNull(registerActivity);
+        assertNotNull(loginActivity);
         // End activity
-        registerActivity.finish();
+        loginActivity.finish();
 
 
-        // end of main to register method
+    // end of main to login method
     }
 
 
@@ -80,5 +80,5 @@ public class MainToRegisterIntegrationTests
 
 
 
-// end of main to register integration tests class
+// end of main to login integration unit tests class
 }
