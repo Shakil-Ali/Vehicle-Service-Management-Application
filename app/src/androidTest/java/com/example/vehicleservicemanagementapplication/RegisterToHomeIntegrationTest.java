@@ -30,9 +30,9 @@ public class RegisterToHomeIntegrationTest
     // Rule for test
     @Rule
     public ActivityTestRule<RegisterActivity> nActivityTestRule = new ActivityTestRule<RegisterActivity>(RegisterActivity.class);
-    // Private variable to initialise profile activity
+    // Private variable to initialise home activity
     private RegisterActivity nActivity = null;
-    // Monitor the profile activity
+    // Monitor the home activity
     Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(HomeActivity.class.getName(), null, false);
 
 
@@ -43,7 +43,7 @@ public class RegisterToHomeIntegrationTest
         // Get the activity
         nActivity = nActivityTestRule.getActivity();
 
-        // end of setup method
+    // end of setup method
     }
 
 
@@ -57,7 +57,7 @@ public class RegisterToHomeIntegrationTest
         onView(withId(R.id.regName)).perform(click());
         // Wait for monitor to be hit and then expires in 50000000 ms
         Activity homeActivity = getInstrumentation().waitForMonitorWithTimeout(monitor, 50000000);
-        // Check that the profile activity is not null
+        // Check that the home activity is not null
         assertNotNull(homeActivity);
         // Finish the opened activity
         homeActivity.finish();
@@ -68,14 +68,14 @@ public class RegisterToHomeIntegrationTest
 
 
 
-    // Tear down message (after testing)
+    // Tear down method (after testing)
     @After
     public void tearDown() throws Exception
     {
         // Set to null and finish
         nActivity = null;
 
-        // end of teardown method
+    // end of teardown method
     }
 
 
