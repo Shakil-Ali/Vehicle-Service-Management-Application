@@ -22,7 +22,7 @@ import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentat
 import static org.junit.Assert.*;
 
 
-// Main To Login Integration Test
+// Main To Login Integration Test class
 public class MainToLoginIntegrationTests
 {
 

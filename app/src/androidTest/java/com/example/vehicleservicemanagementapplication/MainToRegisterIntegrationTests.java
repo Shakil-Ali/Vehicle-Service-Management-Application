@@ -1,17 +1,42 @@
 package com.example.vehicleservicemanagementapplication;
 
+// https://www.youtube.com/watch?v=Xz5Ti4ZoiWA
+
 import org.junit.After;
 import org.junit.Before;
 
 import static org.junit.Assert.*;
 
-public class MainToRegisterIntegrationTests {
 
+// Main To Register Integration Test class
+public class MainToRegisterIntegrationTests
+{
+
+    // Initialisations
+    // Rule for test - specifies this activity has launched
+
+
+    // Set up method (occurs before testing)
     @Before
-    public void setUp() throws Exception {
+    public void setUp() throws Exception
+    {
+
+
+    // end of setup method
     }
 
+
+    // Tear down method (occurs after testing)
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() throws Exception
+    {
+
+
+    // end of tear down method
     }
+
+
+
+
+// end of main to register integration tests class
 }
