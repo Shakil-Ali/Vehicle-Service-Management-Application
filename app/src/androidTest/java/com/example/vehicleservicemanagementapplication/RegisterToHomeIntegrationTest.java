@@ -2,6 +2,7 @@ package com.example.vehicleservicemanagementapplication;
 
 // https://www.youtube.com/watch?v=Xz5Ti4ZoiWA
 
+import android.app.Activity;
 import android.app.Instrumentation;
 
 import androidx.test.rule.ActivityTestRule;
@@ -12,7 +13,11 @@ import com.example.vehicleservicemanagementapplication.Activites.RegisterActivit
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
+import org.junit.Test;
 
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 import static org.junit.Assert.*;
 
@@ -40,6 +45,27 @@ public class RegisterToHomeIntegrationTest
 
         // end of setup method
     }
+
+
+    // Integration Test - Register to Home activity
+    @Test
+    public void registerToHome()
+    {
+        // Check if it does not return null
+        assertNotNull(nActivity.findViewById(R.id.regName));
+        // Take the view with register button id
+        onView(withId(R.id.regName)).perform(click());
+        // Wait for monitor to be hit and then expires in 50000000 ms
+        Activity homeActivity = getInstrumentation().waitForMonitorWithTimeout(monitor, 50000000);
+        // Check that the profile activity is not null
+        assertNotNull(homeActivity);
+        // Finish the opened activity
+        homeActivity.finish();
+
+
+    // end of register to home method
+    }
+
 
 
     // Tear down message (after testing)
