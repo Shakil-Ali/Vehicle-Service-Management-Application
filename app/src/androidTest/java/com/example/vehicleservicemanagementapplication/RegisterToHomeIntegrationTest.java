@@ -35,9 +35,10 @@ public class RegisterToHomeIntegrationTest
     @Before
     public void setUp() throws Exception
     {
+        // Get the activity
+        nActivity = nActivityTestRule.getActivity();
 
-
-    // end of setup method
+        // end of setup method
     }
 
 
@@ -45,9 +46,10 @@ public class RegisterToHomeIntegrationTest
     @After
     public void tearDown() throws Exception
     {
+        // Set to null and finish
+        nActivity = null;
 
-
-    // end of teardown method
+        // end of teardown method
     }
 
 
