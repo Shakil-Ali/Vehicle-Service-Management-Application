@@ -7,13 +7,32 @@ import org.junit.Before;
 
 import static org.junit.Assert.*;
 
-public class RegisterToHomeIntegrationTest {
 
+// Register to home integration test class
+public class RegisterToHomeIntegrationTest
+{
+
+    // Setup method (before testing)
     @Before
-    public void setUp() throws Exception {
+    public void setUp() throws Exception
+    {
+
+
+    // end of setup method
     }
 
+
+    // Tear down message (after testing)
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() throws Exception
+    {
+
+
+    // end of teardown method
     }
+
+
+
+
+// end of register to home integration test class
 }
