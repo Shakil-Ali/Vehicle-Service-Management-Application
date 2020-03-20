@@ -47,7 +47,7 @@ public class MainToRegisterIntegrationTest
     }
 
 
-    // Unit test - launching login activity from main activity
+    // Integration test - launching login activity from main activity
     @Test
     public void mainToRegister()
     {
