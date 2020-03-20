@@ -34,7 +34,6 @@ public class MainToLoginIntegrationTests
     private MainActivity nActivity = null;
     // Monitor for login and register activity
     Instrumentation.ActivityMonitor monitorLogin = getInstrumentation().addMonitor(LoginActivity.class.getName(), null, false);
-    Instrumentation.ActivityMonitor monitorRegister = getInstrumentation().addMonitor(RegisterActivity.class.getName(), null, false);
 
 
     // Set up method (occurs before testing)
