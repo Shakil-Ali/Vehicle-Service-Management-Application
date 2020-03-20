@@ -10,6 +10,7 @@ import androidx.test.rule.ActivityTestRule;
 
 import com.example.vehicleservicemanagementapplication.Activites.Home;
 import com.example.vehicleservicemanagementapplication.Fragments.HomeFragment;
+import com.example.vehicleservicemanagementapplication.R;
 
 import org.junit.After;
 import org.junit.Before;
