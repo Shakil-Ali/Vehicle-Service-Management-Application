@@ -40,9 +40,27 @@ public class LoginActivityUnitTests
     // Monitor for login activity
     Instrumentation.ActivityMonitor monitorHome = getInstrumentation().addMonitor(HomeFragment.class.getName(), null, false);
 
-    // Test credentials
-    private String nEmail = "shakil@gold.ac.uk";
-    private String nPassword = "hello123";
+    // Original credentials
+    private String email_original = "shakil@gold.ac.uk";
+    private String password_original = "hello123";
+
+
+    // Test credentials #1
+    private String email1 = "shakil";
+    private String password1 = "hello123";
+
+    // Test credentials #2
+    private String email2 = "shakil@gold.ac.uk";
+    // use password 1
+
+    // Test credentials #3
+    private String email3 = "SHAKIL@GOLD.AC.UK";
+    // user password 1
+
+    // Test credentials #4
+    // user email 2
+    private String password2 = "HELLO123";
+
 
 
     // Method for starting up anything before the test
@@ -57,16 +75,16 @@ public class LoginActivityUnitTests
 
 
     @Test
-    //  Unit test - launching Login Activity and signing in
-    public void testLogin()
+    //  Systeamtic test - launching Login Activity and signing in
+    public void testLogin1()
     {
 //        // If view not null, then find element (login button)
 //        assertNotNull(nActivity.findViewById(R.id.loginEmail));
 
         // Input email into email field
-        Espresso.onView(withId(R.id.loginEmail)).perform(typeText(nEmail));
+        Espresso.onView(withId(R.id.loginEmail)).perform(typeText(email1));
         // Input password into password field
-        Espresso.onView(withId(R.id.loginPassword)).perform(typeText(nPassword));
+        Espresso.onView(withId(R.id.loginPassword)).perform(typeText(password_original));
         // Close soft keyboard
         Espresso.closeSoftKeyboard();
         // Perform button click (on login button)
@@ -80,8 +98,9 @@ public class LoginActivityUnitTests
 //        loginActivity.finish();
 
 
-    // end of testLogin method
+    // end of testLogin1 method
     }
+
 
 
     // Method for finishing up anything after test
