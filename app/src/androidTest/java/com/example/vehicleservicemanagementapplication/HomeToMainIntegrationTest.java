@@ -1,4 +1,4 @@
-package com.example.vehicleservicemanagementapplication.Activites;
+package com.example.vehicleservicemanagementapplication;
 
 // https://www.youtube.com/watch?v=Xz5Ti4ZoiWA
 
@@ -8,8 +8,9 @@ import android.app.Instrumentation;
 import androidx.test.rule.ActivityTestRule;
 
 import com.example.vehicleservicemanagementapplication.About;
+import com.example.vehicleservicemanagementapplication.Activites.Home;
+import com.example.vehicleservicemanagementapplication.MainActivity;
 import com.example.vehicleservicemanagementapplication.R;
-import com.example.vehicleservicemanagementapplication.Settings;
 
 import org.junit.After;
 import org.junit.Before;
@@ -22,9 +23,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 import static org.junit.Assert.*;
 
-
-// HomeToSettingsIntegrationTest class
-public class HomeToSettingsIntegrationTest
+// Home to main integration test class
+public class HomeToMainIntegrationTest
 {
 
     // Initialisations
@@ -33,8 +33,8 @@ public class HomeToSettingsIntegrationTest
     public ActivityTestRule<Home> nActivityTestRule = new ActivityTestRule<Home>(Home.class);
     // Private variable to initialise home activity
     private Home nActivity = null;
-    // Monitor the settings activity
-    Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(Settings.class.getName(), null, false);
+    // Monitor the main activity
+    Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
 
 
     // Setup method
@@ -44,31 +44,31 @@ public class HomeToSettingsIntegrationTest
         // Get the activity
         nActivity = nActivityTestRule.getActivity();
 
-    // end of setup method
+    // end of set up method
     }
 
 
-    // Integration Test - Home to Settings activity
+    // Integration Test - Home to Main activity
     @Test
-    public void homeToSettings()
+    public void homeToMain()
     {
         // Check if it does not return null
-        assertNotNull(nActivity.findViewById(R.id.drawer_layout));
+        assertNotNull(nActivity.findViewById(R.id.btn_home_login));
         // Take the view with certain id
-        onView(withId(R.id.drawer_layout)).perform(click());
+        onView(withId(R.id.btn_home_login)).perform(click());
         // Wait for monitor to be hit and then expires in 50000000 ms
-        Activity settingsActivity = getInstrumentation().waitForMonitorWithTimeout(monitor, 50000000);
-        // Check that the settings activity is not null
-        assertNotNull(settingsActivity);
+        Activity mainActivity = getInstrumentation().waitForMonitorWithTimeout(monitor, 50000000);
+        // Check that the about activity is not null
+        assertNotNull(mainActivity);
         // Finish the opened activity
-        settingsActivity.finish();
+        mainActivity.finish();
 
 
-    // end of home to settings method
+    // end of home to main method
     }
 
 
-    // Teardown method
+    // Tear down method
     @After
     public void tearDown() throws Exception
     {
@@ -80,5 +80,6 @@ public class HomeToSettingsIntegrationTest
 
 
 
-// end of home to settings integration test class
+
+// end of home to main integration test class
 }

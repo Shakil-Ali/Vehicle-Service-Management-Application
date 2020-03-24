@@ -1,4 +1,4 @@
-package com.example.vehicleservicemanagementapplication.Activites;
+package com.example.vehicleservicemanagementapplication;
 
 // https://www.youtube.com/watch?v=Xz5Ti4ZoiWA
 
@@ -7,8 +7,9 @@ import android.app.Instrumentation;
 
 import androidx.test.rule.ActivityTestRule;
 
+import com.example.vehicleservicemanagementapplication.About;
+import com.example.vehicleservicemanagementapplication.Activites.Home;
 import com.example.vehicleservicemanagementapplication.R;
-import com.example.vehicleservicemanagementapplication.Settings;
 
 import org.junit.After;
 import org.junit.Before;
@@ -22,8 +23,8 @@ import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentat
 import static org.junit.Assert.*;
 
 
-// HomeToVehicleDetailsIntegrationTest class
-public class HomeToVehicleDetailsIntegrationTest
+// HomeToAboutIntegrationTest class
+public class HomeToAboutIntegrationTest
 {
 
     // Initialisations
@@ -32,8 +33,8 @@ public class HomeToVehicleDetailsIntegrationTest
     public ActivityTestRule<Home> nActivityTestRule = new ActivityTestRule<Home>(Home.class);
     // Private variable to initialise home activity
     private Home nActivity = null;
-    // Monitor the vehicle details activity
-    Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(VehicleDetailActivity.class.getName(), null, false);
+    // Monitor the about activity
+    Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(About.class.getName(), null, false);
 
 
     // Setup method
@@ -47,23 +48,23 @@ public class HomeToVehicleDetailsIntegrationTest
     }
 
 
-    // Integration Test - Home to Vehicle Details activity
+    // Integration Test - Home to About activity
     @Test
-    public void homeToVehicleDetails()
+    public void homeToAbout()
     {
         // Check if it does not return null
-        assertNotNull(nActivity.findViewById(R.id.vehicle_detail_title));
+        assertNotNull(nActivity.findViewById(R.id.drawer_layout));
         // Take the view with certain id
-        onView(withId(R.id.vehicle_detail_title)).perform(click());
+        onView(withId(R.id.drawer_layout)).perform(click());
         // Wait for monitor to be hit and then expires in 50000000 ms
-        Activity vehicleDetailsActivity = getInstrumentation().waitForMonitorWithTimeout(monitor, 50000000);
-        // Check that the vehicle details activity is not null
-        assertNotNull(vehicleDetailsActivity);
+        Activity aboutActivity = getInstrumentation().waitForMonitorWithTimeout(monitor, 50000000);
+        // Check that the about activity is not null
+        assertNotNull(aboutActivity);
         // Finish the opened activity
-        vehicleDetailsActivity.finish();
+        aboutActivity.finish();
 
 
-    // end of home to vehicle details method
+    // end of home to about method
     }
 
 
@@ -80,5 +81,5 @@ public class HomeToVehicleDetailsIntegrationTest
 
 
 
-// end of home to vehicle details integration test class
+// end of home to about integration test class
 }
