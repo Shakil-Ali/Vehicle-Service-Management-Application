@@ -45,24 +45,6 @@ public class LoginActivityUnitTests
     private String password_original = "hello123";
 
 
-    // Test credentials #1
-    private String email1 = "shakil";
-    private String password1 = "hello123";
-
-    // Test credentials #2
-    private String email2 = "shakil@gold.ac.uk";
-    // use password 1
-
-    // Test credentials #3
-    private String email3 = "SHAKIL@GOLD.AC.UK";
-    // user password 1
-
-    // Test credentials #4
-    // user email 2
-    private String password2 = "HELLO123";
-
-
-
     // Method for starting up anything before the test
     @Before
     public void setUp() throws Exception
@@ -75,14 +57,14 @@ public class LoginActivityUnitTests
 
 
     @Test
-    //  Systeamtic test - launching Login Activity and signing in
-    public void testLogin1()
+    //  Unit test - launching Login Activity and signing in
+    public void testLogin()
     {
 //        // If view not null, then find element (login button)
 //        assertNotNull(nActivity.findViewById(R.id.loginEmail));
 
         // Input email into email field
-        Espresso.onView(withId(R.id.loginEmail)).perform(typeText(email1));
+        Espresso.onView(withId(R.id.loginEmail)).perform(typeText(email_original));
         // Input password into password field
         Espresso.onView(withId(R.id.loginPassword)).perform(typeText(password_original));
         // Close soft keyboard
@@ -112,6 +94,7 @@ public class LoginActivityUnitTests
 
     // end of tearDown method
     }
+
 
 
 // end of LoginActivityUnitTests class
