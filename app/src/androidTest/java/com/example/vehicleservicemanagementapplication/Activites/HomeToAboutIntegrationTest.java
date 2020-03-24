@@ -53,7 +53,7 @@ public class HomeToAboutIntegrationTest
     {
         // Check if it does not return null
         assertNotNull(nActivity.findViewById(R.id.drawer_layout));
-        // Take the view with login button id
+        // Take the view with certain id
         onView(withId(R.id.drawer_layout)).perform(click());
         // Wait for monitor to be hit and then expires in 50000000 ms
         Activity aboutActivity = getInstrumentation().waitForMonitorWithTimeout(monitor, 50000000);
