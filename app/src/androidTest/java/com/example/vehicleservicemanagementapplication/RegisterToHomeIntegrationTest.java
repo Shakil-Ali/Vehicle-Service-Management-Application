@@ -7,7 +7,7 @@ import android.app.Instrumentation;
 
 import androidx.test.rule.ActivityTestRule;
 
-import com.example.vehicleservicemanagementapplication.Activites.HomeActivity;
+import com.example.vehicleservicemanagementapplication.Activites.Home;
 import com.example.vehicleservicemanagementapplication.Activites.RegisterActivity;
 
 import org.junit.After;
@@ -33,7 +33,7 @@ public class RegisterToHomeIntegrationTest
     // Private variable to initialise home activity
     private RegisterActivity nActivity = null;
     // Monitor the home activity
-    Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(HomeActivity.class.getName(), null, false);
+    Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(Home.class.getName(), null, false);
 
 
     // Setup method (before testing)
