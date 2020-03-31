@@ -4,7 +4,6 @@ package com.example.vehicleservicemanagementapplication;
 // https://www.youtube.com/watch?v=vXRoVIGttO4
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.Dialog;
 import android.app.Instrumentation;
 import android.content.Intent;
@@ -13,8 +12,6 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -26,22 +23,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.test.rule.ActivityTestRule;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.example.vehicleservicemanagementapplication.Activites.Home;
-import com.example.vehicleservicemanagementapplication.Activites.HomeActivity;
-import com.example.vehicleservicemanagementapplication.Activites.LoginActivity;
-import com.example.vehicleservicemanagementapplication.Fragments.HomeFragment;
 import com.example.vehicleservicemanagementapplication.Models.Post;
-import com.example.vehicleservicemanagementapplication.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -55,11 +42,9 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
-import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
-import static org.junit.Assert.*;
 
 
 // HomeUnitTests class class

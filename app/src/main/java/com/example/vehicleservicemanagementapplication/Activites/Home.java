@@ -14,7 +14,6 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.vehicleservicemanagementapplication.Fragments.HomeFragment;
 import com.example.vehicleservicemanagementapplication.Fragments.ProfileFragment;
 import com.example.vehicleservicemanagementapplication.Fragments.SettingsFragment;
-import com.example.vehicleservicemanagementapplication.MainActivity;
 import com.example.vehicleservicemanagementapplication.Models.Post;
 import com.example.vehicleservicemanagementapplication.R;
 import com.google.android.gms.tasks.OnFailureListener;

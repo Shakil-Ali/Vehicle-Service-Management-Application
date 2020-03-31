@@ -3,17 +3,13 @@ package com.example.vehicleservicemanagementapplication;
 // https://www.youtube.com/watch?v=_TR6QcRozAg
 // https://www.youtube.com/watch?v=vXRoVIGttO4
 
-import android.app.Activity;
 import android.app.Instrumentation;
-import android.view.View;
 
 import androidx.test.espresso.Espresso;
 import androidx.test.rule.ActivityTestRule;
 
 import com.example.vehicleservicemanagementapplication.Activites.LoginActivity;
 import com.example.vehicleservicemanagementapplication.Fragments.HomeFragment;
-import com.example.vehicleservicemanagementapplication.MainActivity;
-import com.example.vehicleservicemanagementapplication.R;
 
 import org.junit.After;
 import org.junit.Before;
@@ -24,7 +20,6 @@ import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
-import static org.junit.Assert.*;
 
 // LoginActivityUnitTests Class (Login screen)
 public class LoginActivityUnitTests

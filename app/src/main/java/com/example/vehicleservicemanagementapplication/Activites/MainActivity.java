@@ -1,4 +1,4 @@
-package com.example.vehicleservicemanagementapplication;
+package com.example.vehicleservicemanagementapplication.Activites;
 
 // Import statements
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.example.vehicleservicemanagementapplication.Activites.LoginActivity;
 import com.example.vehicleservicemanagementapplication.Activites.RegisterActivity;
+import com.example.vehicleservicemanagementapplication.R;
 
 // Main Class
 public class MainActivity extends AppCompatActivity

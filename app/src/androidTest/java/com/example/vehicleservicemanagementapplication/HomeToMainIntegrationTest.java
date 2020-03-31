@@ -7,10 +7,8 @@ import android.app.Instrumentation;
 
 import androidx.test.rule.ActivityTestRule;
 
-import com.example.vehicleservicemanagementapplication.About;
 import com.example.vehicleservicemanagementapplication.Activites.Home;
-import com.example.vehicleservicemanagementapplication.MainActivity;
-import com.example.vehicleservicemanagementapplication.R;
+import com.example.vehicleservicemanagementapplication.Activites.MainActivity;
 
 import org.junit.After;
 import org.junit.Before;
