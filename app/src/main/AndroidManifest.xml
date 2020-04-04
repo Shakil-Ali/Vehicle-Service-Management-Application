@@ -22,11 +22,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activites.LoginActivity" />
         <activity android:name=".Activites.RegisterActivity" />
-        <activity android:name=".Settings" />
-        <activity android:name=".VehicleInventory" />
-        <activity android:name=".Main_Menu" />
-        <activity android:name=".Login_form" />
-        <activity android:name=".Signup_Form" />
         <activity android:name=".Activites.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
