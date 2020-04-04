@@ -7,8 +7,8 @@ import android.app.Instrumentation;
 
 import androidx.test.rule.ActivityTestRule;
 
-import com.example.vehicleservicemanagementapplication.About;
 import com.example.vehicleservicemanagementapplication.Activites.Home;
+import com.example.vehicleservicemanagementapplication.Fragments.ProfileFragment;
 import com.example.vehicleservicemanagementapplication.R;
 
 import org.junit.After;
@@ -34,7 +34,7 @@ public class HomeToAboutIntegrationTest
     // Private variable to initialise home activity
     private Home nActivity = null;
     // Monitor the about activity
-    Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(About.class.getName(), null, false);
+    Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(ProfileFragment.class.getName(), null, false);
 
 
     // Setup method
