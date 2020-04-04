@@ -217,7 +217,7 @@ public class RegisterActivity extends AppCompatActivity
     // Method to update user account information
     private void updateUserAccount(final String name, Uri chosenImgUri, final FirebaseUser currentUser)
     {
-        // Variable to store firebase storage reference
+        // Variable to store user profile image storage reference
         StorageReference mStorage = FirebaseStorage.getInstance().getReference().child("users_profilePhotos");
         final StorageReference imgFilePath = mStorage.child(chosenImgUri.getLastPathSegment());
         imgFilePath.putFile(chosenImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>()
