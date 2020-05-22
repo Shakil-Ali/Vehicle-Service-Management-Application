@@ -58,8 +58,8 @@ public class RegisterActivityUnitTests
     //  Unit test - launching Register Activity and registering
     public void testRegister()
     {
-//        // If view not null, then find element (login button)
-//        assertNotNull(nActivity.findViewById(R.id.loginEmail));
+        // If view not null, then find element (login button)
+        // assertNotNull(nActivity.findViewById(R.id.loginEmail));
 
         // Input full name into full name field
         Espresso.onView(withId(R.id.regName)).perform(typeText(nFullName));
@@ -74,15 +74,15 @@ public class RegisterActivityUnitTests
         // Perform button click (on login button)
         Espresso.onView(withId(R.id.regBtn)).perform(click());
 
-//        // Wait until the monitor has been hit (stored in activity variable)
-//        Activity registerActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
-//        // If view is not null - then has launched successfully
-//        assertNotNull(registerActivity);
-//        // End activity
-//        registerActivity.finish();
+        // Wait until the monitor has been hit (stored in activity variable)
+        // Activity registerActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
+        // If view is not null - then has launched successfully
+        // assertNotNull(registerActivity);
+        // End activity
+        // registerActivity.finish();
 
 
-        // end of testRegister method
+    // end of testRegister method
     }
 
 
@@ -101,3 +101,4 @@ public class RegisterActivityUnitTests
 
 // End of RegisterActivityUnitTests class
 }
+
