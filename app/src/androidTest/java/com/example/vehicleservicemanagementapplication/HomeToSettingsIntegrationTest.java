@@ -4,6 +4,7 @@ package com.example.vehicleservicemanagementapplication;
 
 import android.app.Activity;
 import android.app.Instrumentation;
+import android.provider.Settings;
 
 import androidx.test.rule.ActivityTestRule;
 
@@ -80,3 +81,4 @@ public class HomeToSettingsIntegrationTest
 
 // end of home to settings integration test class
 }
+
