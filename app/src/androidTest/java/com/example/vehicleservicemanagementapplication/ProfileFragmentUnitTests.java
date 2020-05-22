@@ -54,7 +54,7 @@ public class ProfileFragmentUnitTests
         // New profile fragment variable
         ProfileFragment fragment = new ProfileFragment();
         // Get fragment manager
-//        nActivity.getFragmentManager().beginTransaction().add(rlContainer.getId(), new HomeFragment()).commitAllowingStateLoss();
+        // nActivity.getFragmentManager().beginTransaction().add(rlContainer.getId(), new HomeFragment()).commitAllowingStateLoss();
         // Wait for fragment to load and check if not null
         Instrumentation.ActivityMonitor monitorProfFrag = getInstrumentation().addMonitor(ProfileFragment.class.getName(), null, false);
         assertNotNull(monitorProfFrag);
@@ -83,3 +83,4 @@ public class ProfileFragmentUnitTests
 
 // end of profile fragment unit tests class
 }
+
