@@ -31,8 +31,6 @@ public class HomeFragmentUnitTests
     public ActivityTestRule<Home> nActivityTestRule = new ActivityTestRule<Home>(Home.class);
     private Home nActivity = null;
 
-
-
     // Set up method (before tests)
     @Before
     public void setUp() throws Exception
