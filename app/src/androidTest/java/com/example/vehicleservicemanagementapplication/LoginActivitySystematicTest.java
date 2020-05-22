@@ -73,8 +73,8 @@ public class LoginActivitySystematicTest
     //  Systematic test - launching Login Activity and signing in
     public void testLogin1()
     {
-//        // If view not null, then find element (login button)
-//        assertNotNull(nActivity.findViewById(R.id.loginEmail));
+        // If view not null, then find element (login button)
+        // assertNotNull(nActivity.findViewById(R.id.loginEmail));
 
         // Input email into email field
         Espresso.onView(withId(R.id.loginEmail)).perform(typeText(email1));
@@ -85,12 +85,12 @@ public class LoginActivitySystematicTest
         // Perform button click (on login button)
         Espresso.onView(withId(R.id.loginBtn)).perform(click());
 
-//        // Wait until the monitor has been hit (stored in activity variable)
-//        Activity loginActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
-//        // If view is not null - then has launched successfully
-//        assertNotNull(loginActivity);
-//        // End activity
-//        loginActivity.finish();
+        // Wait until the monitor has been hit (stored in activity variable)
+        // Activity loginActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
+        // If view is not null - then has launched successfully
+        // assertNotNull(loginActivity);
+        // End activity
+        // loginActivity.finish();
 
 
     // end of testLogin1 method
@@ -101,8 +101,8 @@ public class LoginActivitySystematicTest
     //  Systematic test - launching Login Activity and signing in
     public void testLogin2()
     {
-//        // If view not null, then find element (login button)
-//        assertNotNull(nActivity.findViewById(R.id.loginEmail));
+        // If view not null, then find element (login button)
+        // assertNotNull(nActivity.findViewById(R.id.loginEmail));
 
         // Input email into email field
         Espresso.onView(withId(R.id.loginEmail)).perform(typeText(email_original));
@@ -113,12 +113,12 @@ public class LoginActivitySystematicTest
         // Perform button click (on login button)
         Espresso.onView(withId(R.id.loginBtn)).perform(click());
 
-//        // Wait until the monitor has been hit (stored in activity variable)
-//        Activity loginActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
-//        // If view is not null - then has launched successfully
-//        assertNotNull(loginActivity);
-//        // End activity
-//        loginActivity.finish();
+        // Wait until the monitor has been hit (stored in activity variable)
+        // Activity loginActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
+        // If view is not null - then has launched successfully
+        // assertNotNull(loginActivity);
+        // End activity
+        //  loginActivity.finish();
 
 
     // end of testLogin2 method
@@ -129,8 +129,8 @@ public class LoginActivitySystematicTest
     //  Systematic test - launching Login Activity and signing in
     public void testLogin3()
     {
-//        // If view not null, then find element (login button)
-//        assertNotNull(nActivity.findViewById(R.id.loginEmail));
+        // If view not null, then find element (login button)
+        // assertNotNull(nActivity.findViewById(R.id.loginEmail));
 
         // Input email into email field
         Espresso.onView(withId(R.id.loginEmail)).perform(typeText(email3));
@@ -141,12 +141,12 @@ public class LoginActivitySystematicTest
         // Perform button click (on login button)
         Espresso.onView(withId(R.id.loginBtn)).perform(click());
 
-//        // Wait until the monitor has been hit (stored in activity variable)
-//        Activity loginActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
-//        // If view is not null - then has launched successfully
-//        assertNotNull(loginActivity);
-//        // End activity
-//        loginActivity.finish();
+        // Wait until the monitor has been hit (stored in activity variable)
+        // Activity loginActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
+        // If view is not null - then has launched successfully
+        // assertNotNull(loginActivity);
+        // End activity
+        //  loginActivity.finish();
 
 
     // end of testLogin3 method
@@ -157,8 +157,8 @@ public class LoginActivitySystematicTest
     //  Systematic test - launching Login Activity and signing in
     public void testLogin4()
     {
-//        // If view not null, then find element (login button)
-//        assertNotNull(nActivity.findViewById(R.id.loginEmail));
+        // If view not null, then find element (login button)
+        // assertNotNull(nActivity.findViewById(R.id.loginEmail));
 
         // Input email into email field
         Espresso.onView(withId(R.id.loginEmail)).perform(typeText(email_original));
@@ -169,12 +169,12 @@ public class LoginActivitySystematicTest
         // Perform button click (on login button)
         Espresso.onView(withId(R.id.loginBtn)).perform(click());
 
-//        // Wait until the monitor has been hit (stored in activity variable)
-//        Activity loginActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
-//        // If view is not null - then has launched successfully
-//        assertNotNull(loginActivity);
-//        // End activity
-//        loginActivity.finish();
+        // Wait until the monitor has been hit (stored in activity variable)
+        // Activity loginActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
+        // If view is not null - then has launched successfully
+        // assertNotNull(loginActivity);
+        // End activity
+        //   loginActivity.finish();
 
 
     // end of testLogin4 method
