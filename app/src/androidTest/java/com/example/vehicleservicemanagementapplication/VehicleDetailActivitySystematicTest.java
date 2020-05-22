@@ -64,25 +64,25 @@ public class VehicleDetailActivitySystematicTest
     //  Systematic test #1 - launching Login Activity and signing in
     public void testVehicleDetails1()
     {
-//        // If view not null, then find element (login button)
-//        assertNotNull(nActivity.findViewById(R.id.loginEmail));
+        // If view not null, then find element (login button)
+        // assertNotNull(nActivity.findViewById(R.id.loginEmail));
 
 
         Espresso.onView(withId(R.id.popup_title)).perform(typeText(reg1));
         // Close soft keyboard
         Espresso.closeSoftKeyboard();
         // Perform button click (on login button)
-//        Espresso.onView(withId(R.id.popup_add).perform(click());
+        // Espresso.onView(withId(R.id.popup_add).perform(click());
 
-//        // Wait until the monitor has been hit (stored in activity variable)
-//        Activity loginActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
-//        // If view is not null - then has launched successfully
-//        assertNotNull(loginActivity);
-//        // End activity
-//        loginActivity.finish();
+        // Wait until the monitor has been hit (stored in activity variable)
+        // Activity loginActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
+        // If view is not null - then has launched successfully
+        // assertNotNull(loginActivity);
+        // End activity
+        // loginActivity.finish();
 
 
-        // end of testLogin1 method
+    // end of testLogin1 method
     }
 
 
@@ -153,3 +153,4 @@ public class VehicleDetailActivitySystematicTest
 
 // end of vehicle detail activity systematic test class
 }
+
