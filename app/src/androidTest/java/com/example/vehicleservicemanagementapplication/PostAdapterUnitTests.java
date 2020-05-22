@@ -33,7 +33,7 @@ public class PostAdapterUnitTests
     // Variable initialisation and assignment operations
     // Rule for test - specifies this activity has launched
     @Rule
-//    public ActivityTestRule<PostAdapter> nActivityTestRule = new ActivityTestRule<PostAdapter>(PostAdapter.class);
+    // public ActivityTestRule<PostAdapter> nActivityTestRule = new ActivityTestRule<PostAdapter>(PostAdapter.class);
     // Variable to store context
     private PostAdapter nActivity = null;
     // Monitor for home activity
@@ -50,7 +50,7 @@ public class PostAdapterUnitTests
     public void setUp() throws Exception
     {
         // Store the context of the activity
-//        nActivity = nActivityTestRule.getActivity();
+        // nActivity = nActivityTestRule.getActivity();
 
 
     // end of set up method
@@ -63,7 +63,7 @@ public class PostAdapterUnitTests
         // Instantiate layout XML file into corresponding view objects
         View row = LayoutInflater.from(m_Context).inflate(R.layout.row_post_item, parent, false);
         // Return this view
-//        return new PostAdapterUnitTests().MyViewHolder(row);
+        // return new PostAdapterUnitTests().MyViewHolder(row);
 
 
     // end of on create view holder method test
@@ -75,21 +75,21 @@ public class PostAdapterUnitTests
     public void onBindViewHolder()
     {
         // Make holder have the title from data in specified position
-//        holder.tv_Title.setText(m_Data.get(position).getTitle());
-//        // Make holder have the image from data in specified position
-//        Glide.with(m_Context).load(m_Data.get(position).getPicture()).into(holder.imageVehicle);
+        // holder.tv_Title.setText(m_Data.get(position).getTitle());
+        // Make holder have the image from data in specified position
+        // Glide.with(m_Context).load(m_Data.get(position).getPicture()).into(holder.imageVehicle);
 
     // end of bind view holder method
     }
 
 
-    //
+    // Get item count method
     @Test
     public int getItemCount()
     {
         return m_Data.size();
 
-        // end of get item count method
+    // end of get item count method
     }
 
 
@@ -107,3 +107,4 @@ public class PostAdapterUnitTests
 
 // end of post adapter unit tests class
 }
+
