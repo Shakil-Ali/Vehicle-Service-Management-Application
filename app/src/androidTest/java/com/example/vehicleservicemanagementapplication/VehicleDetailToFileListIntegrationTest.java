@@ -1,4 +1,4 @@
-package com.example.vehicleservicemanagementapplication.Activites;
+package com.example.vehicleservicemanagementapplication;
 
 // https://www.youtube.com/watch?v=vXRoVIGttO4
 
@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class FileListToFileIntegrationTest
+public class VehicleDetailToFileListIntegrationTest
 {
 
     @Before
