@@ -398,3 +398,4 @@ public class RegisterActivity extends AppCompatActivity
 
 // end of class
 }
+
