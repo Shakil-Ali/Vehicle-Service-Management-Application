@@ -14,7 +14,9 @@
         android:textSize="15sp"
         android:text="Dark Mode"
         android:textAllCaps="false"
-        android:id="@+id/ccBtn">
+        android:id="@+id/ccBtn"
+        android:background="#deaa00"
+        >
     </Button>
 
 </FrameLayout>
