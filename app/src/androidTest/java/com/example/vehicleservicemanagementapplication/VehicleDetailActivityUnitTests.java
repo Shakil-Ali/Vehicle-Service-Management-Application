@@ -55,7 +55,7 @@ public class VehicleDetailActivityUnitTests
         Toast.makeText(nActivity, "Vehicle has been removed successfully", Toast.LENGTH_SHORT).show();
 
 
-        // end of delete vehicle method
+    // end of delete vehicle method
     }
 
 
@@ -67,9 +67,8 @@ public class VehicleDetailActivityUnitTests
         String date = DateFormat.format("dd-MM-yyyy", cal).toString();
         return date;
 
-        // end of timeStampToString method
+    // end of timeStampToString method
     }
-
 
 
     // Any actions to carry out after testing
@@ -85,3 +84,4 @@ public class VehicleDetailActivityUnitTests
 
 // end of vehicle detail activity unit tests class
 }
+
