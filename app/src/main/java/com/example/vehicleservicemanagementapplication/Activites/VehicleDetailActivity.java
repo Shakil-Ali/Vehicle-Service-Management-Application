@@ -61,9 +61,9 @@ public class VehicleDetailActivity extends AppCompatActivity
         setContentView(R.layout.activity_vehicle_detail);
 
         // Make bar at top transparent
-//        Window w = getWindow();
-//        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-//        getSupportActionBar().hide();
+        // Window w = getWindow();
+        // w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        // getSupportActionBar().hide();
 
 
         // Assignment Operations
@@ -194,7 +194,7 @@ public class VehicleDetailActivity extends AppCompatActivity
         Toast.makeText(this, "Vehicle has been removed successfully", Toast.LENGTH_SHORT).show();
 
 
-        // end of delete vehicle method
+    // end of delete vehicle method
     }
 
 
@@ -215,10 +215,14 @@ public class VehicleDetailActivity extends AppCompatActivity
     {
         startActivity(new Intent(getApplicationContext(), View_PDF_Files.class));
 
-        // end of btn action method
+    // end of btn action method
     }
+
+
 
 
 
 // end of class
 }
+
+
