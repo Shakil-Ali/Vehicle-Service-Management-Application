@@ -107,11 +107,12 @@ public class HomeUnitTests
 
     // Method for starting up anything before the test
     @Before
-    public void setUp() throws Exception {
+    public void setUp() throws Exception
+    {
         // Store the context of the activity
         nActivity = nActivityTestRule.getActivity();
 
-        // end of set up method
+    // end of set up method
     }
 
 
@@ -337,7 +338,7 @@ public class HomeUnitTests
         });
 
 
-        // end of inPopup method
+    // end of inPopup method
     }
 
 
@@ -374,7 +375,7 @@ public class HomeUnitTests
         });
 
 
-        // end of addPost method
+    // end of addPost method
     }
 
 
