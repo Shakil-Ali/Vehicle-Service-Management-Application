@@ -141,7 +141,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 // Display the pop up for adding vehicles
                 popAddVehicle.show();
 
-            // end of method
+        // end of method
             }
         });
 
@@ -229,33 +229,33 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
 
     // Method for receiving voice input and handling it
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
-//    {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        switch (requestCode)
-//        {
-//            case REQUEST_CODE_SPEECH_INPUT:{
-//                if(resultCode == RESULT_OK && null != data)
-//                {
-//                    // Get text array from the voice intent
-//                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-//                    // Set text from array to text view
-//                    popUpVehicleNote.setText(result.get(0));
-//
-//                // end of if statement
-//                }
-//                // Break statement
-//                break;
-//            }
-//
-//        // end of switch
-//        }
-//
-//
-//    // end of on activity result method
-//    }
+    //    @Override
+    //    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
+    //    {
+    //        super.onActivityResult(requestCode, resultCode, data);
+    //
+    //        switch (requestCode)
+    //        {
+    //            case REQUEST_CODE_SPEECH_INPUT:{
+    //                if(resultCode == RESULT_OK && null != data)
+    //                {
+    //                    // Get text array from the voice intent
+    //                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+    //                    // Set text from array to text view
+    //                    popUpVehicleNote.setText(result.get(0));
+    //
+    //                // end of if statement
+    //                }
+    //                // Break statement
+    //                break;
+    //            }
+    //
+    //        // end of switch
+    //        }
+    //
+    //
+    //    // end of on activity result method
+    //    }
 
 
     // Method for selecting image on pop-up
@@ -381,7 +381,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         // Widgets for the pop up
         // Store user image in image variable
-//        popUpUserImage = popAddVehicle.findViewById(R.id.popup_user_image);
+        // popUpUserImage = popAddVehicle.findViewById(R.id.popup_user_image);
         // Store vehicle image in image variable
         popUpPostImage = popAddVehicle.findViewById(R.id.popup_image);
         // Store title field in text variable
@@ -409,7 +409,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         popUpClickProgressBar = popAddVehicle.findViewById(R.id.popup_progressBar);
 
         // Display user profile image (Glide library) on pop up (add vehicle)
-//        Glide.with(Home.this).load(currentUser.getPhotoUrl()).into(popUpUserImage);
+        // Glide.with(Home.this).load(currentUser.getPhotoUrl()).into(popUpUserImage);
 
 
         // Detect when post button clicked
@@ -580,6 +580,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     // end of method
     }
 
+
     // Method for On Create Options Menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -590,36 +591,36 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     }
 
 
-//    // Method for on Support Navigate Up
-//    @Override
-//    public boolean onSupportNavigateUp()
-//    {
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-//        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-//                || super.onSupportNavigateUp();
-//    }
+    //    // Method for on Support Navigate Up
+    //    @Override
+    //    public boolean onSupportNavigateUp()
+    //    {
+    //        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+    //        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
+    //                || super.onSupportNavigateUp();
+    //    }
 
 
     // Method for on options item selected
     // Method for the three dot in right hand corner
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item)
-//    {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings)
-//        {
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//
-//    // end of method
-//    }
+    //    @Override
+    //    public boolean onOptionsItemSelected(MenuItem item)
+    //    {
+    //        // Handle action bar item clicks here. The action bar will
+    //        // automatically handle clicks on the Home/Up button, so long
+    //        // as you specify a parent activity in AndroidManifest.xml.
+    //        int id = item.getItemId();
+    //
+    //        //noinspection SimplifiableIfStatement
+    //        if (id == R.id.action_settings)
+    //        {
+    //            return true;
+    //        }
+    //
+    //        return super.onOptionsItemSelected(item);
+    //
+    //    // end of method
+    //    }
 
 
     // Method for on navigation item selected
@@ -709,11 +710,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         }
 
         // Use Glide library for user photo - put user photo into area for it (second version makes image appear round on profile)
-//        Glide.with(this).load(currentUser.getPhotoUrl()).into(navUserPhoto);
+        // Glide.with(this).load(currentUser.getPhotoUrl()).into(navUserPhoto);
         Glide.with(this).load(currentUser.getPhotoUrl()).apply(RequestOptions.circleCropTransform()).into(navUserPhoto);
 
 
-        // end of update nav header
+    // end of update nav header
     }
 
 
@@ -721,3 +722,4 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
 // end of class
 }
+
