@@ -55,7 +55,7 @@ public class SettingsFragmentUnitTests
         // New settings fragment variable
         SettingsFragment fragment = new SettingsFragment();
         // Get fragment manager
-//        nActivity.getFragmentManager().beginTransaction().add(rlContainer.getId(), new SettingsFragment()).commitAllowingStateLoss();
+        // nActivity.getFragmentManager().beginTransaction().add(rlContainer.getId(), new SettingsFragment()).commitAllowingStateLoss();
         // Wait for fragment to load and check if not null
         Instrumentation.ActivityMonitor monitorSetFrag = getInstrumentation().addMonitor(SettingsFragment.class.getName(), null, false);
         assertNotNull(monitorSetFrag);
@@ -84,3 +84,4 @@ public class SettingsFragmentUnitTests
 
 // end of settings fragment class
 }
+
