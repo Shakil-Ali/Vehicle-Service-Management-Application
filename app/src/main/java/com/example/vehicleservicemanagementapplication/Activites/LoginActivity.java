@@ -51,26 +51,26 @@ public class LoginActivity extends AppCompatActivity
         loginProgressBar = findViewById(R.id.progressBarLogin);
         firebaseAuth = FirebaseAuth.getInstance();
         HomeActivity = new Intent(this, com.example.vehicleservicemanagementapplication.Activites.Home.class);
-//        loginPhoto = findViewById(R.id.loginUserPhoto);
+        //        loginPhoto = findViewById(R.id.loginUserPhoto);
         clickHereToRegister = findViewById(R.id.textClickHereReg);
 
         // Detect if profile image is clicked
-//        loginPhoto.setOnClickListener(new View.OnClickListener()
-//        {
-//            // On click method
-//            @Override
-//            public void onClick(View v)
-//            {
-//                // Intent to store the register activity
-//                Intent registerActivity = new Intent(getApplicationContext(), RegisterActivity.class);
-//                // Start the activity
-//                startActivity(registerActivity);
-//                // Finish starting the previous activity
-//                finish();
-//
-//            // end of on click method
-//            }
-//        });
+        //        loginPhoto.setOnClickListener(new View.OnClickListener()
+        //        {
+        //            // On click method
+        //            @Override
+        //            public void onClick(View v)
+        //            {
+        //                // Intent to store the register activity
+        //                Intent registerActivity = new Intent(getApplicationContext(), RegisterActivity.class);
+        //                // Start the activity
+        //                startActivity(registerActivity);
+        //                // Finish starting the previous activity
+        //                finish();
+        //
+        //            // end of on click method
+        //            }
+        //        });
 
         clickHereToRegister.setOnClickListener(new View.OnClickListener()
         {
@@ -126,7 +126,7 @@ public class LoginActivity extends AppCompatActivity
                     signIn(email, password);
                 }
 
-            // end of onclick method
+        // end of onclick method
             }
         });
 
@@ -215,5 +215,10 @@ public class LoginActivity extends AppCompatActivity
     }
 
 
+
+
+
+
 // end of class
 }
+
