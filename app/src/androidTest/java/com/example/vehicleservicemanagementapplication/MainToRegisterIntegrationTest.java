@@ -82,3 +82,4 @@ public class MainToRegisterIntegrationTest
 
 // end of main to register integration tests class
 }
+
