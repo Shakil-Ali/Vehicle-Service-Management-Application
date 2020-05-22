@@ -66,6 +66,7 @@ public class HomeFragment extends Fragment
         // Required empty public constructor
     }
 
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -74,6 +75,7 @@ public class HomeFragment extends Fragment
      * @param param2 Parameter 2.
      * @return A new instance of fragment HomeFragment.
      */
+
 
     // TODO: Rename and change types and number of parameters
     public static HomeFragment newInstance(String param1, String param2)
@@ -204,5 +206,8 @@ public class HomeFragment extends Fragment
 
 
 
+
+
 // end of class
 }
+
