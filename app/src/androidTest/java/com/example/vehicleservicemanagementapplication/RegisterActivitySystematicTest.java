@@ -70,8 +70,8 @@ public class RegisterActivitySystematicTest
     //  Systematic test 1 - launching Register Activity and registering
     public void testRegisterSystematic1()
     {
-//        // If view not null, then find element (login button)
-//        assertNotNull(nActivity.findViewById(R.id.loginEmail));
+        // If view not null, then find element (login button)
+        // assertNotNull(nActivity.findViewById(R.id.loginEmail));
 
         // Input full name into full name field
         Espresso.onView(withId(R.id.regName)).perform(typeText(fullName1));
@@ -86,12 +86,12 @@ public class RegisterActivitySystematicTest
         // Perform button click (on login button)
         Espresso.onView(withId(R.id.regBtn)).perform(click());
 
-//        // Wait until the monitor has been hit (stored in activity variable)
-//        Activity registerActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
-//        // If view is not null - then has launched successfully
-//        assertNotNull(registerActivity);
-//        // End activity
-//        registerActivity.finish();
+        // Wait until the monitor has been hit (stored in activity variable)
+        // Activity registerActivity = getInstrumentation().waitForMonitorWithTimeout(monitorHome, 5000);
+        // If view is not null - then has launched successfully
+        // assertNotNull(registerActivity);
+        // End activity
+        // registerActivity.finish();
 
 
     // end of testRegisterSystematic1 method
@@ -173,7 +173,7 @@ public class RegisterActivitySystematicTest
         nActivity = null;
 
 
-        // end of tear down method
+    // end of tear down method
     }
 
 
@@ -181,3 +181,4 @@ public class RegisterActivitySystematicTest
 
 // end of register activity systematic test class
 }
+
