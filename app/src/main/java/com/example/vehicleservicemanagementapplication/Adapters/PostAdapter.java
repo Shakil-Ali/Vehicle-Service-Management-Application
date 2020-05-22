@@ -139,10 +139,11 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.MyViewHolder>
         }
 
 
-        // end of class
+    // end of class
     }
 
 
 
 // end of class
 }
+
