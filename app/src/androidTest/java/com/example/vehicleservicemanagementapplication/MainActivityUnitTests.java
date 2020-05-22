@@ -80,7 +80,7 @@ public class MainActivityUnitTests
         // End activity
         loginActivity.finish();
 
-        // end of mainActivityTestLaunchLogin method
+    // end of mainActivityTestLaunchLogin method
     }
 
 
@@ -99,7 +99,7 @@ public class MainActivityUnitTests
         // End activity
         registerActivity.finish();
 
-        // end of mainActivityTestLaunchRegister method
+    // end of mainActivityTestLaunchRegister method
     }
 
 
@@ -117,3 +117,4 @@ public class MainActivityUnitTests
 
 // end of MainActivityUnitTests class
 }
+
