@@ -7,7 +7,8 @@
     android:orientation="vertical"
     tools:context=".Activites.MainActivity">
 
-<!--    Background Code    -->
+
+    <!--    Background Code    -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,8 +17,7 @@
         >
     </LinearLayout>
 
-<!--    Background Code    -->
-
+    <!--  Logo Code  -->
 
     // Motor Manager Logo
     <ImageView
@@ -28,6 +28,7 @@
         android:layout_marginTop="-640dp"
         >
     </ImageView>
+
 
     // Login Button
     <Button
@@ -44,6 +45,7 @@
         >
     </Button>
 
+
     // Register Button
     <Button
         android:id="@+id/btn_home_register"
@@ -58,5 +60,6 @@
         android:textAllCaps="false"
         >
     </Button>
+
 
 </LinearLayout>
