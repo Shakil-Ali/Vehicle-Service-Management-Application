@@ -10,6 +10,7 @@
     android:background="@drawable/newbackground"
     >
 
+    <!-- Text View informing user on how to add a profile page   -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +19,8 @@
         android:text="Tap on the icon below to add a profile image">
     </TextView>
 
-    // Profile Image Avatar
+
+    <!-- Image View storing user profile image  -->
     <ImageView
         android:id="@+id/regUserPhoto"
         android:layout_width="100dp"
@@ -29,7 +31,7 @@
     </ImageView>
 
 
-    // Name
+    <!-- Field for entering user full name   -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,7 +53,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    // Email
+    <!-- Field for entering user email   -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -73,7 +75,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    // Enter Password
+    <!-- Field for entering user password   -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -96,7 +98,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    // Confirm Password
+    <!-- Field for entering user password   -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -119,7 +121,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    // Register Button
+    <!-- Button for entering registration details   -->
     <Button
         android:id="@+id/regBtn"
         android:layout_width="match_parent"
@@ -134,7 +136,7 @@
     </Button>
 
 
-    // Progress Bar
+    <!-- Progress bar after completing registration form   -->
     <ProgressBar
         android:id="@+id/progressBarReg"
         android:layout_width="match_parent"
@@ -146,6 +148,8 @@
         app:layout_constraintTop_toTopOf="@+id/regBtn">
     </ProgressBar>
 
+
+    <!-- Text View for taking user to login page   -->
     <TextView
         android:id="@+id/textClickHereLogin"
         android:layout_width="wrap_content"
