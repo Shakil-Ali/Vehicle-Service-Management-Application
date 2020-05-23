@@ -10,6 +10,7 @@
     >
 
 
+    <!-- Text View informing user how to upload file   -->
     <TextView
         android:layout_marginTop="200dp"
         android:text="Please enter a file name and click 'Upload' to select a file to store"
@@ -19,6 +20,8 @@
         android:layout_height="wrap_content">
     </TextView>
 
+
+    <!--  Edit View for entering file name  -->
     <EditText
         android:layout_marginTop="40dp"
         android:id="@+id/text_pdfName"
@@ -29,6 +32,8 @@
         android:layout_gravity="center_horizontal">
     </EditText>
 
+
+    <!-- Button for uploading file   -->
     <Button
         android:textSize="17sp"
         android:background="#deaa00"
@@ -40,5 +45,6 @@
         android:textAllCaps="false"
         >
     </Button>
+
 
 </LinearLayout>
