@@ -8,18 +8,18 @@
     android:orientation="vertical">
 
     // Avatar Image
-<!--    <ImageView-->
-<!--        android:id="@+id/popup_user_image"-->
-<!--        android:background="#ffffff"-->
-<!--        android:layout_width="75dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        tools:layout_editor_absoluteX="340dp"-->
-<!--        tools:layout_editor_absoluteY="1dp"-->
-<!--        tools:srcCompat="@tools:sample/avatars" />-->
+    <!--    <ImageView-->
+    <!--        android:id="@+id/popup_user_image"-->
+    <!--        android:background="#ffffff"-->
+    <!--        android:layout_width="75dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        tools:layout_editor_absoluteX="340dp"-->
+    <!--        tools:layout_editor_absoluteY="1dp"-->
+    <!--        tools:srcCompat="@tools:sample/avatars" />-->
 
 
-    // Vehicle reg. number
+    <!--    Vehicle Reg.   -->
     <EditText
         android:background="@drawable/popup_edittext_style"
         android:id="@+id/popup_title"
@@ -34,7 +34,7 @@
     </EditText>
 
 
-    // Vehicle Make
+    <!--    Vehicle Make   -->
     <Spinner
         android:background="@drawable/popup_edittext_style"
         android:ems="10"
@@ -48,7 +48,8 @@
         >
     </Spinner>
 
-    // Vehicle Model
+
+    <!--    Vehicle Make   -->
     <EditText
         android:background="@drawable/popup_edittext_style"
         android:id="@+id/popup_vehicleModel"
@@ -63,7 +64,8 @@
         >
     </EditText>
 
-    // Vehicle Transmission
+
+    <!--    Vehicle Transmission   -->
     <Spinner
         android:background="@drawable/popup_edittext_style"
         android:ems="10"
@@ -77,7 +79,8 @@
         >
     </Spinner>
 
-    // Vehicle Oil Type
+
+    <!--    Vehicle Oil Type   -->
     <Spinner
         android:background="@drawable/popup_edittext_style"
         android:ems="10"
@@ -91,7 +94,8 @@
         >
     </Spinner>
 
-    // Description of work to be carried out
+
+    <!--    Work Description   -->
     <EditText
         android:background="@drawable/popup_edittext_style"
         android:id="@+id/popup_description"
@@ -106,7 +110,8 @@
         >
     </EditText>
 
-    // Extra notes
+
+    <!--    Extra Notes   -->
     <TextView
         android:background="@drawable/popup_edittext_style"
         android:id="@+id/popup_notes"
@@ -122,7 +127,8 @@
         >
     </TextView>
 
-    // Microphone image
+
+    <!--    Mic   -->
     <ImageView
         android:id="@+id/notes_mic"
         android:layout_width="wrap_content"
@@ -136,7 +142,8 @@
         >
     </ImageView>
 
-    // Selecting image for vehicle
+
+    <!--    Vehicle Image   -->
     <ImageView
         android:id="@+id/popup_image"
         android:layout_width="match_parent"
@@ -152,7 +159,7 @@
     </ImageView>
 
 
-    // Add image icon
+    <!--    Add Vehicle Details   -->
     <ImageView
         android:id="@+id/popup_add"
         android:layout_width="50dp"
@@ -173,6 +180,8 @@
         tools:ignore="VectorDrawableCompat">
     </ImageView>
 
+
+    <!--    Progress Bar after entering vehicle details   -->
     <ProgressBar
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -195,3 +204,4 @@
 
 
 </LinearLayout>
+
