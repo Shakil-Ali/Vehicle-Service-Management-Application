@@ -8,11 +8,15 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
+
+    <!--  Layout dimensions  -->
     <include
         layout="@layout/app_bar_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+
+    <!-- Navigation View   -->
     <com.google.android.material.navigation.NavigationView
         android:background="#fff"
         android:id="@+id/nav_view"
