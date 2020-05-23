@@ -7,7 +7,8 @@
     android:padding="20dp"
     tools:context=".Helpers.View_PDF_Files">
 
-    // ListView for stored PDF's
+
+    <!-- List View containing vehicle files   -->
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,4 +18,6 @@
         >
     </ListView>
 
+
 </RelativeLayout>
+
