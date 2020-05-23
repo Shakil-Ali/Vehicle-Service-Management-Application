@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     android:padding="15dp">
 
+
+    <!--    Vehicle Reg.  -->
     <TextView
         android:id="@+id/textViewReg"
         android:layout_width="match_parent"
@@ -13,6 +15,7 @@
     </TextView>
 
 
+    <!--    Vehicle Make   -->
     <TextView
         android:id="@+id/textViewMake"
         android:layout_width="match_parent"
@@ -22,3 +25,4 @@
     </TextView>
 
 </LinearLayout>
+
