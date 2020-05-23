@@ -20,7 +20,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        // Launcher Background Image (Green Grid) - For image of vehicle
+        <!-- Vehicle Image   -->
         <ImageView
             android:id="@+id/vehicle_detail_image"
             android:layout_width="match_parent"
@@ -31,6 +31,8 @@
             app:srcCompat="@drawable/ic_launcher_background"
             tools:ignore="VectorDrawableCompat" />
 
+
+        <!-- Vehicle Title (Registration Number)   -->
         <TextView
             android:id="@+id/vehicle_detail_title"
             android:layout_width="wrap_content"
@@ -44,6 +46,8 @@
             android:textSize="25sp"
             android:text="TextView" />
 
+
+        <!-- Vehicle Title Underline   -->
         <View
             android:background="#2e2e2e"
             android:id="@+id/view"
@@ -54,6 +58,8 @@
             android:layout_marginTop="5dp"
             />
 
+
+        <!-- Date Vehicle Added   -->
         <TextView
             android:id="@+id/vehicle_detail_date"
             android:layout_width="wrap_content"
@@ -66,6 +72,8 @@
             android:textSize="15sp"
             android:text="10 Oct 2020 | by Shakil Ali" />
 
+
+        <!-- Vehicle Make   -->
         <TextView
             android:id="@+id/vehicle_detail_make"
             android:layout_width="wrap_content"
@@ -80,6 +88,8 @@
             android:text="Vehicle Make">
         </TextView>
 
+
+        <!-- Vehicle Model   -->
         <TextView
             android:id="@+id/vehicle_detail_model"
             android:layout_width="wrap_content"
@@ -94,6 +104,8 @@
             android:text="Vehicle Model">
         </TextView>
 
+
+        <!-- Vehicle Transmission  -->
         <TextView
             android:id="@+id/vehicle_detail_transmission"
             android:layout_width="wrap_content"
@@ -108,6 +120,8 @@
             android:text="Vehicle Transmission">
         </TextView>
 
+
+        <!-- Vehicle Oil Type  -->
         <TextView
             android:id="@+id/vehicle_detail_oil"
             android:layout_width="wrap_content"
@@ -122,6 +136,8 @@
             android:text="Vehicle Oil">
         </TextView>
 
+
+        <!-- Vehicle Description   -->
         <TextView
             android:id="@+id/vehicle_detail_description"
             android:layout_width="wrap_content"
@@ -135,6 +151,8 @@
             android:textSize="15sp"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore" />
 
+
+        <!-- Vehicle Extra Notes  -->
         <TextView
             android:id="@+id/vehicle_detail_note"
             android:layout_width="wrap_content"
@@ -149,6 +167,7 @@
             android:text="Extra Notes" />
 
 
+        <!-- Button for file upload   -->
         <Button
             android:layout_marginTop="20dp"
             android:layout_width="50dp"
@@ -161,6 +180,7 @@
         </Button>
 
 
+        <!-- Button for file list   -->
         <Button
             android:layout_marginTop="-50dp"
             android:layout_marginRight="20dp"
@@ -174,6 +194,7 @@
         </Button>
 
 
+        <!-- Button to delete vehicle   -->
         <Button
             android:layout_marginTop="-50dp"
             android:layout_marginRight="80dp"
