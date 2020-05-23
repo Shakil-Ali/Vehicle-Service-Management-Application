@@ -7,6 +7,7 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <!--    Displays view from adapters   -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vehicleRV"
         android:layout_width="match_parent"
