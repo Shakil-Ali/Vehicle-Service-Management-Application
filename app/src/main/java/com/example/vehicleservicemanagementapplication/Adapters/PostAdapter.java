@@ -118,6 +118,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.MyViewHolder>
                     vehicleDetailActivity.putExtra("Oil", m_Data.get(pos).getOil());
                     // Send the vehicle description
                     vehicleDetailActivity.putExtra("Description", m_Data.get(pos).getDescription());
+                    // Send the vehicle note
+                    vehicleDetailActivity.putExtra("Note", m_Data.get(pos).getNote());
                     // Send the vehicle detail post key
                     vehicleDetailActivity.putExtra("VehicleKey", m_Data.get(pos).getVehicleKey());
 
